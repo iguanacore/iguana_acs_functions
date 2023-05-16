@@ -1,0 +1,53 @@
+<ThingDefs><List>
+	<ThingDef Type="Item" Name="Item_Dan_SanHuaHuangJing" Parent="DanBase">
+		<ThingName>三花黄精丸</ThingName>
+		<TexPath>res\Sprs\object_WuDangDLC\object_sanhuahuangjingwan01</TexPath>
+		<Desc>武当山秘传的丹药。服用可固定提高灵气上限。此药虽然对修为高深的修士而言比较鸡肋，但十分适合为刚入门的弟子打基础。多次服用，药效会大大降低。</Desc>	
+		<Tags>
+			<Tag Name="Item_Dan_SanHuaHuangJing" Level="1"/>
+		</Tags>	
+		<Rate>9</Rate>
+		<Beauty>5</Beauty>
+		<ElementKind>Mu</ElementKind>
+		<Item Lable="Dan">
+			<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="1000"/>
+					<SalePrice Value="1" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="1500" />
+					<SalePrice Value="2" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="2500" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<PhysicalLables>
+				<li>Smooth1</li>
+				<li>Hard1</li>
+				<li>Light1</li>
+			</PhysicalLables>
+			<Elixir>
+				<Modifier>Modifier_Item_SanHuaHuangJing</Modifier>
+				<Fesistance>0.1</Fesistance>
+			</Elixir>
+			<BeMade>
+				<WorkToMake>200</WorkToMake>
+				<CostItems>
+					<Item name = "Item_WuDang_HuangJingFen" count = "30"/>
+					<Item name = "Item_CopperGrit" count = "9"/>
+					<Item name = "Item_SilverGrit" count = "9"/>
+					<Item name = "Item_EarthEssence" count = "3"/>
+				</CostItems>
+			</BeMade> 
+		</Item>
+		<Element>
+			<Kind>Mu</Kind>
+			<Value>7</Value>   
+		</Element>
+	</ThingDef>
+</List></ThingDefs>
