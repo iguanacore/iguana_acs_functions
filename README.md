@@ -1,7 +1,7 @@
-# Iguana's Overhaul, fixes
+# Iguana's Overhaul, funcional changes
 A mod, consisting of functional changes for Amazing Cultivation Simulator, not just fixes.
 
-## Currently implemented fixes
+## Currently implemented changes
 
 * Fix Trimerous Essence Price - The Trimerous Essence Pill has a buy price and item quantity equal to equivalent items (SR pool).
 * Change Talisman of Foreseer from "Advanced Talismans" and "Luck with Talisman Room" to 96% quality, so it actually has an adventure exploration effect
