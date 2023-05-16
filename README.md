@@ -1,4 +1,4 @@
-# Iguana's Overhaul, funcional changes
+# Iguana's Overhaul, functional changes
 A mod, consisting of functional changes for Amazing Cultivation Simulator, not just fixes.
 
 ## Currently implemented changes
@@ -41,3 +41,16 @@ For example, removing the Trimerous Essence Price change requires the removal of
 ### MapStories
 
 * (MapStory_Item) Story_Item_E_FuBox - Change Talisman of Foreseer in starting experiences
+
+## How to Contribute
+
+Any Issues/Pull Requests are welcome. To ensure a similar level of quality between all parts of the mod, here's a few guidelines.
+
+When changing vanilla aspects, keep in line with the original naming logic.
+* If the original was MapStory_Item.xml, the PR should use the same filename with MapStory_Item.xml.
+
+If the fixes exist as a standalone mod, include a link to it.
+
+## Credits/Contributions
+
+* ucddj - Trimerous Essence Price, FuBox change
