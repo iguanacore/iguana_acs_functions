@@ -1,0 +1,17 @@
+<Stories><List>	
+	<Story Name="Story_Item_E_FuBox" Parent="BaseFillingStory">
+		<DisplayName>太一宝匣</DisplayName>
+		<Desc>在灭门之夜，你发现云箓房禁法被破，你不忍派中至宝尽数被洗劫，于是拼死闯入其中，将几张珍贵的符箓装入匣中带走。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>打开</Display>
+				<OKResult>
+				<![CDATA[	
+				me:AddMsg(XT("[NAME]开了太一宝匣，取出其中的物件。"));me:DropSpell(1, "Spell_RecoveryPower", 0.95);me:DropSpell(1, "Spell_GlobalEfficiency", 0.95);me:DropSpell(1, "Spell_VisionRadius", 0.96);me:DropSpell(1, "Spell_MoveSpeed2", 0.95);story:RemoveBindItem();
+				]]>		
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+</List></Stories>

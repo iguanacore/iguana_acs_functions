@@ -1,0 +1,9 @@
+<Texts Type="Story">
+	<List>
+		<Text Name="Story_Item_E_FuBox">
+			<DisplayName>Polaris Chest</DisplayName>
+			<Desc>On the night of the attack, the talisman room was breached. You couldn't bear to see such rarities get looted, and so you risked your life to save a few.</Desc>
+			<Selections.0.Display>Open</Selections.0.Display>
+		</Text>
+	</List>
+</Texts>

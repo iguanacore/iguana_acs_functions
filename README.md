@@ -4,6 +4,7 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 ## Currently implemented fixes
 
 * Fix Trimerous Essence Price - The Trimerous Essence Pill has a buy price and item quantity equal to equivalent items (SR pool).
+* Change Talisman of Foreseer from "Advanced Talismans" and "Luck with Talisman Room" to 96% quality, so it actually has an adventure exploration effect
 
 ## Install instructions
 
@@ -36,3 +37,7 @@ For example, removing the Trimerous Essence Price change requires the removal of
 ### Items
 
 * Item_Dan_SanHuaHuangJing - Fix Trimerous Essence Price
+
+### MapStories
+
+* (MapStory_Item) Story_Item_E_FuBox - Change Talisman of Foreseer in starting experiences
