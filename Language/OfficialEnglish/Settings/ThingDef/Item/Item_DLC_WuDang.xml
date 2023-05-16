@@ -1,0 +1,8 @@
+<Texts Type="Thing">
+	<List>
+		<Text Name="Item_Dan_SanHuaHuangJing" sParam="Item">
+			<ThingName>Trimerous Essence Pill</ThingName>
+			<Desc>A secret elixir of the Wudang Mountains. Take to increase Max Qi by a fixed amount. Though it's not very useful to experienced cultivators, it's recommended to help lay foundations for new disciples. But its effect will be significantly decreased if taken multiple times.</Desc>
+		</Text>
+	</List>
+</Texts>
