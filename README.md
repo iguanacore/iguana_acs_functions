@@ -5,6 +5,7 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 
 * Fix Trimerous Essence Price - The Trimerous Essence Pill has a buy price and item quantity equal to equivalent items (SR pool).
 * Change Talisman of Foreseer from "Advanced Talismans" and "Luck with Talisman Room" to 96% quality, so it actually has an adventure exploration effect
+* The golden core tier 3 has a 90% chance for breakthrough at PS instead of the current 10%, more in line with the effect at T2 (100%) and T4 (25%) and its effect on breakthroughs at golden core (150% like T2).
 
 ## Install instructions
 
@@ -42,6 +43,10 @@ For example, removing the Trimerous Essence Price change requires the removal of
 
 * (MapStory_Item) Story_Item_E_FuBox - Change Talisman of Foreseer in starting experiences
 
+### Other files
+
+* Scripts\main.lua - main LUA mod loading utility
+* Scripes\fix-gc-tier3-breakthrough-multiplier.lua - GC T3 breakthrough multiplier fix
 ## How to Contribute
 
 Any Issues/Pull Requests are welcome. To ensure a similar level of quality between all parts of the mod, here's a few guidelines.
