@@ -23,9 +23,9 @@ The full list of changed entities can be seen at the bottom. This mod does not g
 ### Suggested Load Order
 
 * ModLoaderLite
-* **iguana_acs_fix**
-* **iguana_acs_functions**
-* **iguana_acs_features**
+* **[iguana_acs_fix](https://github.com/iguanacore/iguana_acs_fix)**
+* **[iguana_acs_functions](https://github.com/iguanacore/iguana_acs_functions)**
+* **[iguana_acs_features](https://github.com/iguanacore/iguana_acs_features)**
 * Anything else
 * Alternative Translations
 
