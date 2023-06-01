@@ -1,0 +1,45 @@
+<ThingDefs><List>
+    <ThingDef Type="Item" Name="Item_StoneBox2" Parent="MaterialBase">
+		<ThingName>古旧石匣</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+		<Desc>深埋在山岩中的一方石匣，看上去有些年代了，不知道里面有什么东西。</Desc>	
+		<Beauty>1</Beauty>	
+		<Rate>9</Rate>
+		<ElementKind>None</ElementKind>
+		
+		<IllustratedHandLabel>WOther</IllustratedHandLabel>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+		<Item Lable="Other">
+			<NotRandom>1</NotRandom>
+			<FabaoSuffix>匣</FabaoSuffix>			
+		</Item>
+		<StoryBnts>
+			<li Name="打开" Desc="试着打开这个匣子" Appoint="0" Story="Story_Item_StoneBox2" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+	</ThingDef>
+
+	<ThingDef Type="Item" Name="Item_SpringBox" Parent="MaterialBase">
+		<ThingName>年货</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>res\Sprs\object\object_XIAObaoxiang01</TexPath>
+		<Desc>来自异界的神秘礼物，被异界之人称之为年货！</Desc>
+		<Beauty>1</Beauty>	
+		<Rate>9</Rate>
+		<ElementKind>None</ElementKind>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+		
+		<IllustratedHandLabel>WOther</IllustratedHandLabel>
+		<Item Lable="Other">	
+			<NotRandom>1</NotRandom>
+			<FabaoSuffix>匣</FabaoSuffix>			
+		</Item>
+		<StoryBnts>
+			<li Name="打开" Desc="试着打开这个匣子" Appoint="0" Story="Story_Item_SpringBox" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+	</ThingDef>
+</List></ThingDefs>

@@ -1,0 +1,18 @@
+<Texts Type="Thing">
+	<List>
+    	<Text Name="Item_StoneBox2" sParam="Item">
+			<ThingName>Ancient Casket</ThingName>
+			<Desc>A stone casket buried deep beneath mountain rocks, appears to be quite dated. It is unknown what it contains.</Desc>
+			<Item.FabaoSuffix>Box</Item.FabaoSuffix>
+			<StoryBnts.0.Name>Open</StoryBnts.0.Name>
+			<StoryBnts.0.Desc>Try to open this casket</StoryBnts.0.Desc>
+		</Text>
+        <Text Name="Item_SpringBox" sParam="Item">
+			<ThingName>Festive Goods</ThingName>
+			<Desc>Mysterious gift from Otherworld, it is referred to as "festive goods" by people living in there.</Desc>
+			<Item.FabaoSuffix>Box</Item.FabaoSuffix>
+			<StoryBnts.0.Name>Open</StoryBnts.0.Name>
+			<StoryBnts.0.Desc>Try to open this casket</StoryBnts.0.Desc>
+		</Text>
+    </List>
+</Texts>

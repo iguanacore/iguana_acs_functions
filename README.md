@@ -7,6 +7,8 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * Change Talisman of Foreseer from "Advanced Talismans" and "Luck with Talisman Room" to 96% quality, so it actually has an adventure exploration effect
 * The golden core tier 3 has a 90% chance for breakthrough at PS instead of the current 10%, more in line with the effect at T2 (100%) and T4 (25%) and its effect on breakthroughs at golden core (150% like T2).
 * Skill Level Everywhere - Displays Skill Level instead of Ability Rating ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/20/))
+* Story Button Interaction Change - Changes the interaction with Ancient Caskets and Festive Goods, making it select an opener randomly.
+
 ## Install instructions
 
 Download the latest release, extract the iguana_acs_functions into the Mods folder. If the release is behind the Main version and you want to update to the preview version, download the repository directly, and extract the contents of the archive into the iguana_acs_functions folder, located in the Mods folder.
@@ -38,6 +40,7 @@ For example, removing the Trimerous Essence Price change requires the removal of
 ### Items
 
 * Item_Dan_SanHuaHuangJing - Fix Trimerous Essence Price
+* Item_StoneBox2 and Item_SpringBox - Ancient Caskets and Festive Goods, related to Story Button Interaction Change
 
 ### MapStories
 
