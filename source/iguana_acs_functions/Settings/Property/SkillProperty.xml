@@ -1,0 +1,151 @@
+<Properties><List>
+    <Property Name="MaxSkillAbility_Fight">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="Fight" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+	</Property>
+	
+	<Property Name="MaxSkillAbility_Qi">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="Qi" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+	</Property>
+	
+	<Property Name="MaxSkillAbility_SocialContact">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="SocialContact" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+	</Property>
+	
+	<Property Name="MaxSkillAbility_Medicine">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="Medicine" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+	</Property>
+	
+	<Property Name="MaxSkillAbility_Cooking">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="Cooking" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+	</Property>
+	
+	<Property Name="MaxSkillAbility_Building">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="Building" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+	</Property>
+	
+	<Property Name="MaxSkillAbility_Farming">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="Farming" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+	</Property>
+	
+	<Property Name="MaxSkillAbility_Mining">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="Mining" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+	</Property>
+	
+	<Property Name="MaxSkillAbility_Art">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="Art" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+	</Property>
+	
+	<Property Name="MaxSkillAbility_Manual">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="Manual" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+	</Property>	
+
+    	<Property Name="MaxSkillAbility_Fabao">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="Fabao" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+
+	</Property>
+	
+	<Property Name="MaxSkillAbility_FightSkill">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="FightSkill" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+		
+	</Property>
+	
+	<Property Name="MaxSkillAbility_Barrier">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="Barrier" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+
+	</Property>
+	
+	<Property Name="MaxSkillAbility_DouFa">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="DouFa" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+
+	</Property>
+	
+	<Property Name="MaxSkillAbility_DanQi">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="DanQi" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+
+	</Property>
+	
+	<Property Name="MaxSkillAbility_Zhen">
+		<BaseValue>1</BaseValue>
+		<LuckWeight>0</LuckWeight>
+
+		<Skills>
+			<li Name="Zhen" Weight="1" Base="0" Addion="1"/>
+		</Skills>
+
+	</Property>
+</List></Properties>
