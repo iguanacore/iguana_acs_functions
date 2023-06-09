@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using XiaWorld;
 using HarmonyLib;
 using XiaWorld.UI.InGame;
@@ -7,12 +6,12 @@ using UnityEngine;
 
 namespace iguana_acs_functions
 {
-    public class UIChanges
+    public class SkillLevelEverywhere
     {
         [HarmonyPatch(typeof(Panel_NpcInfoPanel), "UpdateSkill")]
-        private class NPCInfoPanelUpdateBars
+        public class NPCInfoPanelUpdateBars
         {
-            private static void Postfix(ref UI_panel_NpcInfo ___Panel, ref Npc ___npc, ref g_emNpcSkillType[] ___skills, g_emNpcSkillType[] ___Dskills, g_emNpcSkillType[] ___DBodyskills)
+            public static void Postfix(ref UI_panel_NpcInfo ___Panel, ref Npc ___npc, ref g_emNpcSkillType[] ___skills, g_emNpcSkillType[] ___Dskills, g_emNpcSkillType[] ___DBodyskills)
             {
                 g_emNpcSkillType[] array = ((!___npc.IsDisciple) ? ___skills : ((___npc.GongKind != g_emGongKind.Body) ? ___Dskills : ___DBodyskills));
                 for (int i = 0; i < ___Panel.m_n98.numItems; i++)
@@ -33,9 +32,9 @@ namespace iguana_acs_functions
         }
 
         [HarmonyPatch(typeof(Panel_NpcPropertyPanel), "UpdateSkill")]
-        private class NPCPropertyPanelUpdateBars
+        public class NPCPropertyPanelUpdateBars
         {
-            private static void Postfix(ref UI_NpcPropertyPanel ___Panel, ref Npc ___npc, ref g_emNpcSkillType[] ___skills, ref List<g_emNpcSkillType> ___WorkNotHave)
+            public static void Postfix(ref UI_NpcPropertyPanel ___Panel, ref Npc ___npc, ref g_emNpcSkillType[] ___skills, ref List<g_emNpcSkillType> ___WorkNotHave)
             {
                 for (int i = 0; i < ___skills.Length; i++)
                 {
