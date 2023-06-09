@@ -46,11 +46,15 @@ For example, removing the Trimerous Essence Price change requires the removal of
 
 * (MapStory_Item) Story_Item_E_FuBox - Change Talisman of Foreseer in starting experiences
 
+### Properties
+
+* SkillProperty - Sort Manuals By Attainment
+
 ### Other files
 
 * Scripts\main.lua - main LUA mod loading utility
 * Scripts\fix-gc-tier3-breakthrough-multiplier.lua - GC T3 breakthrough multiplier fix
-* iguana_acs_functions.dll - Skill Level Everywhere
+* iguana_acs_functions.dll - Skill Level Everywhere, Sort Manuals By Attainment
 
 ## How to Contribute
 
