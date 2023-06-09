@@ -8,7 +8,7 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * The golden core tier 3 has a 90% chance for breakthrough at PS instead of the current 10%, more in line with the effect at T2 (100%) and T4 (25%) and its effect on breakthroughs at golden core (150% like T2).
 * Skill Level Everywhere - Displays Skill Level instead of Ability Rating ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/20/))
 * Story Button Interaction Change - Changes the interaction with Ancient Caskets and Festive Goods, making it select an opener randomly.
-
+* Sort Manuals by Attainment - Sorts the manuals by ascending attainment in the Manual Library. Also displays a small element icon next to manuals. Takes into account the element of the cultivator if any ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/21/))
 ## Install instructions
 
 Download the latest release, extract the iguana_acs_functions into the Mods folder. If the release is behind the Main version and you want to update to the preview version, download the repository directly, and extract the contents of the archive into the iguana_acs_functions folder, located in the Mods folder.
@@ -46,11 +46,15 @@ For example, removing the Trimerous Essence Price change requires the removal of
 
 * (MapStory_Item) Story_Item_E_FuBox - Change Talisman of Foreseer in starting experiences
 
+### Properties
+
+* SkillProperty - Sort Manuals By Attainment
+
 ### Other files
 
 * Scripts\main.lua - main LUA mod loading utility
 * Scripts\fix-gc-tier3-breakthrough-multiplier.lua - GC T3 breakthrough multiplier fix
-* iguana_acs_functions.dll - Skill Level Everywhere
+* iguana_acs_functions.dll - Skill Level Everywhere, Sort Manuals By Attainment
 
 ## How to Contribute
 
@@ -63,4 +67,4 @@ If the fixes exist as a standalone mod, include a link to it.
 
 ## Credits/Contributions
 
-* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere
+* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment
