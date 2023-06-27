@@ -9,6 +9,8 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * Skill Level Everywhere - Displays Skill Level instead of Ability Rating ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/20/))
 * Story Button Interaction Change - Changes the interaction with Ancient Caskets and Festive Goods, making it select an opener randomly.
 * Sort Manuals by Attainment - Sorts the manuals by ascending attainment in the Manual Library. Also displays a small element icon next to manuals. Takes into account the element of the cultivator if any ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/21/))
+* Sync Perfect Alignment moodlet - the perfect alignment moodlet is changed to trigger at the same element strength (1.85) as optimal cultivation speed and golden core
+
 ## Install instructions
 
 Download the latest release, extract the iguana_acs_functions into the Mods folder. If the release is behind the Main version and you want to update to the preview version, download the repository directly, and extract the contents of the archive into the iguana_acs_functions folder, located in the Mods folder.
@@ -54,6 +56,7 @@ For example, removing the Trimerous Essence Price change requires the removal of
 
 * Scripts\main.lua - main LUA mod loading utility
 * Scripts\fix-gc-tier3-breakthrough-multiplier.lua - GC T3 breakthrough multiplier fix
+* Scripts\sync-perfect-alignment-moodlet.lua - Sync Perfect Alignment moodlet
 * iguana_acs_functions.dll - Skill Level Everywhere, Sort Manuals By Attainment
 
 ## How to Contribute
@@ -67,4 +70,4 @@ If the fixes exist as a standalone mod, include a link to it.
 
 ## Credits/Contributions
 
-* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment
+* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet
