@@ -1,0 +1,2 @@
+Key	Value
+有约{0}位流民加入了{1}。	About {0} refugees joined {1}.

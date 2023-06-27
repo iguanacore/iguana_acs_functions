@@ -10,7 +10,8 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * Story Button Interaction Change - Changes the interaction with Ancient Caskets and Festive Goods, making it select an opener randomly.
 * Sort Manuals by Attainment - Sorts the manuals by ascending attainment in the Manual Library. Also displays a small element icon next to manuals. Takes into account the element of the cultivator if any ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/21/))
 * Sync Perfect Alignment moodlet - the perfect alignment moodlet is changed to trigger at the same element strength (1.85) as optimal cultivation speed and golden core
-* Heavenly Reforge Limit increased - Increases the Heavenly Reforge Cap from 36 (Vanilla) to 2048. 
+* Heavenly Reforge Limit increased - Increases the Heavenly Reforge Cap from 36 (Vanilla) to 2048. ([Standalone mod](https://mega.nz/file/O10BVYwR#N09NIqmaX3KZ_M72BKY-XJ6wlhlhTjH4DEvsj5qtElI))
+* Agency Population Limit increased - Increases the Agency Population limit from 400 000 (Vanilla) to 999 999. ([Standalone mod](https://mega.nz/file/vwNA3RzY#ft7q0U-nhHHuCv7QHXRuJ1z0BCtpWrY6SFRkQlo-5Y8))
 
 ## Install instructions
 
@@ -56,12 +57,14 @@ For example, removing the Trimerous Essence Price change requires the removal of
 ### Functions
 
 * FabaoData.AddGodCount, FabaoData.LoadInit - Heavenly Reforge Limit increased, Transpiler changing ldc.i4.s 36 to ldc.i4 2048
+* OutspreadMgr.Region.AddPopulation, OutspreadMgr.Region.RawAddPopulation - Agency Population Limit increased, Transpiler changing ldc.i4 400000 to ldc.i4 999999
 
 ### Other files
 
 * Scripts\main.lua - main LUA mod loading utility
 * Scripts\fix-gc-tier3-breakthrough-multiplier.lua - GC T3 breakthrough multiplier fix
 * Scripts\sync-perfect-alignment-moodlet.lua - Sync Perfect Alignment moodlet
+* Scripts\MapStory\MapStory.lua - Agency Population Limit increased, MapStoryHelper.SlightlyIncreaseAllPop and MapStoryHelper.IncreaseAllPop
 * iguana_acs_functions.dll - Skill Level Everywhere, Sort Manuals By Attainment
 
 ## How to Contribute

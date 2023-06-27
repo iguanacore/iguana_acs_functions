@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GodCountIncreaser.cs" />
+    <Compile Include="OutspreadPopIncreaser.cs" />
     <Compile Include="SkillLevelEverywhere.cs" />
     <Compile Include="SortManualsByAttainment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
