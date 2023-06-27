@@ -10,6 +10,7 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * Story Button Interaction Change - Changes the interaction with Ancient Caskets and Festive Goods, making it select an opener randomly.
 * Sort Manuals by Attainment - Sorts the manuals by ascending attainment in the Manual Library. Also displays a small element icon next to manuals. Takes into account the element of the cultivator if any ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/21/))
 * Sync Perfect Alignment moodlet - the perfect alignment moodlet is changed to trigger at the same element strength (1.85) as optimal cultivation speed and golden core
+* Heavenly Reforge Limit increased - Increases the Heavenly Reforge Cap from 36 (Vanilla) to 2048. 
 
 ## Install instructions
 
@@ -51,6 +52,10 @@ For example, removing the Trimerous Essence Price change requires the removal of
 ### Properties
 
 * SkillProperty - Sort Manuals By Attainment
+
+### Functions
+
+* FabaoData.AddGodCount, FabaoData.LoadInit - Heavenly Reforge Limit increased, Transpiler changing ldc.i4.s 36 to ldc.i4 2048
 
 ### Other files
 
