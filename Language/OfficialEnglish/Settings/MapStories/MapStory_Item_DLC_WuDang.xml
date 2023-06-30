@@ -1,0 +1,11 @@
+<Texts Type="Story">
+	<List>
+        <Text Name="Story_Item_ChunYangWuJiGong">
+			<DisplayName>Secret of enlightenment</DisplayName>
+			<Desc>Attempt to practice the methods listed.</Desc>
+			<Selections.0.Display>Positive Practice</Selections.0.Display>
+			<Selections.1.Display>Reverse Practice</Selections.1.Display>
+            <Selections.2.Display>Never mind</Selections.2.Display>
+		</Text>
+	</List>
+</Texts>

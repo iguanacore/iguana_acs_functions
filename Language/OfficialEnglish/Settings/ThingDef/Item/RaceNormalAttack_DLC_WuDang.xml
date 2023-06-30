@@ -1,0 +1,17 @@
+<Texts Type="Thing">
+	<List>
+		<Text Name="WuDangYa_NormalAttack" sParam="Item">
+			<ThingName>Wudang Duck Attack</ThingName> <!-- DeepL also suggests Wu-Tang Duck Attack, guess it's nothing to fuck with-->
+			<Item.Equip.AtkDamage.0.DescTags>Wuji Sword Style</Item.Equip.AtkDamage.0.DescTags>
+			<Item.Equip.AtkDamage.1.DescTags>Innate Shaoyang Sword Qi</Item.Equip.AtkDamage.1.DescTags>
+			<Item.Equip.AtkDamage.2.DescTags>Wuji Sword Style</Item.Equip.AtkDamage.2.DescTags>
+			<Item.Equip.AtkDamage.3.DescTags>Innate Shaoyang Sword Qi</Item.Equip.AtkDamage.3.DescTags>
+            <Item.Equip.AtkDamage.4.DescTags>Zi Yang Zheng Qi Fist</Item.Equip.AtkDamage.4.DescTags>
+            <Item.Equip.AtkDamage.5.DescTags>Tai Chi Fist</Item.Equip.AtkDamage.5.DescTags>
+            <Item.Equip.AtkDamage.6.DescTags>Xuankong Divine Whisk</Item.Equip.AtkDamage.6.DescTags>
+            <Item.Equip.AtkDamage.7.DescTags>Zi Yang Zheng Qi Fist</Item.Equip.AtkDamage.7.DescTags>
+            <Item.Equip.AtkDamage.8.DescTags>Tai Chi Fist</Item.Equip.AtkDamage.8.DescTags>
+            <Item.Equip.AtkDamage.9.DescTags>Zi Yang Zheng Qi Fist</Item.Equip.AtkDamage.9.DescTags>
+		</Text>
+	</List>
+</Texts>

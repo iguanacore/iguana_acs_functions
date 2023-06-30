@@ -1,0 +1,15 @@
+<Texts Type="Thing">
+	<List>
+		<Text Name="Item_WuHuangDan" sParam="Item">
+			<ThingName>Yolkless egg</ThingName>
+			<Desc>A delicacy of mysterious origin, very delicious and said to be a good gift for friends and relatives in some places. It can be taken to build a foundation directly and permanently increases constitution by 20%, but only for the first consumption.</Desc>
+		</Text>
+        <Text Name="Item_ChunYangWuJiGong" sParam="Item">
+			<ThingName>Pure Yang Infinite Power</ThingName>
+			<Desc>The secret of the Wudang school is not passed down, it is its highest internal energy technique, this secret has two refining methods: positive practice can fundementally improve the upper limit of Qi, reverse practice can reduce attainment, but it will cause injuries to the Dantian internal breath disorder. Practicioners can choose one to practive.</Desc>
+			<Item.FabaoSuffix>Book</Item.FabaoSuffix>			
+            <StoryBnts.0.Name>Inspect</StoryBnts.0.Name>
+			<StoryBnts.0.Desc>Select a method to practice.</StoryBnts.0.Desc>
+        </Text>
+    </List>
+</Texts>
