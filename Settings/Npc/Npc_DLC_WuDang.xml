@@ -1,0 +1,34 @@
+<JianghuNpcDefs><List>
+	<Def Name="Npc_WuDang_1" School="13">
+		<LastName>武当</LastName>
+		<FristName>鸭</FristName>
+		<Race>WuDang_WuDiYa</Race>
+		<Sex>Male</Sex>
+		<Feature>Tenacity</Feature>
+		<GongLevel>None</GongLevel>
+		<Fame>3</Fame>
+		<Titles>无敌</Titles>
+		<CNOnly>0</CNOnly>
+		<LikeItems>
+			<li>Item_FunPainting</li>
+			<li>Item_FunPoem</li>
+			<li>Item_FunMusic</li>
+			<li>Item_FunChess</li>
+		</LikeItems>
+		<HateItems>
+			<li>Item_HorribleMeal</li>
+		</HateItems>
+		<Carry>
+			<li>
+				<ThingDef>Item_WuHuangDan</ThingDef>
+				<Count>9</Count>
+			</li>
+			<li>
+				<ThingDef>Item_ChunYangWuJiGong</ThingDef>
+			</li>
+		</Carry>
+		<Hobby>
+			<li>10001</li>
+		</Hobby>
+	</Def>
+</List></JianghuNpcDefs>

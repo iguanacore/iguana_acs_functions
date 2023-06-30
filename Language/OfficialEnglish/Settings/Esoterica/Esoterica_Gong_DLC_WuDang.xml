@@ -1,0 +1,14 @@
+<Texts Type="Other">
+	<List>
+        <Text Name="Gong13_Esoterica_30">
+			<DisplayName>Pure Yang Infinite Power - Positive</DisplayName>
+			<Desc>Positive practice of Pure Yang Infinite Power can fundementally increase the maximum Qi value of a cultivator.</Desc>
+			<EffectDesc>[size=10][color=#D06508]Increases Max Qi[/color][/size]</EffectDesc>
+		</Text>
+        <Text Name="Gong13_Esoterica_31">
+			<DisplayName>Pure Yang Infinite Power - Reverse</DisplayName>
+			<Desc>Reverse practice of Pure Yang Infinite Power can reduce attainment, but it will cause injuries to the Dantian internal breath disorder</Desc>
+			<EffectDesc>[size=10][color=#D06508]Reduces attainment\nCauses injuries to the Dantian[/color][/size]</EffectDesc>
+		</Text>
+	</List>
+</Texts>

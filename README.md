@@ -13,6 +13,7 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * Heavenly Reforge Limit increased - Increases the Heavenly Reforge Cap from 36 (Vanilla) to 2048. ([Standalone mod](https://mega.nz/file/O10BVYwR#N09NIqmaX3KZ_M72BKY-XJ6wlhlhTjH4DEvsj5qtElI))
 * Agency Population Limit increased - Increases the Agency Population limit from 400 000 (Vanilla) to 999 999. ([Standalone mod](https://mega.nz/file/vwNA3RzY#ft7q0U-nhHHuCv7QHXRuJ1z0BCtpWrY6SFRkQlo-5Y8))
 * Farmable Strange Mushroom - Adds Strange Mushroom as a rare drop to the Mushroom plant, with similar rates to Red Ginseng.
+* Wudang DLC Translation" - Translates the Duck and related untranslated content added with the Wudang DLC
 
 ## Install instructions
 
@@ -50,6 +51,10 @@ For example, removing the Trimerous Essence Price change requires the removal of
 ### Plants
 
 * Mushroom - Farmable Strange Mushroom
+
+### JianghuNpc
+
+* Npc_WuDang_1 - Wudang DLC Translation
 
 ### MapStories
 

@@ -1,0 +1,16 @@
+<Texts Type="Other">
+	<List>
+		<Text Name="LsXuanWu">
+			<DisplayName>Miao</DisplayName>
+			<Desc>Black Tortoise Miao is a fantastic spiritual animal naturally occurring between heaven and earth. It is the manifestation of some rules of nature.</Desc>
+			<TalkBefore>Crackle...</TalkBefore>
+			<TalkAfter>...Crackle!</TalkAfter>
+		</Text>
+        <Text Name="WuDang_WuDiYa">
+			<DisplayName>Wudang Duck</DisplayName>
+			<Desc>Fantastic ducks from Wudang Mountain!</Desc>
+			<TalkBefore>Quack...</TalkBefore>
+			<TalkAfter>...Quack!</TalkAfter>
+		</Text>
+	</List>
+</Texts>

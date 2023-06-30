@@ -1,0 +1,18 @@
+Tag	TargetType	Q	MA	SA	FA	fParam	sParam	BanNpc	UnlockNpc
+类型标签	0是目标不论仙凡1是目标为凡人2是目标为仙人3是目标为仙人且我比其境界高4是目标为仙人且我比其境界低4是目标为仙人且我与其境界一样	Report Bug	无成功失败/中性回答	Success!	Fail	数值参数(SECRET为事件ID)	文本参数		
+									
+Chat_Place_WuDang_JinDing	0	Is there some special fishes here?	It is said there is a kind of crab in clouds and they only appear in summer.						
+Chat_Place_WuDang_NanYanGong	0	Is there some special fishes here?	It is said there is a kind of crab in clouds and they only appear in summer.						
+Chat_Place_WuDang_ZiXiaoGong	0	Is there some special fishes here?	It is said there is a kind of crab in clouds and they only appear in summer.						
+Chat_Place_WuDang_Taizipo	0	Is there some special fishes here?	It is said there is a kind of crab in clouds and they only appear in summer.						
+Chat_Place_WuDang_JinDing	0	Is there some special fishes here?	It is said there is a kind of crab in clouds and they only eat metal element items.						
+Chat_Place_WuDang_NanYanGong	0	Is there some special fishes here?	It is said there is a kind of crab in clouds and they only eat metal element items.						
+Chat_Place_WuDang_ZiXiaoGong	0	Is there some special fishes here?	It is said there is a kind of crab in clouds and they only eat metal element items.						
+Chat_Place_WuDang_Taizipo	0	Is there some special fishes here?	It is said there is a kind of crab in clouds and they only eat metal element items.						
+Chat_Place_WuDang_JinDing	0	Is there some special fishes here?	Please pay attention to the cloubs nearby and you can find some black fishes. But they do not show their faces during daytime.						
+Chat_Place_WuDang_NanYanGong	0	Is there some special fishes here?	Please pay attention to the cloubs nearby and you can find some black fishes. But they do not show their faces during daytime.						
+Chat_Place_WuDang_ZiXiaoGong	0	Is there some special fishes here?	Please pay attention to the cloubs nearby and you can find some black fishes. But they do not show their faces during daytime.						
+Chat_Place_WuDang_Taizipo	0	Is there some special fishes here?	Please pay attention to the cloubs nearby and you can find some black fishes. But they do not show their faces during daytime.						
+Chat_Npc_Npc_WuDang_1	0	Taoist……	This friend, you and I have a destiny! You and I should become good friends, and invite each other to be fellow travellers…...						
+Chat_Npc_Npc_WuDang_1	0	How Have you been?	Quack, Wudang invincible duck!						
+Chat_Npc_Npc_WuDang_1	0	How is the creation of the Taoist friends?	Well, the creation of the world is not an easy thing, there are still some days to go, do not rush.						

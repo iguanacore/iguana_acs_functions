@@ -1,2 +1,9 @@
 Key	Value
 有约{0}位流民加入了{1}。	About {0} refugees joined {1}.
+[NAME]尝试正练这本秘籍。	[NAME] tried to practice the positive method.
+[NAME]已经逆练了秘籍，无法正练了。	[NAME] has already practiced the reverse method, they can no longer learn the positive method.
+[NAME]已经学会了正练之法。	[NAME] has learned the positive practice method.
+[NAME]尝试逆练这本秘籍。	[NAME] tried to practice the reverse method.
+[NAME]已经正练了秘籍，无法逆练了。	[NAME] has already practiced the positive method, they can no longer learn the reverse method.
+[NAME]已经学会了逆练之法。	[NAME] has learned the reverse practice method.
+[NAME]想了想，还是决定不参悟这本秘籍了。	[NAME] thought about it, and decided not to study either of the methods.
