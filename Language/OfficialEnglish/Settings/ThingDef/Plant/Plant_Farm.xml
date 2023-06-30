@@ -1,0 +1,8 @@
+<Texts Type="Thing">
+	<List>
+		<Text Name="Mushroom" sParam="Plant">
+			<ThingName>Mushroom</ThingName>
+			<Desc>Common mushroom. Often grows in an environment of [temperature]18[/temperature]-[temperature]23[/temperature], and can only grow in the dark.\nHas a chance of spawning Strange Mushrooms.</Desc>
+		</Text>
+	</List>
+</Texts>

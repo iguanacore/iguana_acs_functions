@@ -1,0 +1,49 @@
+<ThingDefs><List>
+<ThingDef Type="Plant" Name="Mushroom" Parent="FarmBase">
+	<ThingName>香菇</ThingName>
+	<MaxStack>1</MaxStack>
+	<TexPath>res\Sprs\scene_TemperateForest_plant\scene_mogu001</TexPath>
+	<Desc>常见的菌类食物，通常生长在[temperature]18[/temperature]-[temperature]23[/temperature]的环境中，只能在阴暗的环境中生长。</Desc>
+	<Plant>	
+		<WindEffect>0</WindEffect>
+		
+		<RipedTexPath></RipedTexPath>
+		<HarvestedTexPath></HarvestedTexPath>
+		<LeaflessTexPath></LeaflessTexPath>   
+		<SnowedTexPath></SnowedTexPath>
+		<VisualSizeMin>0.6</VisualSizeMin>
+		<VisualSizeMax>2</VisualSizeMax>
+		
+		<RestBegin>0</RestBegin>
+		<RestEnd>0</RestEnd>
+		<SowWork>75</SowWork>
+		<SowPlaceKind>Ground</SowPlaceKind>
+		<SowPlaceTag>WetLand</SowPlaceTag>  <!--地板，蘑菇床的设定 -->
+		<SowRenderTags>Plant</SowRenderTags>
+		
+		<GrowDays>5</GrowDays>
+		<HarvestDays>2</HarvestDays>
+		
+		
+		<TempMin>18</TempMin>
+		<TempMax>23</TempMax>
+		<FertilityMin>1</FertilityMin>
+		<FertilityMax>2</FertilityMax>
+		<GrowGlowMin>0</GrowGlowMin>
+		<GrowGlowMax>40</GrowGlowMax>	
+	</Plant>
+	<Harvest>
+		<HarvestItems>
+			<li>
+				<ThingDef>Item_Mushroom</ThingDef>
+				<Count>2</Count>
+			</li>
+            <li>
+				<ThingDef>Item_StrangeMush</ThingDef>
+				<Count>1</Count>
+				<Rate>0.04</Rate>
+			</li>
+		</HarvestItems>
+	</Harvest>
+</ThingDef>
+</List></ThingDefs>
