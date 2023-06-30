@@ -12,6 +12,7 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * Sync Perfect Alignment moodlet - the perfect alignment moodlet is changed to trigger at the same element strength (1.85) as optimal cultivation speed and golden core
 * Heavenly Reforge Limit increased - Increases the Heavenly Reforge Cap from 36 (Vanilla) to 2048. ([Standalone mod](https://mega.nz/file/O10BVYwR#N09NIqmaX3KZ_M72BKY-XJ6wlhlhTjH4DEvsj5qtElI))
 * Agency Population Limit increased - Increases the Agency Population limit from 400 000 (Vanilla) to 999 999. ([Standalone mod](https://mega.nz/file/vwNA3RzY#ft7q0U-nhHHuCv7QHXRuJ1z0BCtpWrY6SFRkQlo-5Y8))
+* Farmable Strange Mushroom - Adds Strange Mushroom as a rare drop to the Mushroom plant, with similar rates to Red Ginseng.
 
 ## Install instructions
 
@@ -45,6 +46,10 @@ For example, removing the Trimerous Essence Price change requires the removal of
 
 * Item_Dan_SanHuaHuangJing - Fix Trimerous Essence Price
 * Item_StoneBox2 and Item_SpringBox - Ancient Caskets and Festive Goods, related to Story Button Interaction Change
+
+### Plants
+
+* Mushroom - Farmable Strange Mushroom
 
 ### MapStories
 
