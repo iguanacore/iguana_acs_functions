@@ -14,7 +14,7 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * Agency Population Limit increased - Increases the Agency Population limit from 400 000 (Vanilla) to 999 999. ([Standalone mod](https://mega.nz/file/vwNA3RzY#ft7q0U-nhHHuCv7QHXRuJ1z0BCtpWrY6SFRkQlo-5Y8))
 * Farmable Strange Mushroom - Adds Strange Mushroom as a rare drop to the Mushroom plant, with similar rates to Red Ginseng.
 * Wudang DLC Translation" - Translates the Duck and related untranslated content added with the Wudang DLC
-
+* Fix Camping Head UI - Various improvements to the Head UI when camping ([Standalone Mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/22/))
 ## Install instructions
 
 Download the latest release, extract the iguana_acs_functions into the Mods folder. If the release is behind the Main version and you want to update to the preview version, download the repository directly, and extract the contents of the archive into the iguana_acs_functions folder, located in the Mods folder.
@@ -41,7 +41,7 @@ The full list of changed entities can be seen at the bottom. This mod does not g
 
 Below is a list of changed entities. To revert a particular change from the mod, either comment out the relevant lines and entities, or delete the files in question. Changed files in the Language\OfficialEnglish directory are related to translation and can be reverted by removing them.
 
-For example, removing the Trimerous Essence Price change requires the removal of iguana_acs_fix\Settings\ThingDef\Item\Item_DLC_WuDang.xml, as well as the corresponding file under Language\OfficialEnglish.
+For example, removing the Trimerous Essence Price change requires the removal of iguana_acs_functions\Settings\ThingDef\Item\Item_DLC_WuDang.xml, as well as the corresponding file under Language\OfficialEnglish.
 
 ### Items
 
@@ -75,7 +75,7 @@ For example, removing the Trimerous Essence Price change requires the removal of
 * Scripts\fix-gc-tier3-breakthrough-multiplier.lua - GC T3 breakthrough multiplier fix
 * Scripts\sync-perfect-alignment-moodlet.lua - Sync Perfect Alignment moodlet
 * Scripts\MapStory\MapStory.lua - Agency Population Limit increased, MapStoryHelper.SlightlyIncreaseAllPop and MapStoryHelper.IncreaseAllPop
-* iguana_acs_functions.dll - Skill Level Everywhere, Sort Manuals By Attainment
+* iguana_acs_functions.dll - Skill Level Everywhere, Sort Manuals By Attainment, Fix Camping Head UI
 
 ## How to Contribute
 
@@ -88,4 +88,4 @@ If the fixes exist as a standalone mod, include a link to it.
 
 ## Credits/Contributions
 
-* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet
+* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet, Fix Camping Head UI

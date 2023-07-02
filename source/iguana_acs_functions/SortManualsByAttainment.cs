@@ -9,6 +9,7 @@ namespace iguana_acs_functions
     public class SortManualsByAttainment
     {
         public static List<UI_FiveForceFlag> createdItems = new List<UI_FiveForceFlag>();
+        public static bool enabled = true;
 
         [HarmonyPatch(typeof(Wnd_CangJingGeWindow), "CheckEsoLise")]
         public class SortManuals
@@ -19,6 +20,7 @@ namespace iguana_acs_functions
                 {
                     createdItems[i].Dispose();
                 }
+                if (!SortManualsByAttainment.enabled) { return; }
                 createdItems.Clear();
                 if (___showesoshowlist.Count == 0) return;
                 Npc npc = ____npc;
@@ -48,6 +50,7 @@ namespace iguana_acs_functions
         {
             public static void Postfix(int index, GObject obj, ref List<string> ___showesoshowlist, ref Npc ____npc, ref int ____type)
             {
+                if (!SortManualsByAttainment.enabled) { return; }
                 UI_BookShelfEso uI_BookShelfEso = obj as UI_BookShelfEso;
                 string manualName = ___showesoshowlist[index];
                 EsotericaData sysEsoterica = EsotericaMgr.Instance.GetSysEsoterica(manualName);

@@ -6,13 +6,17 @@ using UnityEngine;
 
 namespace iguana_acs_functions
 {
-    public class SkillLevelEverywhere
+    public static class SkillLevelEverywhere
     {
+        public static bool enabled = true;
+
+
         [HarmonyPatch(typeof(Panel_NpcInfoPanel), "UpdateSkill")]
         public class NPCInfoPanelUpdateBars
         {
             public static void Postfix(ref UI_panel_NpcInfo ___Panel, ref Npc ___npc, ref g_emNpcSkillType[] ___skills, g_emNpcSkillType[] ___Dskills, g_emNpcSkillType[] ___DBodyskills)
             {
+                if (!SkillLevelEverywhere.enabled) { return; }
                 g_emNpcSkillType[] array = ((!___npc.IsDisciple) ? ___skills : ((___npc.GongKind != g_emGongKind.Body) ? ___Dskills : ___DBodyskills));
                 for (int i = 0; i < ___Panel.m_n98.numItems; i++)
                 {
@@ -36,6 +40,7 @@ namespace iguana_acs_functions
         {
             public static void Postfix(ref UI_NpcPropertyPanel ___Panel, ref Npc ___npc, ref g_emNpcSkillType[] ___skills, ref List<g_emNpcSkillType> ___WorkNotHave)
             {
+                if (!SkillLevelEverywhere.enabled) { return; }
                 for (int i = 0; i < ___skills.Length; i++)
                 {
                     g_emNpcSkillType g_emNpcSkillType = ___skills[i];
