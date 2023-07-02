@@ -63,7 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FixCampingHeadUI.cs" />
     <Compile Include="GodCountIncreaser.cs" />
+    <Compile Include="iguana_acs_functions.cs" />
     <Compile Include="OutspreadPopIncreaser.cs" />
     <Compile Include="SkillLevelEverywhere.cs" />
     <Compile Include="SortManualsByAttainment.cs" />
