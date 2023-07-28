@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using static FairyGUI.UIConfig;
 
 namespace iguana_acs_functions
 {
@@ -13,11 +14,16 @@ namespace iguana_acs_functions
     public class iguana_acs_functions
     {
         static Dictionary<string, bool> config = new Dictionary<string, bool>()
-                {
-                    { "SkillLevelEverywhere", SkillLevelEverywhere.enabled},
-                    { "SortManualsByAttainment", SortManualsByAttainment.enabled},
-                    { "FixCampingHeadUI", FixCampingHeadUI.enabled}
-                };
+            {
+                { "SkillLevelEverywhere", SkillLevelEverywhere.enabled},
+                { "SortManualsByAttainment", SortManualsByAttainment.enabled},
+                { "FixCampingHeadUI", FixCampingHeadUI.enabled},
+                { "AddSectRules", AddSectRules.enabled}
+            };
+        static Dictionary<string, List<Action>> loadSaveSubmods = new Dictionary<string, List<Action>>()
+        {
+            { "AddSectRules", new List<Action>(){AddSectRules.OnLoad, AddSectRules.OnSave } }
+        };
         public static void OnLoad()
         {
             Dictionary<string, bool> loadConfig = MLLMain.GetSaveOrDefault<Dictionary<string, bool>>("iguana_acs_functions_config");
@@ -32,6 +38,13 @@ namespace iguana_acs_functions
             if (!Configuration.ListItems.ContainsKey("iguana_acs_functions"))
             {
                 OnInit();
+            }
+            foreach(KeyValuePair<string, List<Action>> kvp in loadSaveSubmods)
+            {
+                if (!config.ContainsKey(kvp.Key) || config[kvp.Key])
+                {
+                    kvp.Value[0]();
+                }
             }
         }
         public static void OnInit()
@@ -50,6 +63,13 @@ namespace iguana_acs_functions
         public static void OnSave()
         {
             MLLMain.AddOrOverWriteSave("iguana_acs_functions_config", config);
+            foreach (KeyValuePair<string, List<Action>> kvp in loadSaveSubmods)
+            {
+                if (!config.ContainsKey(kvp.Key) || config[kvp.Key])
+                {
+                    kvp.Value[1]();
+                }
+            }
         }
 
         private static void HandleConfig()

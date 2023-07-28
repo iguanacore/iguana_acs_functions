@@ -1,0 +1,67 @@
+<Texts Type="Other">
+	<List>
+		<Text Name="City_Base">
+			<DisplayName>City</DisplayName>
+			<Desc>Action taken when aventuring into a city</Desc>
+			<Selection.0.DisplayName>Recruit</Selection.0.DisplayName>
+			<Selection.1.DisplayName>Kidnap Commoners</Selection.1.DisplayName>
+			<Selection.2.DisplayName>Preach</Selection.2.DisplayName>
+			<Selection.3.DisplayName>Acquire materials</Selection.3.DisplayName>
+			<Selection.4.DisplayName>Leave</Selection.4.DisplayName>
+		</Text>
+		<Text Name="Business_Base">
+			<DisplayName>Acquire Materials</DisplayName>
+			<Desc>The resources acquired when in a city.</Desc>
+			<Selection.0.DisplayName>Food</Selection.0.DisplayName>
+			<Selection.1.DisplayName>Marble</Selection.1.DisplayName>
+			<Selection.2.DisplayName>Wood</Selection.2.DisplayName>
+			<Selection.3.DisplayName>Iron</Selection.3.DisplayName>
+			<Selection.4.DisplayName>Cotton</Selection.4.DisplayName>
+		</Text>
+		<Text Name="Story_LingZhiGet">
+			<DisplayName>Wild Spirit Roots</DisplayName>
+			<Desc>Action taken when encountering a Wild Spirit Root</Desc>
+			<Selection.0.DisplayName>Wander around</Selection.0.DisplayName>
+			<Selection.0.Desc>Remember to disable it when harvesting spirit fruits!</Selection.0.Desc>
+		</Text>
+		<Text Name="Story_LingZhiBeg">
+			<DisplayName>Sect-owned Spirit Roots</DisplayName>
+			<Desc>Action taken when encountering a Sect-owned Spirit Root</Desc>
+			<Selection.0.DisplayName>Wander around</Selection.0.DisplayName>
+			<Selection.0.Desc>Remember to disable it when harvesting spirit fruits!</Selection.0.Desc>
+		</Text>
+		<Text Name="UnearthingArtifact">
+			<DisplayName>Unearthing Artifact</DisplayName>
+			<Desc>Action taken when unearthing a Treasure</Desc>
+			<Selection.0.DisplayName>Fight for it</Selection.0.DisplayName>
+		</Text>
+		<Text Name="ManifestingMiracle">
+			<DisplayName>Manifesting Miracle</DisplayName>
+			<Desc>Action taken when encountering miracles on newly-unearthed Stone Engravings of Dragon Cliff</Desc>
+			<Selection.0.DisplayName>Meditate</Selection.0.DisplayName>
+		</Text>
+		<Text Name="ManifestingMandate">
+			<DisplayName>Manifesting Mandate</DisplayName>
+			<Desc>Action taken when encountering a place containing Law teachings</Desc>
+			<Selection.0.DisplayName>Take it by force</Selection.0.DisplayName>
+			<Selection.1.DisplayName>Accept Teachings</Selection.1.DisplayName>
+		</Text>
+		<Text Name="ManifestingCave">
+			<DisplayName>Manifesting Cave</DisplayName>
+			<Desc>Action taken when exploring an Immortal's abode</Desc>
+			<Selection.0.DisplayName>Search for treasures</Selection.0.DisplayName>
+		</Text>
+		<Text Name="TracesOfAncientBook">
+			<DisplayName>Traces of Ancient Book</DisplayName>
+			<Desc>Action taken when investigating an Ancient Book</Desc>
+			<Selection.0.DisplayName>Divine the book's location</Selection.0.DisplayName>
+			<Selection.1.DisplayName>Search around</Selection.1.DisplayName>
+		</Text>
+		<Text Name="UnearthingManual">
+			<DisplayName>Unearthing Manual</DisplayName>
+			<Desc>Action taken when unearthing a Manual</Desc>
+			<Selection.0.DisplayName>Take it by force</Selection.0.DisplayName>
+			<Selection.1.DisplayName>Bide your time</Selection.1.DisplayName>
+		</Text>
+	</List>
+</Texts>

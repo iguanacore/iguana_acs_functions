@@ -1,0 +1,83 @@
+<SchoolRuleDefs><List>
+	<Def Name="City_Base">
+		<DisplayName>城市</DisplayName>
+		<Desc>[NAME]来到了[PLACE]，发现此地人烟稠密，贸易兴盛。</Desc>
+		<Selection>
+			<li Type="Recruit" DisplayName="寻觅弟子" Desc=""/>
+			<li Type="Kidnap" DisplayName="掳掠凡人" Desc=""/>
+			<li Type="Preach" DisplayName="助人行善" Desc=""/>
+            <li Type="Business" DisplayName="离去" Desc=""/>
+			<li Type="Bye" Default="1" DisplayName="无视" Desc=""/>
+		</Selection>
+	</Def>
+    <Def Name="Business_Base">
+		<DisplayName>采购物资</DisplayName>
+		<Desc>[NAME]发现此处货商业发达，物美价廉，便决定采购一批物资回山门。</Desc>
+		<Selection>
+			<li Type="Food" Default="1" DisplayName="采购食物" Desc=""/>
+			<li Type="Marble" DisplayName="采购大理石" Desc=""/>
+			<li Type="Wood" DisplayName="采购木料" Desc=""/>
+            <li Type="Iron" DisplayName="采购铁矿石" Desc=""/>
+			<li Type="Cotton" DisplayName="采购棉花" Desc=""/>
+		</Selection>
+	</Def>
+    <Def Name="Story_LingZhiGet">
+		<DisplayName>采购物资</DisplayName>
+		<Desc>[NAME]来到[PLACE]，想起有传闻说此处有天地灵根生长，略微查看，发现此处地气旺盛，确实不似凡俗之地。</Desc>
+		<Selection>
+			<li Type="Wander" Default="2" DisplayName="随便逛逛" Desc=""/>
+		</Selection>
+	</Def>
+	<Def Name="Story_LingZhiBeg">
+		<DisplayName>采购物资</DisplayName>
+		<Desc>[NAME]来到[PLACE]，想起此地乃是种植天地灵根之所。</Desc>
+		<Selection>
+			<li Type="Wander" Default="2" DisplayName="随便逛逛" Desc="Careful"/>
+		</Selection>
+	</Def>
+	<Def Name="UnearthingArtifact">
+		<DisplayName>宝物出土</DisplayName>
+		<Desc>[NAME]在[PLACE]发现宝物即将出土。</Desc>
+		<Selection>
+			<li Type="Take" Default="1" DisplayName="争夺" Desc=""/>
+		</Selection>
+	</Def>
+	<Def Name="ManifestingMiracle">
+		<DisplayName>神通现世</DisplayName>
+		<Desc>[NAME]来到[PLACE]，发现刚刚出土的龙崖石刻附近已经聚集了不少修行者。</Desc>
+		<Selection>
+			<li Type="Take" Default="1" DisplayName="静坐参悟" Desc=""/>
+		</Selection>
+	</Def>
+	<Def Name="ManifestingMandate">
+		<DisplayName>道统现世</DisplayName>
+		<Desc>[NAME]来到[PLACE]，发现此处竟然是《[LAW]》的道统传承，传承被一座前古仙阵围绕，似乎是古代仙人为挑选适合道统的传承者而设置的封印。阵法之中电光流转，似乎蕴含莫大的神通法力。</Desc>
+		<Selection>
+			<li Type="Take" DisplayName="强行夺取" Desc=""/>
+			<li Type="AcceptTeachings" Default="1" DisplayName="接受传承" Desc=""/>
+		</Selection>
+	</Def>
+	<Def Name="ManifestingCave">
+		<DisplayName>仙家洞府</DisplayName>
+		<Desc>[NAME]在[PLACE]发现一座上古仙人的洞府重新现世，其中收藏有不少珍贵的宝物。</Desc>
+		<Selection>
+			<li Type="Take" Default="1" DisplayName="入内寻宝" Desc=""/>
+		</Selection>
+	</Def>
+	<Def Name="TracesOfAncientBook">
+		<DisplayName>古书踪迹</DisplayName>
+		<Desc>[NAME]来到[PLACE]，发现已经有很多修行者来此寻觅古书踪迹。</Desc>
+		<Selection>
+			<li Type="Divine" DisplayName="演算天机" Desc=""/>
+			<li Type="Search" Default="1" DisplayName="四面搜索" Desc=""/>
+		</Selection>
+	</Def>
+	<Def Name="UnearthingManual">
+		<DisplayName>秘籍出土</DisplayName>
+		<Desc>[NAME]来到[PLACE]，发现众人已经为了争夺秘籍而大打出手。</Desc>
+		<Selection>
+			<li Type="Take" Default="1" DisplayName="力压群雄" Desc=""/>
+			<li Type="BideYourTime" Default="1" DisplayName="伺机夺取" Desc=""/>
+		</Selection>
+	</Def>
+</List></SchoolRuleDefs>

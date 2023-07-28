@@ -1,0 +1,304 @@
+<Stories><List>	
+	<Story Name="Story_LingZhiGet"  Parent="BaseFillingStory">
+		<DisplayName>历练于此</DisplayName>
+		<RuleKind>Story_LingZhiGet</RuleKind>
+		<Desc>[NAME]来到[PLACE]，想起有传闻说此处有天地灵根生长，略微查看，发现此处地气旺盛，确实不似凡俗之地。</Desc>
+		<Kind>Story_LingZhiGet</Kind>
+		<Selections>
+			<li>
+				<Display>寻觅灵根</Display> 
+				<DisplayCondition><![CDATA[	
+				(story.Place == "Place_FertileField5" and world:GetWorldFlag(56) == 0) or
+				(story.Place == "Place_SouthForest3" and world:GetWorldFlag(59) == 0) or
+				(story.Place == "Place_Snowfield2" and world:GetWorldFlag(62) == 0) or
+				(story.Place == "Place_Desert3" and world:GetWorldFlag(65) == 0) or
+				(story.Place == "Place_CentralPlains2" and world:GetWorldFlag(68) == 0)
+				]]>
+				</DisplayCondition>
+				<OKResult><![CDATA[
+					local nFlag = nil
+					local nStep = nil
+					if story.Place == "Place_FertileField5" then
+						nFlag = 56
+						if me:GetGElementKind() == 5 then
+							nStep = 1
+						elseif me:GetGElementKind() == 1 then
+							nStep = 2
+						else
+							nStep = 3
+						end
+					elseif story.Place == "Place_SouthForest3" then
+						nFlag = 59
+						if me:GetGElementKind() == 3 then
+							nStep = 1
+						elseif me:GetGElementKind() == 2 then
+							nStep = 2
+						else
+							nStep = 3
+						end
+					elseif story.Place == "Place_Snowfield2" then
+						nFlag = 62
+						if me:GetGElementKind() == 1 then
+							nStep = 1
+						elseif me:GetGElementKind() == 3 then
+							nStep = 2
+						else
+							nStep = 3
+						end
+					elseif story.Place == "Place_Desert3" then
+						nFlag = 65
+						if me:GetGElementKind() == 2 then
+							nStep = 1
+						elseif me:GetGElementKind() == 4 then
+							nStep = 2
+						else
+							nStep = 3
+						end
+					elseif story.Place == "Place_CentralPlains2" then
+						nFlag = 68
+						if me:GetGElementKind() == 4 then
+							nStep = 1
+						elseif me:GetGElementKind() == 5 then
+							nStep = 2
+						else
+							nStep = 3
+						end
+					end
+					if nStep == 1 then
+						if me:GetLuck() >= me:RandomInt(1, 10) then
+							me:AddMsg(XT("[NAME]来到此地便感觉到一种亲近的气息，一番寻觅，竟然真的找到了天地灵根的踪迹！"));world:SetWorldFlag(nFlag,1);me:TriggerStory("Story_LingZhiGet");
+						else
+							me:AddMsg(XT("[NAME]来到此地便感觉到一种亲近的气息，但似乎欠缺了一些机缘，最终一无所获，只能空手而归。"));
+						end
+					elseif nStep == 2 then
+						if me:GetLuck() >= me:RandomInt(1, 20) then
+							me:AddMsg(XT("[NAME]来到此地便感觉到一种同出一源的气息，一番寻觅，竟然真的找到了天地灵根的踪迹！"));world:SetWorldFlag(nFlag,1);me:TriggerStory("Story_LingZhiGet");
+						else
+							me:AddMsg(XT("[NAME]来到此地便感觉到一种同出一源的气息，但似乎欠缺了一些机缘，最终一无所获，只能空手而归。"));
+						end
+					elseif nStep == 3 then
+						me:AddMsg(XT("[NAME]凭着感觉一番寻觅，最终一无所获，只能空手而归。"));
+					end
+				]]></OKResult>
+			</li>
+			<li>
+				<Display>布置阵法</Display> 
+				<DisplayCondition><![CDATA[	
+				(story.Place == "Place_FertileField5" and world:GetWorldFlag(56) == 1 and world:GetWorldFlag(58) == 0) or
+				(story.Place == "Place_SouthForest3" and world:GetWorldFlag(59) == 1 and world:GetWorldFlag(61) == 0) or
+				(story.Place == "Place_Snowfield2" and world:GetWorldFlag(62) == 1 and world:GetWorldFlag(64) == 0) or
+				(story.Place == "Place_Desert3" and world:GetWorldFlag(65) == 1 and world:GetWorldFlag(67) == 0) or
+				(story.Place == "Place_CentralPlains2" and world:GetWorldFlag(68) == 1 and world:GetWorldFlag(70) == 0)
+				]]>
+				</DisplayCondition>
+				<OKResult><![CDATA[
+					local nFlag = nil
+					if story.Place == "Place_FertileField5" then
+						nFlag = 58
+					elseif story.Place == "Place_SouthForest3" then
+						nFlag = 61
+					elseif story.Place == "Place_Snowfield2" then
+						nFlag = 64
+					elseif story.Place == "Place_Desert3" then
+						nFlag = 67
+					elseif story.Place == "Place_CentralPlains2" then
+						nFlag = 70
+					end
+					if me:CheckItemEquptCount("Item_QingLianShan_SiXiang") == 1 then
+						me:AddMsg(XT("天地灵根无法移植，[NAME]为防止被他人所获，便想布置一道阵法隐藏其踪迹。"));me:AddMsg(XT("然而[NAME]尝试之下，却发现天地灵根上通天机，普通阵法完全无法遮蔽其气息。"));me:AddMsg(XT("[NAME]略一思索，便拿出自身携带的四象遮天图，借助大千世界四季运转之力成功隐藏了灵植的痕迹。"));world:SetWorldFlag(nFlag,1);me:TriggerStory("Story_LingZhiGet");
+					else
+						me:AddMsg(XT("天地灵根无法移植，[NAME]为防止被他人所获，便想布置一道阵法隐藏其踪迹。"));me:AddMsg(XT("然而[NAME]尝试之下，却发现天地灵根上通天机，普通阵法完全无法遮蔽其气息。看来需要以某种遮蔽天机的宝物为引，才能布置完成这一阵法。"));me:TriggerStory("Story_LingZhiGet");
+					end
+				]]></OKResult>
+			</li>
+			<li>
+				<Display>收获灵根</Display> 
+				<DisplayCondition><![CDATA[	
+				(story.Place == "Place_FertileField5" and world:GetWorldFlag(56) == 1) or
+				(story.Place == "Place_SouthForest3" and world:GetWorldFlag(59) == 1) or
+				(story.Place == "Place_Snowfield2" and world:GetWorldFlag(62) == 1) or
+				(story.Place == "Place_Desert3" and world:GetWorldFlag(65) == 1) or
+				(story.Place == "Place_CentralPlains2" and world:GetWorldFlag(68) == 1)
+				]]>
+				</DisplayCondition>
+				<OKResult><![CDATA[
+					local tbTable = GameMain:GetMod("MapStoryHelper");
+					local nFlagTime = nil
+					local nFlagCover = nil
+					local sItem = nil
+					local nRd = nil
+					local nGetNum = nil
+					local sZ = nil
+					if story.Place == "Place_FertileField5" then
+						nFlagTime = 57
+						nFlagCover = 58
+						sItem = "Item_JinEssence"
+						nRd = me:RandomInt(320,390)
+						nGetNum = me:RandomInt(2,6)
+						sZ = XT("这株位于卢山的金灵根-琅琊神木")
+					elseif story.Place == "Place_SouthForest3" then
+						nFlagTime = 60
+						nFlagCover = 61
+						sItem = "Item_MuEssence"
+						nRd = me:RandomInt(240,300)
+						nGetNum = me:RandomInt(1,5)
+						sZ = XT("这株位于虫谷的木灵根-木枯藤")
+					elseif story.Place == "Place_Snowfield2" then
+						nFlagTime = 63
+						nFlagCover = 64
+						sItem = "Item_ShuiEssence"
+						nRd = me:RandomInt(90,110)
+						nGetNum = 1
+						sZ = XT("这株位于玉晶潭的水灵根-五色金莲")
+					elseif story.Place == "Place_Desert3" then
+						nFlagTime = 66
+						nFlagCover = 67
+						sItem = "Item_HuoEssence"
+						nRd = me:RandomInt(80,100)
+						nGetNum = 1
+						sZ = XT("这株位于火穴的火灵根-朱果树")
+					elseif story.Place == "Place_CentralPlains2" then
+						nFlagTime = 69
+						nFlagCover = 70
+						sItem = "Item_TuEssence"
+						nRd = me:RandomInt(165,195)
+						nGetNum = me:RandomInt(1,3)
+						sZ = XT("这株位于炼丹峰的土灵根-赭黄精")
+					end
+					if world:GetWorldFlag(nFlagTime) == 0 then
+						me:AddMsg(XT("[NAME]小心翼翼的将天地灵根的果实采摘而下。"));me:DropAwardItem(sItem,nGetNum);world:SetWorldFlag(nFlagTime,world.DayCount + nRd);tbTable:LingYaoNote(sZ,me.npcObj:GetName(),1,nFlagTime);
+					elseif world:GetWorldFlag(nFlagTime) <= world.DayCount then
+						if world:GetWorldFlag(nFlagCover) == 1 then	
+							me:AddMsg(XT("[NAME]来到此处，进入阵法，发现天地灵根已然成熟。[NAME]小心翼翼的将天地灵根的果实采摘而下。"));me:DropAwardItem(sItem,nGetNum);world:SetWorldFlag(nFlagTime,world:GetWorldFlag(nFlagTime) + nRd);tbTable:LingYaoNote(sZ,me.npcObj:GetName(),1,nFlagTime);
+						else
+							local nTime = world:GetWorldFlag(nFlagTime) - world.DayCount
+							if nTime < -5 then
+								me:AddMsg(XT("[NAME]来到此处，按照记忆中的位置找到灵植，结果发现已然来迟了一步，天地灵根的果实已经消失殆尽。"));world:SetWorldFlag(nFlagTime,world:GetWorldFlag(nFlagTime) + nRd);tbTable:LingYaoNote(sZ,me.npcObj:GetName(),2,nFlagTime);
+							elseif nTime < -2 then
+								local nNum = math.max(1, math.floor(nGetNum / 3))
+								me:AddMsg(XT("[NAME]来到此处，按照记忆中的位置找到灵植，结果发现天地灵根的果实似乎被路过的灵兽嚼吃了一些。"));me:DropAwardItem(sItem,nNum);world:SetWorldFlag(nFlagTime,world:GetWorldFlag(nFlagTime) + nRd);tbTable:LingYaoNote(sZ,me.npcObj:GetName(),3,nFlagTime);
+							else
+								me:AddMsg(XT("[NAME]来到此处，按照记忆中的位置找到灵植，发现天地灵根已然成熟。[NAME]小心翼翼的将天地灵根的果实采摘而下。"));me:DropAwardItem(sItem,nGetNum);world:SetWorldFlag(nFlagTime,world:GetWorldFlag(nFlagTime) + nRd);tbTable:LingYaoNote(sZ,me.npcObj:GetName(),1,nFlagTime);
+							end
+						end
+					else
+						local nTime = world:GetWorldFlag(nFlagTime) - world.DayCount
+						me:AddMsg(string.format(XT("[NAME]来到此处，发现天地灵根尚未成熟。看上去大概还需要%s天左右的生长时间。"), tostring(nTime)));
+					end
+				]]></OKResult>
+			</li>
+			<li>
+				<Display>随便逛逛</Display> 
+                <RuleType>Wander</RuleType>
+				<OKResult><![CDATA[	
+				me:AddMsg(XT("[NAME]四处游荡时发现此处物产颇丰，于是收集一些特产运回了门派。"));me:DropAwardItemFromCache(story.PlaceProduce, 1, me:RandomInt(1, 3));
+				
+				]]></OKResult>
+			</li>
+			<li>
+				<Display>无视</Display>
+				<OKResult><![CDATA[	
+				me:AddMsg(XT("[NAME]想了想，还是决定离开了此处。"));
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>	
+	
+	<Story Name="Story_LingZhiBeg"  Parent="BaseFillingStory">
+		<DisplayName>历练于此</DisplayName>
+		<RuleKind>Story_LingZhiBeg</RuleKind>
+		<Desc>[NAME]来到[PLACE]，想起此地乃是种植天地灵根之所。</Desc>
+		<Kind>Story_LingZhiBeg</Kind>
+		<Selections>
+			<li>
+				<Display>求取灵根</Display> 
+				<OKResult><![CDATA[
+				local nFlagTime = nil
+				local sItem = nil
+				local nRd = nil
+				local nSchool = 0
+				local nNum = 0
+				if story.Place == "Place_TianJi1" then
+					nFlagTime = 71
+					sItem = "Item_JinEssence"
+					nRd = me:RandomInt(320,390)
+					nSchool = 3
+					nNum = me:RandomInt(2,6)
+				elseif story.Place == "Place_LongHu2" then
+					nFlagTime = 72
+					sItem = "Item_MuEssence"
+					nRd = me:RandomInt(240,300)
+					nSchool = 5
+					nNum = me:RandomInt(1,5)
+				elseif story.Place == "Place_DanXia3" then
+					nFlagTime = 73
+					sItem = "Item_ShuiEssence"
+					nRd = me:RandomInt(90,110)
+					nSchool = 1
+					nNum = 1
+				elseif story.Place == "Place_Shu1" then
+					nFlagTime = 74
+					sItem = "Item_HuoEssence"
+					nRd = me:RandomInt(80,100)
+					nSchool = 6
+					nNum = 1
+				elseif story.Place == "Place_KunLun2" then
+					nFlagTime = 75
+					sItem = "Item_TuEssence"
+					nRd = me:RandomInt(165,195)
+					nSchool = 2
+					nNum = me:RandomInt(1,3)
+				end
+				
+				local schoolname = world:GetSchoolName(nSchool)
+				if world:IsSchoolSubmissionToPlayer(story.School) == true then
+					if (world:GetWorldFlag(nFlagTime)) == 0 or (world:GetWorldFlag(nFlagTime) <= world.DayCount) then
+						me:AddMsg(string.format(XT("[NAME]听闻此地的天地灵根成熟，于是前来收取。虽然[NAME]门派与%s的关系并不怎样，但看守灵根的长老想起自家门派遭遇，只能强忍不满，一脸笑容的上来拜见，并将灵根成熟后的果实尽数给予了[NAME]。"), tostring(schoolname)));me:DropAwardItem(sItem,nNum);
+						
+						if world:GetWorldFlag(nFlagTime) == 0 then
+							world:SetWorldFlag(nFlagTime,world.DayCount + nRd);
+						else
+							world:SetWorldFlag(nFlagTime,world:GetWorldFlag(nFlagTime) + nRd);
+						end	
+					else
+						local nTime = world:GetWorldFlag(nFlagTime) - world.DayCount
+						me:AddMsg(string.format(XT("[NAME]听闻此地的天地灵根成熟，于是前来收取。虽然%s已经被[NAME]的门派征服，但奈何灵根早已成熟，已经被用完，也是无可奈何。天地灵根下次成熟还需%s天左右，[NAME]可届时再来。"), tostring(schoolname), tostring(nTime)));
+					end
+				else
+					if me:GetSchoolRelation(nSchool) <= 600 then
+						me:AddMsg(string.format(XT("[NAME]想要求取天地灵根，然而[NAME]门派与%s的关系并不到位。[NAME]刚刚靠近灵根所在之地，就被%s的弟子拦住了去路。"), tostring(schoolname), tostring(schoolname)));me:TriggerStory("Story_LingZhiBeg");
+					else
+						if (world:GetWorldFlag(nFlagTime)) == 0 or (world:GetWorldFlag(nFlagTime) <= world.DayCount) then
+							me:AddMsg(string.format(XT("[NAME]想要求取天地灵根。考虑到[NAME]门派与%s一直以来私交甚好，看守灵根的长老便将一颗灵根之果实给予[NAME]。"), tostring(schoolname)));me:DropAwardItem(sItem,1);
+							if world:GetWorldFlag(nFlagTime) == 0 then
+								world:SetWorldFlag(nFlagTime,world.DayCount + nRd);
+							else
+								world:SetWorldFlag(nFlagTime,world:GetWorldFlag(nFlagTime) + nRd);
+							end
+						else
+							local nTime = world:GetWorldFlag(nFlagTime) - world.DayCount
+							me:AddMsg(string.format(XT("[NAME]想要求取天地灵根。虽然[NAME]门派与%s一直以来私交甚好，但毕竟天地灵根果实有限，看守灵根的长老便婉拒了[NAME]的请求。天地灵根下次成熟还需%s天左右，[NAME]可届时再来。"), tostring(schoolname), tostring(nTime)));
+						end
+					end
+				end
+				]]></OKResult>
+			</li>
+			<li>
+				<Display>随便逛逛</Display> 
+                <RuleType>Wander</RuleType>
+				<OKResult><![CDATA[	
+				me:AddMsg(XT("[NAME]四处游荡时发现此处物产颇丰，于是收集一些特产运回了门派。"));me:DropAwardItemFromCache(story.PlaceProduce, 1, me:RandomInt(1, 3));
+				
+				]]></OKResult>
+			</li>
+			<li>
+				<Display>无视</Display>
+				<OKResult><![CDATA[	
+				me:AddMsg(XT("[NAME]想了想，还是决定离开了此处。"));
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>	
+</List></Stories>

@@ -1,0 +1,165 @@
+<Stories><List>
+	<Story Name="City_Base"  Parent="BaseFillingStory">
+		<DisplayName>城市</DisplayName>
+        <RuleKind>City_Base</RuleKind>
+		<Desc>[NAME]来到了[PLACE]，发现此地人烟稠密，贸易兴盛。</Desc>
+		<Kind>City</Kind>
+		<Selections>
+			<!--<li>
+				<Display>打听秘闻</Display>
+				<Condition>
+				<![CDATA[
+				me:GetSkillLevel("SocialContact") >= me:RandomInt(1, 100)
+				]]>
+				</Condition>
+				<Tip>处世</Tip>
+				<OKResult>me:AddMsg("[NAME]听到有一帮修行者说起修行界最近的传言，[IT]上前试图套话，获得一个秘密。");me:AddSecretFromCache(story.PlaceSecrets);</OKResult>
+				<NOResult>me:AddMsg("[NAME]听到有一帮修行者说起修行界最近的传言，[IT]上前试图套话，但却引起对方的警觉，最后无功而返。");</NOResult>
+			</li>-->
+			<!--<li>
+				<Display>打探地点</Display>
+				<Condition>
+				<![CDATA[
+				me:GetSkillLevel("SocialContact") >= me:RandomInt(5, 16)
+				]]>
+				</Condition>
+				<Tip>处世</Tip>
+				<OKResult>me:AddMsg("[NAME]从过往的商旅口中知道了一个有趣的地方，[IT]略施小术就从那名商旅口中套出了更多信息。");me:UnLockPlaceFromCache(story.PlaceChildren);
+				</OKResult>
+				<NOResult>me:AddMsg("[NAME]并没有打探到什么有价值的信息。");</NOResult>
+			</li>-->
+			<li>
+				<Display>寻觅弟子</Display>
+                <RuleType>Recruit</RuleType>
+				<Condition>
+				<![CDATA[
+				(me:GetLuck() + me:GetCharisma()) >= me:RandomInt(5, 15)
+				]]>
+				</Condition>
+				<Tip>机缘与魅力</Tip>
+				<OKResult>me:TriggerStory("Join_Base");</OKResult>
+				<NOResult>me:AddMsg(XT("[NAME]并没有找到合适的修行种子。"));</NOResult>
+			</li>
+
+			<li>
+				<Display>掳掠凡人</Display>
+                <RuleType>Kidnap</RuleType>
+				<OKResult>me:TriggerStory("Kidnap_Base");</OKResult>
+			</li>
+
+			<li>
+				<Display>助人行善</Display>
+                <RuleType>Preach</RuleType>
+				<OKResult>me:TriggerStory("GodStory_2");</OKResult>
+			</li>
+
+			<li>
+				<Display>采购物资</Display>
+                <RuleType>Business</RuleType>
+				<OKResult>me:TriggerStory("Business_Base");</OKResult>
+			</li>
+			<li>
+				<Display>离去</Display>
+                <RuleType>Bye</RuleType>
+				<OKResult><![CDATA[
+				me:AddMsg(XT("[NAME]什么都不想做，还是离开这里吧。"));
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+
+
+	<Story Name="Business_Base"  Parent="BaseFillingStory">
+		<DisplayName>采购物资</DisplayName>
+        <RuleKind>Business_Base</RuleKind>
+		<Desc>[NAME]发现此处货商业发达，物美价廉，便决定采购一批物资回山门。</Desc>
+		<ItemCache>  <!--食物池子-->
+			<li>
+				<ThingDef>Item_Flour</ThingDef>
+				<Count>60</Count>
+				<Rate>0.05</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_Jerky</ThingDef>
+				<Count>40</Count>
+				<Rate>0.05</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_Cake</ThingDef>
+				<Count>40</Count>
+				<Rate>0.05</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_BoarMeat</ThingDef>
+				<Count>60</Count>
+				<Rate>0.05</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_Beef</ThingDef>
+				<Count>60</Count>
+				<Rate>0.05</Rate>
+			</li>
+		</ItemCache>
+		<ItemCache2>  <!--石材池子-->
+			<li>
+				<ThingDef>Item_Marble</ThingDef>
+				<Count>40</Count>
+				<Rate>0.05</Rate>
+			</li>
+		</ItemCache2>
+		<ItemCache3>  <!--木料池子-->
+			<li>
+				<ThingDef>Item_Wood</ThingDef>
+				<Count>60</Count>
+				<Rate>0.05</Rate>
+			</li>
+		</ItemCache3>
+		<ItemCache4>  <!--金属池子-->
+			<li>
+				<ThingDef>Item_IronRock</ThingDef>
+				<Count>20</Count>
+				<Rate>0.05</Rate>
+			</li>
+		</ItemCache4>
+		<ItemCache5>  <!--布料皮革池子-->
+			<li>
+				<ThingDef>Item_Cotton</ThingDef>
+				<Count>60</Count>
+				<Rate>0.05</Rate>
+			</li>
+		</ItemCache5>
+		<Selections>
+			<li>
+				<Display>采购食物</Display>
+                <RuleType>Food</RuleType>
+				<OKResult>me:DropAwardItemFromCache(story.ItemCache, 1, 1);
+				</OKResult>
+			</li>
+			<li>
+				<Display>采购大理石</Display>
+                <RuleType>Marble</RuleType>
+				<OKResult>me:DropAwardItemFromCache(story.ItemCache2, 1, 1);
+				</OKResult>
+			</li>
+			<li>
+				<Display>采购木料</Display>
+                <RuleType>Wood</RuleType>
+				<OKResult>me:DropAwardItemFromCache(story.ItemCache3, 1, 1);
+				</OKResult>
+			</li>
+			<li>
+				<Display>采购铁矿石</Display>
+                <RuleType>Iron</RuleType>
+				<OKResult>me:DropAwardItemFromCache(story.ItemCache4, 1, 1);
+				</OKResult>
+			</li>
+			<li>
+				<Display>采购棉花</Display>
+                <RuleType>Cotton</RuleType>
+				<OKResult>me:DropAwardItemFromCache(story.ItemCache5, 1, 1);
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+</List></Stories>
