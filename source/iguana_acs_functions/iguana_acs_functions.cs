@@ -1,11 +1,7 @@
 ﻿using FairyGUI;
 using ModLoaderLite.Config;
 using ModLoaderLite;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
 
 namespace iguana_acs_functions
 {
@@ -16,7 +12,8 @@ namespace iguana_acs_functions
                 {
                     { "SkillLevelEverywhere", SkillLevelEverywhere.enabled},
                     { "SortManualsByAttainment", SortManualsByAttainment.enabled},
-                    { "FixCampingHeadUI", FixCampingHeadUI.enabled}
+                    { "FixCampingHeadUI", FixCampingHeadUI.enabled},
+                    { "InfiniteMouseScroll", InfiniteScroll.enabled}
                 };
         public static void OnLoad()
         {
@@ -57,6 +54,7 @@ namespace iguana_acs_functions
             SkillLevelEverywhere.enabled = Configuration.GetCheckBox("iguana_acs_functions", "SkillLevelEverywhere");
             SortManualsByAttainment.enabled = Configuration.GetCheckBox("iguana_acs_functions", "SortManualsByAttainment");
             FixCampingHeadUI.enabled = Configuration.GetCheckBox("iguana_acs_functions", "FixCampingHeadUI");
+            InfiniteScroll.enabled = Configuration.GetCheckBox("iguana_acs_functions", "InfiniteMouseScroll");
         }
     }
 }
