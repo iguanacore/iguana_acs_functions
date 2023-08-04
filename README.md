@@ -16,6 +16,7 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * Wudang DLC Translation" - Translates the Duck and related untranslated content added with the Wudang DLC
 * Fix Camping Head UI - Various improvements to the Head UI when camping ([Standalone Mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/22/))
 * Add Sect Rules -  better control over the popups when playing, both through additional Sect Rules and Concern/Neglect Sect Event rules. See detailed changes in the [[Standalone Mod description]](https://www.nexusmods.com/amazingcultivationsimulator/mods/24)
+* Infinite Mouse Scrolling - Removes the limit to zooming out with the scroll wheel, matching prior behaviour with PageUp. ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/23)).
 
 ## Install instructions
 
@@ -25,6 +26,14 @@ Download the latest release, extract the iguana_acs_functions into the Mods fold
 Activate the Mod in Mod Manager, make sure to load it after any of the prerequisite Mods.
 
 For ensuring that Patches are loaded, restart the game.
+
+## Configuration
+
+Some of the changes are configurable on a per-save basis. To do so, in the menu item System's dropdown select "MLL设置".
+![screenshot of the system menu dropdown with the cursor on the "MLL设置" option](https://i.imgur.com/E2HtqCW.png)
+
+You can then disable the changes you might not want to apply to your save. Some of these changes require you to save and load to apply.
+![screenshot of the MLL Configuration menu](https://i.imgur.com/nWPUddG.png)
 
 ## Compatibility with other mods
 
@@ -98,5 +107,5 @@ If the fixes exist as a standalone mod, include a link to it.
 
 ## Credits/Contributions
 
-* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet, Fix Camping Head UI, Add Sect Rules
+* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet, Fix Camping Head UI, Add Sect Rules, Infinite Mouse Scrolling
 * Gothmos - Add Sect Rules

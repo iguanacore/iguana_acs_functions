@@ -1,7 +1,6 @@
 ﻿using FairyGUI;
 using ModLoaderLite.Config;
 using ModLoaderLite;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +17,8 @@ namespace iguana_acs_functions
                 { "SkillLevelEverywhere", SkillLevelEverywhere.enabled},
                 { "SortManualsByAttainment", SortManualsByAttainment.enabled},
                 { "FixCampingHeadUI", FixCampingHeadUI.enabled},
-                { "AddSectRules", AddSectRules.enabled}
+                { "AddSectRules", AddSectRules.enabled},
+                { "InfiniteMouseScroll", InfiniteScroll.enabled}
             };
         static Dictionary<string, List<Action>> loadSaveSubmods = new Dictionary<string, List<Action>>()
         {
@@ -77,6 +77,8 @@ namespace iguana_acs_functions
             SkillLevelEverywhere.enabled = Configuration.GetCheckBox("iguana_acs_functions", "SkillLevelEverywhere");
             SortManualsByAttainment.enabled = Configuration.GetCheckBox("iguana_acs_functions", "SortManualsByAttainment");
             FixCampingHeadUI.enabled = Configuration.GetCheckBox("iguana_acs_functions", "FixCampingHeadUI");
+            InfiniteScroll.enabled = Configuration.GetCheckBox("iguana_acs_functions", "InfiniteMouseScroll");
+            AddSectRules.enabled = Configuration.GetCheckBox("iguana_acs_functions", "AddSectRules");
         }
     }
 }
