@@ -9,6 +9,7 @@ namespace iguana_acs_functions
 
     public class iguana_acs_functions
     {
+        public static bool configLoaded = false;
         public static Dictionary<string, bool> config = new Dictionary<string, bool>()
             {
                 { "Skill Level Everywhere", SkillLevelEverywhere.enabled},
@@ -26,7 +27,7 @@ namespace iguana_acs_functions
             {
                 { "AddSectRules", new List<Action>(){AddSectRules.OnLoad, AddSectRules.OnSave } }
             };
-        public static void OnLoad()
+        public static void OnInit()
         {
             Dictionary<string, bool> loadConfig = MLLMain.GetSaveOrDefault<Dictionary<string, bool>>("iguana_acs_functions_config");
             if (loadConfig != null)
@@ -39,29 +40,23 @@ namespace iguana_acs_functions
             }
             if (!Configuration.ListItems.ContainsKey("iguana_acs_functions"))
             {
-                OnInit();
-            }
-            foreach(KeyValuePair<string, List<Action>> kvp in loadSaveSubmods)
-            {
-                if (!config.ContainsKey(kvp.Key) || config[kvp.Key])
-                {
-                    kvp.Value[0]();
-                }
-            }
-        }
-        public static void OnInit()
-        {
-            if (!Configuration.ListItems.ContainsKey("iguana_acs_functions"))
-            {
                 foreach (KeyValuePair<string, bool> kvp in config)
                 {
                     Configuration.AddCheckBox("iguana_acs_functions", kvp.Key, kvp.Key, kvp.Value);
                 }
                 Configuration.Subscribe(new EventCallback0(HandleConfig));
             }
+            HandleConfig(); // Needed or the loaded config isn't applied immediately
+            foreach (KeyValuePair<string, List<Action>> kvp in loadSaveSubmods)
+            {
+                if (!config.ContainsKey(kvp.Key) || config[kvp.Key])
+                {
+                    kvp.Value[0]();
+                }
+            }
+            configLoaded = true;
         }
-
-
+        public static Action OnLoad = OnInit;
         public static void OnSave()
         {
             MLLMain.AddOrOverWriteSave("iguana_acs_functions_config", config);
