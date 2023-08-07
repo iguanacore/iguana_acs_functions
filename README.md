@@ -30,10 +30,14 @@ For ensuring that Patches are loaded, restart the game.
 ## Configuration
 
 Some of the changes are configurable on a per-save basis. To do so, in the menu item System's dropdown select "MLL设置".
+
 ![screenshot of the system menu dropdown with the cursor on the "MLL设置" option](https://i.imgur.com/E2HtqCW.png)
 
-You can then disable the changes you might not want to apply to your save. Some of these changes require you to save and load to apply.
+You can then disable the changes you might not want to apply to your save. Some of these changes require you to save and relaunch the game then load to apply.
+
 ![screenshot of the MLL Configuration menu](https://i.imgur.com/nWPUddG.png)
+
+In case the mod modifies XML files, to disable it entirely you'll need to remove the XML files related to the mod from its subfolders.
 
 ## Compatibility with other mods
 
