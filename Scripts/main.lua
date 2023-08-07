@@ -10,7 +10,6 @@ function applyEvent(event)
     local config = CS.iguana_acs_functions.iguana_acs_functions.config
     for title, submodFunc in pairs( iguana_acs_functions.submods[event]) do
         local doesConfigExist, configValue = config:TryGetValue(title) 
-        print("iguana_acs_functions:"..title.." "..tostring(doesConfigExist).." "..tostring(configValue))
         if (doesConfigExist == false) or (configValue == true) then -- nil = no configuration -> always enabled
             print("iguana_acs_functions:"..event..": calling submod func "..title)
             submodFunc()
