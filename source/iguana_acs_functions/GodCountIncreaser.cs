@@ -9,41 +9,48 @@ using System.Reflection.Emit;
 
 namespace iguana_acs_functions
 {
-    [HarmonyPatch(typeof(FabaoData), "LoadInit")]
-    class iguana_GodCountIncreaserY2KLI
+    class iguana_GodCountIncreaser
     {
-        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        public static bool enabled = true;
+
+        [HarmonyPatch(typeof(FabaoData), "LoadInit")]
+        class iguana_GodCountIncreaserY2KLI
         {
-            foreach (CodeInstruction codeInstruction in instructions)
+            static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
             {
-                if (codeInstruction.opcode.Name == "ldc.i4.s" && codeInstruction.operand.ToString() == "36")
-                {
-                    int newvalue = 2048;
-                    codeInstruction.opcode = OpCodes.Ldc_I4;
-                    codeInstruction.operand = newvalue;
-                }
+                if (!enabled) { return instructions; }
+                foreach (CodeInstruction codeInstruction in instructions)
+                    {
+                        if (codeInstruction.opcode.Name == "ldc.i4.s" && codeInstruction.operand.ToString() == "36")
+                        {
+                            int newvalue = 2048;
+                            codeInstruction.opcode = OpCodes.Ldc_I4;
+                            codeInstruction.operand = newvalue;
+                        }
+                    }
+                return instructions;
             }
-            return instructions;
+
         }
 
-    }
-
-    [HarmonyPatch(typeof(FabaoData), "AddGodCount")]
-    class iguana_GodCountIncreaserY2KAGC
-    {
-        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        [HarmonyPatch(typeof(FabaoData), "AddGodCount")]
+        class iguana_GodCountIncreaserY2KAGC
         {
-            foreach (CodeInstruction codeInstruction in instructions)
+            static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
             {
-                if (codeInstruction.opcode.Name == "ldc.i4.s" && codeInstruction.operand.ToString() == "36")
+                if (!enabled) { return instructions; }
+                foreach (CodeInstruction codeInstruction in instructions)
                 {
-                    int newvalue = 2048;
-                    codeInstruction.opcode = OpCodes.Ldc_I4;
-                    codeInstruction.operand = newvalue;
+                    if (codeInstruction.opcode.Name == "ldc.i4.s" && codeInstruction.operand.ToString() == "36")
+                    {
+                        int newvalue = 2048;
+                        codeInstruction.opcode = OpCodes.Ldc_I4;
+                        codeInstruction.operand = newvalue;
 
+                    }
                 }
+                return instructions;
             }
-            return instructions;
         }
     }
 }

@@ -13,5 +13,5 @@ end
 if iguana_acs_functions.submods["OnLoad"] == nil then
     iguana_acs_functions.submods["OnLoad"] = {}
 end
-iguana_acs_functions.submods["OnInit"]["fix T3 GC Breakthrough Multiplier"] = fixGCBreakthroughChange
-iguana_acs_functions.submods["OnLoad"]["fix T3 GC Breakthrough Multiplier"] = fixGCBreakthroughChange
+iguana_acs_functions.submods["OnInit"]["Fix T3 GC Breakthrough Multiplier"] = fixGCBreakthroughChange
+iguana_acs_functions.submods["OnLoad"]["Fix T3 GC Breakthrough Multiplier"] = fixGCBreakthroughChange

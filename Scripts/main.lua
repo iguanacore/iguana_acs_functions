@@ -1,5 +1,4 @@
 local iguana_acs_functions = GameMain:GetMod("iguana_acs_functions")
-local events = GameMain:GetMod("_Event");
 
 function functorAddSubmodInitializer(event)
     return function ()
@@ -9,9 +8,15 @@ function functorAddSubmodInitializer(event)
         if iguana_acs_functions.submods[event] == nil then
             iguana_acs_functions.submods[event] = {}
         end
+        local config = CS.iguana_acs_functions.iguana_acs_functions.config
         for title, submodFunc in pairs( iguana_acs_functions.submods[event]) do
-            print("iguana_acs_functions:"..event..": calling submod func "..title)
-            submodFunc()
+            local doesConfigExist, configValue = config:TryGetValue(title) 
+            if (doesConfigExist == false) or (configValue == true) then -- nil = no configuration -> always enabled
+                print("iguana_acs_functions:"..event..": calling submod func "..title)
+                submodFunc()
+            else
+                print("iguana_acs_functions:"..event..": "..title.." disabled, ignoring")
+            end
         end
     end
 end

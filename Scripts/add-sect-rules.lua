@@ -1,9 +1,16 @@
-local tbTable = GameMain:GetMod("MagicHelper");
-local tbMagic = tbTable:GetMagic("Magic_MapStory");
+local iguana_acs_functions = GameMain:GetMod("iguana_acs_functions")
 
-local SECRET = {53,76}
+function changeSecretEventShows()
+    local event11 = MapStoryMgr:GetSecretDef(11) --Traces of Ancient Book
+    event11.MsgShowType = "s_ancientbook"
+    for i = 20,22 do
+        local event = MapStoryMgr:GetSecretDef(i) -- Traces of Just Sect
+        event.MsgShowType = "s_tracesjust"
+    end
+end
 
-function tbMagic:MagicLeave(success)
+function NewMagicLeave(success)
+    local SECRET = {53,76}
     local MsgShowMgr = CS.XiaWorld.MsgShowMgr.Instance
 	if success == true then
 		local LuaHelper = self.bind.LuaHelper;
@@ -40,3 +47,22 @@ function tbMagic:MagicLeave(success)
 		end
 	end
 end
+
+function addSectRules()
+    changeSecretEventShows()
+    local tbTable = GameMain:GetMod("MagicHelper");
+    local tbMagic = tbTable:GetMagic("Magic_MapStory");
+    tbMagic.MagicLeave = NewMagicLeave
+end
+
+if iguana_acs_functions.submods == nil then
+    iguana_acs_functions.submods = {}
+end
+if iguana_acs_functions.submods["OnInit"] == nil then
+    iguana_acs_functions.submods["OnInit"] = {}
+end
+if iguana_acs_functions.submods["OnLoad"] == nil then
+    iguana_acs_functions.submods["OnLoad"] = {}
+end
+iguana_acs_functions.submods["OnInit"]["Add Sect Rules"] = addSectRules
+iguana_acs_functions.submods["OnLoad"]["Add Sect Rules"] = addSectRules
