@@ -46,5 +46,23 @@ namespace iguana_acs_functions
                 return instructions;
             }
         }
+        //Related to Issue/PR #29
+        [HarmonyPatch(typeof(OutspreadMgr), "GetRegionPopulationAddPerday")]
+        public static class iguana_GetRegionPopulationAddPerDay_Patch
+        {
+            static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+            {
+                if (!enabled) { return instructions; }
+                foreach (CodeInstruction codeInstruction in instructions)
+                {
+                    if (codeInstruction.opcode.Name == "ldc.i4" && codeInstruction.operand.ToString() == "40000")
+                    {
+                        int newvalue = 99999;
+                        codeInstruction.operand = newvalue;
+                    }
+                }
+                return instructions;
+            }
+        }
     }
 }
