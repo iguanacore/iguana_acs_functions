@@ -9,36 +9,42 @@ using System.Reflection.Emit;
 
 namespace iguana_acs_functions
 {
-    [HarmonyPatch(typeof(OutspreadMgr.Region), "AddPopulation")]
-    public static class iguana_AddPopulation_Patch
+    class iguana_OutspreadPopIncreaser
     {
-        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        public static bool enabled = true;
+        [HarmonyPatch(typeof(OutspreadMgr.Region), "AddPopulation")]
+        public static class iguana_AddPopulation_Patch
         {
-            foreach (CodeInstruction codeInstruction in instructions)
+            static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
             {
-                if (codeInstruction.opcode.Name == "ldc.i4" && codeInstruction.operand.ToString() == "400000")
+                if (!enabled) { return instructions; }
+                foreach (CodeInstruction codeInstruction in instructions)
                 {
-                    int newvalue = 999999;
-                    codeInstruction.operand = newvalue;
+                    if (codeInstruction.opcode.Name == "ldc.i4" && codeInstruction.operand.ToString() == "400000")
+                    {
+                        int newvalue = 999999;
+                        codeInstruction.operand = newvalue;
+                    }
                 }
+                return instructions;
             }
-            return instructions;
         }
-    }
-    [HarmonyPatch(typeof(OutspreadMgr.Region), "RawAddPopulation")]
-    public static class iguana_RawAddPopulation_Patch
-    {
-        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        [HarmonyPatch(typeof(OutspreadMgr.Region), "RawAddPopulation")]
+        public static class iguana_RawAddPopulation_Patch
         {
-            foreach (CodeInstruction codeInstruction in instructions)
+            static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
             {
-                if (codeInstruction.opcode.Name == "ldc.i4" && codeInstruction.operand.ToString() == "400000")
+                if (!enabled) { return instructions; }
+                foreach (CodeInstruction codeInstruction in instructions)
                 {
-                    int newvalue = 999999;
-                    codeInstruction.operand = newvalue;
+                    if (codeInstruction.opcode.Name == "ldc.i4" && codeInstruction.operand.ToString() == "400000")
+                    {
+                        int newvalue = 999999;
+                        codeInstruction.operand = newvalue;
+                    }
                 }
+                return instructions;
             }
-            return instructions;
         }
     }
 }
