@@ -44,7 +44,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="ModLoaderLite">
-      <HintPath>..\..\..\..\..\..\workshop\content\955900\1997170546\ModLoaderLite.dll</HintPath>
+      <HintPath>..\..\..\ModLoaderLite\ModLoaderLite.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
