@@ -88,7 +88,7 @@ For example, removing the Trimerous Essence Price change requires the removal of
 ### Functions
 
 * FabaoData.AddGodCount, FabaoData.LoadInit - Heavenly Reforge Limit increased, Transpiler changing ldc.i4.s 36 to ldc.i4 2048
-* OutspreadMgr.Region.AddPopulation, OutspreadMgr.Region.RawAddPopulation - Agency Population Limit increased, Transpiler changing ldc.i4 400000 to ldc.i4 999999
+* OutspreadMgr.Region.AddPopulation, OutspreadMgr.Region.RawAddPopulation, OutspreadMgr.GetRegionPopulationAddPerday - Agency Population Limit increased, Transpiler changing ldc.i4 400000 to ldc.i4 999999
 
 ### Other files
 
