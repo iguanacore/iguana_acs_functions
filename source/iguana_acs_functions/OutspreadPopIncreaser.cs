@@ -47,7 +47,6 @@ namespace iguana_acs_functions
             }
         }
         //Related to Issue/PR #29
-        [HarmonyDebug]
         [HarmonyPatch(typeof(OutspreadMgr), "GetRegionPopulationAddPerday")]
         public static class iguana_GetRegionPopulationAddPerDay_Patch
         {
