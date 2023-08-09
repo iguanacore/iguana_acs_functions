@@ -1,0 +1,52 @@
+<Texts Type="Story">
+	<List>
+		<Text Name="Secrets_Gong2">
+			<DisplayName>Manifesting Mandate</DisplayName>
+			<Desc>[NAME] arrived at [PLACE] and discovered that this is the place that had inherited the teachings of the "Myriad Artifact Law." The inheritance is surrounded by a circle of ancient Immortals. It seems that this is the seal set by the ancient Immortal to select the candidates suitable to inherit their teachings. There is lightning shooting out from the array, it seems like it possesses great magical power.</Desc>
+			<Selections.0.Display>Take it by force</Selections.0.Display>
+			<Selections.0.Tip>Primordial Spirit and Luck</Selections.0.Tip>
+			<Selections.1.Display>Accept Teachings</Selections.1.Display>
+			<Selections.2.Display>Leave</Selections.2.Display>
+		</Text>
+		<Text Name="Secrets_Gong3">
+			<DisplayName>Manifesting Mandate</DisplayName>
+			<Desc>[NAME] arrived at [PLACE] and discovered that this is the place that had inherited the teachings of the "Seven-Slaughtering Sword." The inheritance is surrounded by a circle of ancient Immortals. It seems that this is the seal set by the ancient Immortal to select the candidates suitable to inherit their teachings. There is lightning shooting out from the array, it seems like it possesses great magical power.</Desc>
+			<Selections.0.Display>Take it by force</Selections.0.Display>
+			<Selections.0.Tip>Primordial Spirit and Luck</Selections.0.Tip>
+			<Selections.1.Display>Accept Teachings</Selections.1.Display>
+			<Selections.2.Display>Leave</Selections.2.Display>
+		</Text>
+		<Text Name="Secrets_Gong4">
+			<DisplayName>Manifesting Mandate</DisplayName>
+			<Desc>[NAME] arrived at [PLACE] and discovered that this is the place that had inherited the teachings of the "Jade Purity Immortal Law." The inheritance is surrounded by a circle of ancient Immortals. It seems that this is the seal set by the ancient Immortal to select the candidates suitable to inherit their teachings. There is lightning shooting out from the array, it seems like it possesses great magical power.</Desc>
+			<Selections.0.Display>Take it by force</Selections.0.Display>
+			<Selections.0.Tip>Primordial Spirit and Luck</Selections.0.Tip>
+			<Selections.1.Display>Accept Teachings</Selections.1.Display>
+			<Selections.2.Display>Leave</Selections.2.Display>
+		</Text>
+		<Text Name="Secrets_Gong5">
+			<DisplayName>Manifesting Mandate</DisplayName>
+			<Desc>[NAME] arrived at [PLACE] and discovered that this is the place that had inherited the teachings of the "Heaven Stealing Law." The inheritance is surrounded by a circle of ancient Immortals. It seems that this is the seal set by the ancient Immortal to select the candidates suitable to inherit their teachings. There is lightning shooting out from the array, it seems like it possesses great magical power.</Desc>
+			<Selections.0.Display>Take it by force</Selections.0.Display>
+			<Selections.0.Tip>Primordial Spirit and Luck</Selections.0.Tip>
+			<Selections.1.Display>Accept Teachings</Selections.1.Display>
+			<Selections.2.Display>Leave</Selections.2.Display>
+		</Text>
+		<Text Name="Secrets_Gong6">
+			<DisplayName>Manifesting Mandate</DisplayName>
+			<Desc>[NAME] arrived at [PLACE] and discovered that this is the place that had inherited the teachings of the "Primordial Alchemy Law." The inheritance is surrounded by a circle of ancient Immortals. It seems that this is the seal set by the ancient Immortal to select the candidates suitable to inherit their teachings. There is lightning shooting out from the array, it seems like it possesses great magical power.</Desc>
+			<Selections.0.Display>Take it by force</Selections.0.Display>
+			<Selections.0.Tip>Primordial Spirit and Luck</Selections.0.Tip>
+			<Selections.1.Display>Accept Teachings</Selections.1.Display>
+			<Selections.2.Display>Leave</Selections.2.Display>
+		</Text>
+		<Text Name="Secrets_Gong7">
+			<DisplayName>Manifesting Mandate</DisplayName>
+			<Desc>[NAME] arrived at [PLACE] and discovered that this is the place that had inherited the teachings of the "Emotion Severing Law." The inheritance is surrounded by a circle of ancient Immortals. It seems that this is the seal set by the ancient Immortal to select the candidates suitable to inherit their teachings. There is lightning shooting out from the array, it seems like it possesses great magical power.</Desc>
+			<Selections.0.Display>Take it by force</Selections.0.Display>
+			<Selections.0.Tip>Primordial Spirit and Luck</Selections.0.Tip>
+			<Selections.1.Display>Accept Teachings</Selections.1.Display>
+			<Selections.2.Display>Leave</Selections.2.Display>
+		</Text>
+    </List>
+</Texts>

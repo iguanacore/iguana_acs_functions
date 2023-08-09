@@ -1,0 +1,117 @@
+<Texts Type="Story">
+	<List>
+		<Text Name="Secrets_Esoterica1">
+			<DisplayName>Traces of Ancient Book</DisplayName>
+			<Desc>Having arrived at [PLACE], [NAME] found that a great number of cultivators have already come here in search of the ancient book.</Desc>
+			<Selections.0.Display>Divine the book's location</Selections.0.Display>
+			<Selections.0.Tip>Luck</Selections.0.Tip>
+			<Selections.1.Display>Search around</Selections.1.Display>
+			<Selections.1.Tip>Luck</Selections.1.Tip>
+			<Selections.2.Display>Leave</Selections.2.Display>
+		</Text>
+        <Text Name="Secrets_FabaoAppear1">
+			<DisplayName>Treasure Unearthed</DisplayName>
+			<Desc>[NAME] found a treasure about to be unearthed in [PLACE].</Desc>
+			<Selections.0.Display>Fight for it</Selections.0.Display>
+			<Selections.0.Tip>Qi Shaping</Selections.0.Tip>
+			<Selections.1.Display>Ignore</Selections.1.Display>
+		</Text>
+		<Text Name="Secrets_FabaoAppear2">
+			<DisplayName>Treasure Unearthed</DisplayName>
+			<Desc>[NAME] found a treasure about to be unearthed in [PLACE].</Desc>
+			<Selections.0.Display>Fight for it</Selections.0.Display>
+			<Selections.0.Tip>Core Shaping</Selections.0.Tip>
+			<Selections.1.Display>Ignore</Selections.1.Display>
+		</Text>
+		<Text Name="Secrets_FabaoAppear3">
+			<DisplayName>Treasure Unearthed</DisplayName>
+			<Desc>[NAME] found a treasure about to be unearthed in [PLACE].</Desc>
+			<Selections.0.Display>Fight for it</Selections.0.Display>
+			<Selections.0.Tip>Golden Core</Selections.0.Tip>
+			<Selections.1.Display>Ignore</Selections.1.Display>
+		</Text>
+		<Text Name="Secrets_FabaoAppear3_Cold">
+			<DisplayName>Treasure Unearthed</DisplayName>
+			<Desc>[NAME] found a treasure about to be unearthed in [PLACE]. Due to its broken seal, the surrounding land of the site have been shrouded in frost. One can not even get close to it without profound Cultivation.</Desc>
+			<Selections.0.Display>Fight for it</Selections.0.Display>
+			<Selections.0.Tip>Golden Core</Selections.0.Tip>
+			<Selections.1.Display>Leave in frustration</Selections.1.Display>
+			<Selections.2.Display>Leave</Selections.2.Display>
+		</Text>
+		<Text Name="Secrets_FabaoAppear3_Hot">
+			<DisplayName>Treasure Unearthed</DisplayName>
+			<Desc>[NAME] found a treasure about to be unearthed in [PLACE]. Due to its broken seal, the surrounding land of the site have been surrounded by inferno fire. One can not even get close to it without profound Cultivation.</Desc>
+			<Selections.0.Display>Fight for it</Selections.0.Display>
+			<Selections.0.Tip>Golden Core</Selections.0.Tip>
+			<Selections.1.Display>Leave in frustration</Selections.1.Display>
+			<Selections.2.Display>Leave</Selections.2.Display>
+		</Text>
+		<Text Name="Secrets_DongFuAppear">
+			<DisplayName>Immortal's Abode</DisplayName>
+			<Desc>[NAME] found an ancient abode of an immortal in [PLACE], with an abundance of treasures hidden in it.</Desc>
+			<Selections.0.Display>Search for treasures</Selections.0.Display>
+			<Selections.0.Tip>Luck</Selections.0.Tip>
+			<Selections.1.Display>Leave</Selections.1.Display>
+		</Text>
+		<Text Name="Secrets_DongFuAppear_Cold">
+			<DisplayName>Immortal's Abode</DisplayName>
+			<Desc>[NAME] found an ancient abode of an immortal in [PLACE], with an abundance of treasures hidden in it. However, the cave is protected by warding spells and its inside shrouded in coldness, killing anyone who does not have resistance to it.</Desc>
+			<Selections.0.Display>Search for treasures</Selections.0.Display>
+			<Selections.0.Tip>Luck</Selections.0.Tip>
+			<Selections.1.Display>Leave in frustration</Selections.1.Display>
+			<Selections.2.Display>Leave</Selections.2.Display>
+		</Text>
+		<Text Name="Secrets_DongFuAppear_Hot">
+			<DisplayName>Immortal's Abode</DisplayName>
+			<Desc>[NAME] found an ancient abode of an immortal in [PLACE], with an abundance of treasures hidden in it. However, the cave is protected by warding spells and its inside burning with fire, killing anyone who does not have resistance to it.</Desc>
+			<Selections.0.Display>Search for treasures</Selections.0.Display>
+			<Selections.0.Tip>Luck</Selections.0.Tip>
+			<Selections.1.Display>Leave in frustration</Selections.1.Display>
+			<Selections.2.Display>Leave</Selections.2.Display>
+		</Text>
+		<Text Name="Secrets_DongFuAppear_Manual">
+			<DisplayName>Immortal's Abode</DisplayName>
+			<Desc>[NAME] found an ancient abode of an immortal in [PLACE], with an abundance of treasures hidden in it. The owner of the cave was a master of Artifact Crafting, who set up countless booby traps and warding spells with this skill. One can not survive and explore the cave without being proficient in Artifact Crafting.</Desc>
+			<Selections.0.Display>Search for treasures</Selections.0.Display>
+			<Selections.0.Tip>Artifact Crafting</Selections.0.Tip>
+			<Selections.1.Display>Leave</Selections.1.Display>
+		</Text>
+		<Text Name="Secrets_DongFuAppear_Medicine">
+			<DisplayName>Immortal's Abode</DisplayName>
+			<Desc>[NAME] found an ancient abode of an immortal in [PLACE], with an abundance of treasures hidden in it. The owner of the cave was a master Alchemist, who set up countless booby traps and warding spells with this skill. One can not survive and explore the cave without being proficient in Alchemy.</Desc>
+			<Selections.0.Display>Search for treasures</Selections.0.Display>
+			<Selections.0.Tip>Alchemy</Selections.0.Tip>
+			<Selections.1.Display>Leave</Selections.1.Display>
+		</Text>
+		<Text Name="Secrets_Esoterica2">
+			<DisplayName>Unearthing Manual</DisplayName>
+			<Desc>Having arrived at [PLACE], [NAME] found that other cultivators in search of the manual had already been locked in a tangled fight.</Desc>
+			<Selections.0.Display>Take it by force</Selections.0.Display>
+			<Selections.0.Tip>Golden Core</Selections.0.Tip>
+			<Selections.1.Display>Bide your time</Selections.1.Display>
+			<Selections.1.Tip>Luck</Selections.1.Tip>
+			<Selections.2.Display>Leave</Selections.2.Display>
+		</Text>
+		<Text Name="Secrets_Magic">
+			<DisplayName>Manifesting Miracle</DisplayName>
+			<Desc>Having arrived at [PLACE], [NAME] found that a great number of cultivators have already gathered around the newly-unearthed Stone Engravings of Dragon Cliff.</Desc>
+			<Selections.0.Display>Meditate</Selections.0.Display>
+			<Selections.0.Tip>Intelligence</Selections.0.Tip>
+			<Selections.1.Display>Leave</Selections.1.Display>
+		</Text>
+		<Text Name="Secrets_Magic_Cold">
+			<DisplayName>Manifesting Miracle</DisplayName>
+			<Desc>Having arrived at [PLACE], [NAME] found that a great number of cultivators have already gathered around the newly-unearthed Stone Engravings of Dragon Cliff. However, due to the interference of Qi energy mechanics between heaven and earth, the surrounding land of the unearthed site have been shrouded in frost.</Desc>
+			<Selections.0.Display>Meditate</Selections.0.Display>
+			<Selections.0.Tip>Intelligence</Selections.0.Tip>
+			<Selections.1.Display>Leave in frustration</Selections.1.Display>
+		</Text>
+		<Text Name="Secrets_Magic_Hot">
+			<DisplayName>Manifesting Miracle</DisplayName>
+			<Desc>Having arrived at [PLACE], [NAME] found that a great number of cultivators have already gathered around the newly-unearthed Stone Engravings of Dragon Cliff. However, due to the interference of Qi energy mechanics between heaven and earth, the surrounding land of the unearthed site have been surrounded by inferno fire.</Desc>
+			<Selections.0.Display>Meditate</Selections.0.Display>
+			<Selections.0.Tip>Intelligence</Selections.0.Tip>
+			<Selections.1.Display>Leave in frustration</Selections.1.Display>
+		</Text>
+	</List>
+</Texts>

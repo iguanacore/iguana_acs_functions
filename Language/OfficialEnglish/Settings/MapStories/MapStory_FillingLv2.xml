@@ -1,0 +1,20 @@
+<Texts Type="Story">
+	<List>
+		<Text Name="Story_LingZhiGet">
+			<DisplayName>Adventure here</DisplayName>
+			<Desc>[NAME] arrived at [PLACE] and recalled that there is supposed to be a Spirit Root that grows here. After searching around it turned out that the area was replete with Earth Qi, there was something out of the ordinary here.</Desc>
+			<Selections.0.Display>Search for the Spirit Root</Selections.0.Display>
+			<Selections.1.Display>Set up a Formation</Selections.1.Display>
+			<Selections.2.Display>Harvest Spirit Root</Selections.2.Display>
+			<Selections.3.Display>Wander around</Selections.3.Display>
+			<Selections.4.Display>Ignore</Selections.4.Display>
+		</Text>
+		<Text Name="Story_LingZhiBeg">
+			<DisplayName>Adventure here</DisplayName>
+			<Desc>[NAME] arrived at [PLACE] and recalled that this is where Spirit Root grows.</Desc>
+			<Selections.0.Display>Search for Spirit Root</Selections.0.Display>
+			<Selections.1.Display>Wander around</Selections.1.Display>
+			<Selections.2.Display>Ignore</Selections.2.Display>
+		</Text>
+	</List>
+</Texts>

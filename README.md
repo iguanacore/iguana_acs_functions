@@ -15,6 +15,7 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * Farmable Strange Mushroom - Adds Strange Mushroom as a rare drop to the Mushroom plant, with similar rates to Red Ginseng.
 * Wudang DLC Translation" - Translates the Duck and related untranslated content added with the Wudang DLC
 * Fix Camping Head UI - Various improvements to the Head UI when camping ([Standalone Mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/22/))
+* Add Sect Rules -  better control over the popups when playing, both through additional Sect Rules and Concern/Neglect Sect Event rules. See detailed changes in the [[Standalone Mod description]](https://www.nexusmods.com/amazingcultivationsimulator/mods/24)
 * Infinite Mouse Scrolling - Removes the limit to zooming out with the scroll wheel, matching prior behaviour with PageUp. ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/23)).
 
 ## Install instructions
@@ -69,10 +70,16 @@ For example, removing the Trimerous Essence Price change requires the removal of
 ### MapStories
 
 * (MapStory_Item) Story_Item_E_FuBox - Change Talisman of Foreseer in starting experiences
+* various Mapstories - Add Sect Rules
 
 ### Properties
 
 * SkillProperty - Sort Manuals By Attainment
+
+### Message displays / UI Events
+* School rules changes for Add Sect Rules
+* Event display changes for Add Sect Rules
+* Npc UI Events changes for Add Sect Rules
 
 ### Functions
 
@@ -85,7 +92,9 @@ For example, removing the Trimerous Essence Price change requires the removal of
 * Scripts\fix-gc-tier3-breakthrough-multiplier.lua - GC T3 breakthrough multiplier fix
 * Scripts\sync-perfect-alignment-moodlet.lua - Sync Perfect Alignment moodlet
 * Scripts\MapStory\MapStory.lua - Agency Population Limit increased, MapStoryHelper.SlightlyIncreaseAllPop and MapStoryHelper.IncreaseAllPop
-* iguana_acs_functions.dll - Skill Level Everywhere, Sort Manuals By Attainment, Fix Camping Head UI
+* Scripts\derivative-calc-change.lua - Add Sect Rules
+* Scripts\event-show-secrets-change.lua - Add Sect Rules
+* iguana_acs_functions.dll - Skill Level Everywhere, Sort Manuals By Attainment, Fix Camping Head UI, Add Sect Rules
 
 ## How to Contribute
 
@@ -98,4 +107,5 @@ If the fixes exist as a standalone mod, include a link to it.
 
 ## Credits/Contributions
 
-* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet, Fix Camping Head UI, Infinite Mouse Scrolling
+* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet, Fix Camping Head UI, Add Sect Rules, Infinite Mouse Scrolling
+* Gothmos - Add Sect Rules

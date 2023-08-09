@@ -1,0 +1,58 @@
+<EventShowDefs><List>
+	<Def Name="s_tracesjust">
+		<DisplayName>正派行踪</DisplayName>
+		<Desc>正派行踪</Desc>
+	</Def>
+	<Def Name="s_ancientbook">
+		<DisplayName>古书踪迹</DisplayName>
+		<Desc>古书踪迹</Desc>
+	</Def>
+	<Def Name="p_derivativecalc1">
+		<DisplayName>大衍神算 1</DisplayName>
+		<Desc>大衍神算</Desc>
+	</Def>
+    <Def Name="p_derivativecalc2">
+		<DisplayName>大衍神算 2</DisplayName>
+		<Desc>大衍神算</Desc>
+	</Def>
+	<Def Name="p_derivativecalc3">
+		<DisplayName>大衍神算 失败</DisplayName>
+		<Desc>大衍神算</Desc>
+	</Def>
+	<Def Name="dc_manifestmiracle">
+		<DisplayName>秘闻-秘籍出土</DisplayName>
+		<Desc>秘闻-秘籍出土</Desc>
+	</Def>
+	<Def Name="dc_manifestmandate">
+		<DisplayName>秘闻-道统现世</DisplayName>
+		<Desc>秘闻-道统现世</Desc>
+	</Def>
+		<Def Name="dc_manifestcave">
+		<DisplayName>秘闻-洞府现世</DisplayName>
+		<Desc>秘闻-洞府现世</Desc>
+	</Def>
+	<Def Name="dc_tracesevil">
+		<DisplayName>秘闻-正邪行踪</DisplayName>
+		<Desc>秘闻-正邪行踪</Desc>
+	</Def>
+	<Def Name="dc_tracesjust">
+		<DisplayName>秘闻-正邪行踪</DisplayName>
+		<Desc>秘闻-正邪行踪</Desc>
+	</Def>
+	<Def Name="dc_ancientbook">
+		<DisplayName>秘闻-秘籍出土</DisplayName>
+		<Desc>秘闻-秘籍出土</Desc>
+	</Def>
+	<Def Name="m_9">
+		<DisplayName>路人需要帮助</DisplayName>
+		<Desc>路人需要帮助</Desc>
+	</Def>
+	<Def Name="m_73">
+		<DisplayName>[name]研习[manual]成功</DisplayName>
+		<Desc>研习</Desc>
+	</Def>
+	<Def Name="m_53">
+		<DisplayName>存档写入完成</DisplayName>
+		<Desc>存档写入完成</Desc>
+	</Def>
+</List></EventShowDefs>

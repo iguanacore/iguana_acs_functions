@@ -1,0 +1,313 @@
+<Stories><List>
+	<Story Name="Secrets_Gong2"  Parent="BaseFillingStory">
+		<DisplayName>道统现世</DisplayName>
+		<RuleKind>ManifestingMandate</RuleKind>
+		<Desc>[NAME]来到[PLACE]，发现此处竟然是《己寅九冲多宝真解》的道统传承，传承被一座前古仙阵围绕，似乎是古代仙人为挑选适合道统的传承者而设置的封印。阵法之中电光流转，似乎蕴含莫大的神通法力。</Desc>
+		<Selections>
+			<li>
+				<Display>强行夺取</Display> 
+                <RuleType>Take</RuleType> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 10 and me:RandomInt(1, 3) == 1
+				]]>
+				</Condition>
+				<Tip>元神期及机缘</Tip>
+				<OKResult>
+				<![CDATA[	
+					me:AddMsg(XT("[NAME]运转元神，以强横的修为暴力破解法阵，获取了其中的道统传承。"));me:AddSchoolScore(1,200);story:FinishSecret();me:DropAwardItem("Item_Dan_TreeEXP", 1);me:UnLockGong("Gong_2_Mu");   
+				]]>
+				</OKResult>
+				<NOResult>
+				<![CDATA[	
+				if me:GetGLevel() >= 10 then
+					me:AddMsg(XT("[NAME]运转元神，以强横的修为暴力破解法阵，但似乎机缘差了些：法阵破灭的力量竟然波及到了传承本身一同毁灭，[NAME]暗叹一声，只得离开。"));me:AddSchoolScore(1,100);story:FinishSecret();
+				else				
+					me:AddMsg(XT("[NAME]试图暴力破解阵法，但是却太过不自量力，被阵法反击身负重伤，沦为修行界的笑柄。"));me:AddSchoolScore(1,-300);me:AddDamgeFromCache(story.DamageCache,4);story:FinishSecret();
+				end;
+				]]>
+				</NOResult>
+			</li>
+			<li>
+				<Display>接受传承</Display>
+                <RuleType>AcceptTeachings</RuleType> 
+				<OKResult>
+				<![CDATA[	
+				if me:GetMatchingWithGong("Gong_2_Mu") >= 1 then
+					me:AddMsg(XT("[NAME]上前接受阵法的检测，竟然非常适合这门道统，顺利接受了道统的传承。"));me:DropAwardItem("Item_Dan_TreeEXP", 1);me:UnLockGong("Gong_2_Mu");story:FinishSecret();   
+				else
+					me:AddMsg(XT("[NAME]上前接受阵法的检测，但可惜最终并没有通过阵法的检测，只能无奈离去"));
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>离开</Display>
+				<OKResult><![CDATA[	
+				me:AddMsg(XT("[NAME]想了想，决定还是不冒险了，转身离去。"));
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="Secrets_Gong3"  Parent="BaseFillingStory">
+		<DisplayName>道统现世</DisplayName>
+		<RuleKind>ManifestingMandate</RuleKind>
+		<Desc>[NAME]来到[PLACE]，发现此处竟然是《七杀剑诀》的道统传承，传承被一座前古仙阵围绕，似乎是古代仙人为挑选适合道统的传承者而设置的封印。阵法之中电光流转，似乎蕴含莫大的神通法力。</Desc>
+		<Selections>
+			<li>
+				<Display>强行夺取</Display>  
+                <RuleType>Take</RuleType> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 10 and me:RandomInt(1, 3) == 1
+				]]>
+				</Condition>
+				<Tip>元神期及机缘</Tip>
+				<OKResult>
+				<![CDATA[	
+				me:AddMsg(XT("[NAME]运转元神，以强横的修为暴力破解法阵，获取了其中的道统传承。"));me:AddSchoolScore(1,200);story:FinishSecret();me:DropAwardItem("Item_Dan_TreeEXP", 1);me:UnLockGong("Gong_3_Jin");   
+				]]>
+				</OKResult>
+				<NOResult>
+				<![CDATA[	
+				if me:GetGLevel() >= 10 then
+					me:AddMsg(XT("[NAME]运转元神，以强横的修为暴力破解法阵，但似乎机缘差了些：法阵破灭的力量竟然波及到了传承本身一同毁灭，[NAME]暗叹一声，只得离开。"));me:AddSchoolScore(1,100);story:FinishSecret();
+				else				
+					me:AddMsg(XT("[NAME]试图暴力破解阵法，但是却太过不自量力，被阵法反击身负重伤，沦为修行界的笑柄。"));me:AddSchoolScore(1,-300);me:AddDamgeFromCache(story.DamageCache,4);story:FinishSecret();
+				end;
+				]]>
+				</NOResult>
+			</li>
+			<li>
+				<Display>接受传承</Display> 
+                <RuleType>AcceptTeachings</RuleType> 
+				<OKResult>
+				<![CDATA[	
+				if me:GetMatchingWithGong("Gong_3_Jin") >= 1 then
+					me:AddMsg(XT("[NAME]上前接受阵法的检测，竟然非常适合这门道统，顺利接受了道统的传承。"));me:DropAwardItem("Item_Dan_TreeEXP", 1);me:UnLockGong("Gong_3_Jin");story:FinishSecret();   
+				else
+					me:AddMsg(XT("[NAME]上前接受阵法的检测，但可惜最终并没有通过阵法的检测，只能无奈离去"));
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>离开</Display>
+				<OKResult><![CDATA[	
+				me:AddMsg(XT("[NAME]想了想，决定还是不冒险了，转身离去。"));
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+	<Story Name="Secrets_Gong4"  Parent="BaseFillingStory">
+		<DisplayName>道统现世</DisplayName>
+		<RuleKind>ManifestingMandate</RuleKind>
+		<Desc>[NAME]来到[PLACE]，发现此处竟然是《玉清仙法》的道统传承，传承被一座前古仙阵围绕，似乎是古代仙人为挑选适合道统的传承者而设置的封印。阵法之中电光流转，似乎蕴含莫大的神通法力。</Desc>
+		<Selections>
+			<li>
+				<Display>强行夺取</Display>  
+                <RuleType>Take</RuleType> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 10 and me:RandomInt(1, 3) == 1
+				]]>
+				</Condition>
+				<Tip>元神期及机缘</Tip>
+				<OKResult>
+				<![CDATA[	
+				me:AddMsg(XT("[NAME]运转元神，以强横的修为暴力破解法阵，获取了其中的道统传承。"));me:AddSchoolScore(1,200);story:FinishSecret();me:DropAwardItem("Item_Dan_TreeEXP", 1);me:UnLockGong("Gong_4_None");   
+				]]>
+				</OKResult>
+				<NOResult>
+				<![CDATA[	
+				if me:GetGLevel() >= 10 then
+					me:AddMsg(XT("[NAME]运转元神，以强横的修为暴力破解法阵，但似乎机缘差了些：法阵破灭的力量竟然波及到了传承本身一同毁灭，[NAME]暗叹一声，只得离开。"));me:AddSchoolScore(1,100);story:FinishSecret();
+				else				
+					me:AddMsg(XT("[NAME]试图暴力破解阵法，但是却太过不自量力，被阵法反击身负重伤，沦为修行界的笑柄。"));me:AddSchoolScore(1,-300);me:AddDamgeFromCache(story.DamageCache,4);story:FinishSecret();
+				end;
+				]]>
+				</NOResult>
+			</li>
+			<li>
+				<Display>接受传承</Display> 
+                <RuleType>AcceptTeachings</RuleType> 
+				<OKResult>
+				<![CDATA[	
+				if me:GetMatchingWithGong("Gong_4_None") >= 1 then
+					me:AddMsg(XT("[NAME]上前接受阵法的检测，竟然非常适合这门道统，顺利接受了道统的传承。"));me:DropAwardItem("Item_Dan_TreeEXP", 1);me:UnLockGong("Gong_4_None");story:FinishSecret();   
+				else
+					me:AddMsg(XT("[NAME]上前接受阵法的检测，但可惜最终并没有通过阵法的检测，只能无奈离去"));
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>离开</Display>
+				<OKResult><![CDATA[	
+				me:AddMsg(XT("[NAME]想了想，决定还是不冒险了，转身离去。"));
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="Secrets_Gong5"  Parent="BaseFillingStory">
+		<DisplayName>道统现世</DisplayName>
+		<RuleKind>ManifestingMandate</RuleKind>
+		<Desc>[NAME]来到[PLACE]，发现此处竟然是《偷天诀》的道统传承，传承被一座前古仙阵围绕，似乎是古代仙人为挑选适合道统的传承者而设置的封印。阵法之中电光流转，似乎蕴含莫大的神通法力。</Desc>
+		<Selections>
+			<li>
+				<Display>强行夺取</Display>  
+                <RuleType>Take</RuleType> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 10 and me:RandomInt(1, 3) == 1
+				]]>
+				</Condition>
+				<Tip>元神期及机缘</Tip>
+				<OKResult>
+				<![CDATA[	
+				me:AddMsg(XT("[NAME]运转元神，以强横的修为暴力破解法阵，获取了其中的道统传承。"));me:AddSchoolScore(1,200);story:FinishSecret();me:DropAwardItem("Item_Dan_TreeEXP", 1);me:UnLockGong("Gong_5_Tu");   
+				]]>
+				</OKResult>
+				<NOResult>
+				<![CDATA[	
+				if me:GetGLevel() >= 10 then
+					me:AddMsg(XT("[NAME]运转元神，以强横的修为暴力破解法阵，但似乎机缘差了些：法阵破灭的力量竟然波及到了传承本身一同毁灭，[NAME]暗叹一声，只得离开。"));me:AddSchoolScore(1,100);story:FinishSecret();
+				else				
+					me:AddMsg(XT("[NAME]试图暴力破解阵法，但是却太过不自量力，被阵法反击身负重伤，沦为修行界的笑柄。"));me:AddSchoolScore(1,-300);me:AddDamgeFromCache(story.DamageCache,4);story:FinishSecret();
+				end;
+				]]>
+				</NOResult>
+			</li>
+			<li>
+				<Display>接受传承</Display> 
+                <RuleType>AcceptTeachings</RuleType> 
+				<OKResult>
+				<![CDATA[	
+				if me:GetMatchingWithGong("Gong_5_Tu") >= 1 then
+					me:AddMsg(XT("[NAME]上前接受阵法的检测，竟然非常适合这门道统，顺利接受了道统的传承。"));me:DropAwardItem("Item_Dan_TreeEXP", 1);me:UnLockGong("Gong_5_Tu");story:FinishSecret();   
+				else
+					me:AddMsg(XT("[NAME]上前接受阵法的检测，但可惜最终并没有通过阵法的检测，只能无奈离去"));
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>离开</Display>
+				<OKResult><![CDATA[	
+				me:AddMsg(XT("[NAME]想了想，决定还是不冒险了，转身离去。"));
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="Secrets_Gong6"  Parent="BaseFillingStory">
+		<DisplayName>道统现世</DisplayName>
+		<RuleKind>ManifestingMandate</RuleKind>
+		<Desc>[NAME]来到[PLACE]，发现此处竟然是《九转金丹直指》的道统传承，传承被一座前古仙阵围绕，似乎是古代仙人为挑选适合道统的传承者而设置的封印。阵法之中电光流转，似乎蕴含莫大的神通法力。</Desc>
+		<Selections>
+			<li>
+				<Display>强行夺取</Display>  
+                <RuleType>Take</RuleType> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 10 and me:RandomInt(1, 3) == 1
+				]]>
+				</Condition>
+				<Tip>元神期及机缘</Tip>
+				<OKResult>
+				<![CDATA[	
+				me:AddMsg(XT("[NAME]运转元神，以强横的修为暴力破解法阵，获取了其中的道统传承。"));me:AddSchoolScore(1,200);story:FinishSecret();me:DropAwardItem("Item_Dan_TreeEXP", 1);me:UnLockGong("Gong_6_Huo");   
+				]]>
+				</OKResult>
+				<NOResult>
+				<![CDATA[	
+				if me:GetGLevel() >= 10 then
+					me:AddMsg(XT("[NAME]运转元神，以强横的修为暴力破解法阵，但似乎机缘差了些：法阵破灭的力量竟然波及到了传承本身一同毁灭，[NAME]暗叹一声，只得离开。"));me:AddSchoolScore(1,100);story:FinishSecret();
+				else				
+					me:AddMsg(XT("[NAME]试图暴力破解阵法，但是却太过不自量力，被阵法反击身负重伤，沦为修行界的笑柄。"));me:AddSchoolScore(1,-300);me:AddDamgeFromCache(story.DamageCache,4);story:FinishSecret();
+				end;
+				]]>
+				</NOResult>
+			</li>
+			<li>
+				<Display>接受传承</Display> 
+                <RuleType>AcceptTeachings</RuleType> 
+				<OKResult>
+				<![CDATA[	
+				if me:GetMatchingWithGong("Gong_6_Huo") >= 1 then
+					me:AddMsg(XT("[NAME]上前接受阵法的检测，竟然非常适合这门道统，顺利接受了道统的传承。"));me:DropAwardItem("Item_Dan_TreeEXP", 1);me:UnLockGong("Gong_6_Huo");story:FinishSecret();   
+				else
+					me:AddMsg(XT("[NAME]上前接受阵法的检测，但可惜最终并没有通过阵法的检测，只能无奈离去"));
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>离开</Display>
+				<OKResult><![CDATA[	
+				me:AddMsg(XT("[NAME]想了想，决定还是不冒险了，转身离去。"));
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="Secrets_Gong7"  Parent="BaseFillingStory">
+		<DisplayName>道统现世</DisplayName>
+		<RuleKind>ManifestingMandate</RuleKind>
+		<Desc>[NAME]来到[PLACE]，发现此处竟然是《太上忘情道》的道统传承，传承被一座前古仙阵围绕，似乎是古代仙人为挑选适合道统的传承者而设置的封印。阵法之中电光流转，似乎蕴含莫大的神通法力。</Desc>
+		<Selections>
+			<li>
+				<Display>强行夺取</Display>  
+                <RuleType>Take</RuleType> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 10 and me:RandomInt(1, 3) == 1
+				]]>
+				</Condition>
+				<Tip>元神期及机缘</Tip>
+				<OKResult>
+				<![CDATA[	
+				me:AddMsg(XT("[NAME]运转元神，以强横的修为暴力破解法阵，获取了其中的道统传承。"));me:AddSchoolScore(1,200);story:FinishSecret();me:DropAwardItem("Item_Dan_TreeEXP", 1);me:UnLockGong("Gong_7_Huo");   
+				]]>
+				</OKResult>
+				<NOResult>
+				<![CDATA[	
+				if me:GetGLevel() >= 10 then
+					me:AddMsg(XT("[NAME]运转元神，以强横的修为暴力破解法阵，但似乎机缘差了些：法阵破灭的力量竟然波及到了传承本身一同毁灭，[NAME]暗叹一声，只得离开。"));me:AddSchoolScore(1,100);story:FinishSecret();
+				else				
+					me:AddMsg(XT("[NAME]试图暴力破解阵法，但是却太过不自量力，被阵法反击身负重伤，沦为修行界的笑柄。"));me:AddSchoolScore(1,-300);me:AddDamgeFromCache(story.DamageCache,4);story:FinishSecret();
+				end;
+				]]>
+				</NOResult>
+			</li>
+			<li>
+				<Display>接受传承</Display> 
+                <RuleType>AcceptTeachings</RuleType> 
+				<OKResult>
+				<![CDATA[	
+				if me:GetMatchingWithGong("Gong_7_Huo") >= 1 then
+					me:AddMsg(XT("[NAME]上前接受阵法的检测，竟然非常适合这门道统，顺利接受了道统的传承。"));me:DropAwardItem("Item_Dan_TreeEXP", 1);me:UnLockGong("Gong_7_Huo");story:FinishSecret();   
+				else
+					me:AddMsg(XT("[NAME]上前接受阵法的检测，但可惜最终并没有通过阵法的检测，只能无奈离去"));
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>离开</Display>
+				<OKResult><![CDATA[	
+				me:AddMsg(XT("[NAME]想了想，决定还是不冒险了，转身离去。"));
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+</List></Stories>

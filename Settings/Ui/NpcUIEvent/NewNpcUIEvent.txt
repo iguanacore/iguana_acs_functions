@@ -1,0 +1,9 @@
+ID	Content	WholeContent	TipDesc	Desc	Type	TypeLevel	ImportanceLevel	IsShowNpcTips	RemoveType	WorldSpeed	SameType	LocationType	Icon
+	消息描述	同ID合并后描述	tips上显示的详细说明或进一步提示		事件类型（默认为空）	同类型事件等级（默认为0）	0提示 1信息 2警告（默认为0）	0不显示 1显示（默认为0）	0自动过期 1条件过期 2查看过期（默认为0）	0不处理 1暂停 2一档 3二挡 4三挡 （默认为0）	0SameR_DiffA  1Add  2Refresh（默认为0）	0None  1Happen  2Obj  3SelectObj（暂未使用）	
+501	Miracle Failed	Derivative Calculation 			501		1	1	1		1		
+502	Manifesting Cave	Derivative Calculation 			501		1	1	1		1		
+503	Traces of Ancient Book	Derivative Calculation 			501		1	1	1		1		
+504	Manifesting Miracle	Derivative Calculation 			501		1	1	1		1		
+505	Traces of Evil Sect	Derivative Calculation 			501		1	1	1		1		
+506	Traces of Just Sect	Derivative Calculation 			501		1	1	1		1		
+507	Manifesting Mandate	Derivative Calculation 			501		1	1	1		1		

@@ -1,0 +1,23 @@
+<Texts Type="Story">
+	<List>
+        <Text Name="City_Base">
+			<DisplayName>City</DisplayName>
+			<Desc>[NAME] came to [PLACE] and discovered that it was densely populated and business was booming.</Desc>
+			<Selections.0.Display>Search for Disciples</Selections.0.Display>
+			<Selections.0.Tip>Luck and Charisma</Selections.0.Tip>
+			<Selections.1.Display>Kidnap Commoners</Selections.1.Display>
+			<Selections.2.Display>Help others</Selections.2.Display>
+			<Selections.3.Display>Purchase Materials</Selections.3.Display>
+			<Selections.4.Display>Depart</Selections.4.Display>
+		</Text>
+		<Text Name="Business_Base">
+			<DisplayName>Purchase Materials</DisplayName>
+			<Desc>[NAME] discovered that this place had a developed market with low prices and so decided to pick things up before heading back.</Desc>
+			<Selections.0.Display>Purchase Food</Selections.0.Display>
+			<Selections.1.Display>Purchase Marble</Selections.1.Display>
+			<Selections.2.Display>Purchase Wood</Selections.2.Display>
+			<Selections.3.Display>Purchase Iron Ore</Selections.3.Display>
+			<Selections.4.Display>Purchase Cotton</Selections.4.Display>
+		</Text>
+	</List>
+</Texts>

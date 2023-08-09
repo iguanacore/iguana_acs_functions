@@ -1,0 +1,68 @@
+<Texts Type="Other">
+	<List>
+		<Text Name="p_derivativecalc1">
+			<DisplayName>DC Popup</DisplayName>
+			<Desc>Derivative Calculation Popup</Desc>
+		</Text>
+        <Text Name="p_derivativecalc2">
+			<DisplayName>DC Results Notifications (DCN)</DisplayName>
+			<Desc>Derivative Calculation Results Notifications</Desc>
+		</Text>
+		<Text Name="s_zhengxie">
+			<DisplayName>Secrets - Traces of Evil Sect</DisplayName>
+			<Desc>Secrets - Traces of Evil Sect</Desc>
+		</Text>
+		<Text Name="s_tracesjust">
+			<DisplayName>Secrets - Traces of Just Sect</DisplayName>
+			<Desc>Secrets - Traces of Just Sect</Desc>
+		</Text>
+		<Text Name="s_miji">
+			<DisplayName>Secret - Manifesting Miracle</DisplayName>
+			<Desc>Secret - Manifesting Miracle</Desc>
+		</Text>
+		<Text Name="s_ancientbook">
+			<DisplayName>Secret - Traces of Ancient Book</DisplayName>
+			<Desc>Secret - Traces of Ancient Book</Desc>
+		</Text>
+		<Text Name="p_derivativecalc3">
+			<DisplayName>DCN: Failure</DisplayName>
+			<Desc>No effect if Derivative Calculations Notifications are not enabled</Desc>
+		</Text>
+		<Text Name="dc_manifestmiracle">
+			<DisplayName>DCN: Manifesting Miracle</DisplayName>
+			<Desc>No effect if Derivative Calculations Notifications are not enabled</Desc>
+		</Text>
+		<Text Name="dc_manifestmandate">
+			<DisplayName>DCN: Manifesting Mandate</DisplayName>
+			<Desc>No effect if Derivative Calculations Notifications are not enabled</Desc>
+		</Text>
+		<Text Name="dc_manifestcave">
+			<DisplayName>DCN: Manifesting Cave</DisplayName>
+			<Desc>No effect if Derivative Calculations Notifications are not enabled</Desc>
+		</Text>
+		<Text Name="dc_tracesevil">
+			<DisplayName>DCN: Traces of Evil Sect</DisplayName>
+			<Desc>No effect if Derivative Calculations Notifications are not enabled</Desc>
+		</Text>
+		<Text Name="dc_tracesjust">
+			<DisplayName>DCN: Traces of Just Sect</DisplayName>
+			<Desc>No effect if Derivative Calculations Notifications are not enabled</Desc>
+		</Text>
+		<Text Name="dc_ancientbook">
+			<DisplayName>DCN: Traces of Ancient Book</DisplayName>
+			<Desc>No effect if Derivative Calculations Notifications are not enabled</Desc>
+		</Text>
+		<Text Name="m_9">
+			<DisplayName>Message: Passerby is in need of help.</DisplayName>
+			<Desc>Passerby is in need of help.</Desc>
+		</Text>
+		<Text Name="m_73">
+			<DisplayName>Message: [name] tried to study [manual] and succeeded</DisplayName>
+			<Desc>Study</Desc>
+		</Text>
+		<Text Name="m_53">
+			<DisplayName>Message: Saving completed.</DisplayName>
+			<Desc>Saving completed.</Desc>
+		</Text>
+	</List>
+</Texts>
