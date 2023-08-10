@@ -20,7 +20,8 @@ namespace iguana_acs_functions
                 { "Heavenly Reforge Limit Increase", iguana_GodCountIncreaser.enabled},
                 { "Raise Agency Pop Limit to 999,999", iguana_OutspreadPopIncreaser.enabled },
                 { "Sync perfect alignment moodlet", true},
-                { "Fix T3 GC Breakthrough Multiplier", true}
+                { "Fix T3 GC Breakthrough Multiplier", true},
+                { "Instantly choose story option with hotkey", InstantStoryHotkey.enabled}
 
             };
         static Dictionary<string, List<Action>> loadSaveSubmods = new Dictionary<string, List<Action>>()
@@ -78,6 +79,7 @@ namespace iguana_acs_functions
             AddSectRules.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Add Sect Rules");
             iguana_GodCountIncreaser.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Heavenly Reforge Limit Increase");
             iguana_OutspreadPopIncreaser.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Raise Agency Pop Limit to 999,999");
+            InstantStoryHotkey.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Instantly choose story option with hotkey");
             Dictionary<string, bool> newConfig = new Dictionary<string, bool>();
             foreach (KeyValuePair<string, bool> kvp in config)
             {
