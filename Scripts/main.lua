@@ -1,6 +1,6 @@
 local iguana_acs_functions = GameMain:GetMod("iguana_acs_functions")
 
-function applyEvent(event)
+function iguana_acs_functions:applyEvent(event)
     if iguana_acs_functions.submods == nil then
         iguana_acs_functions.submods = {}
     end
@@ -18,7 +18,8 @@ function applyEvent(event)
         end
     end
 end
-function functorAddSubmodInitializer(event)
+
+function iguana_acs_functions:functorAddSubmodInitializer(event)
     return function(self)
         if self.configLoaded == nil then
             if self.lateCall == nil then
@@ -27,7 +28,7 @@ function functorAddSubmodInitializer(event)
             table.insert(self.lateCall, event)
             return
         end
-        applyEvent(event)
+        iguana_acs_functions:applyEvent(event)
     end
 end
 
@@ -54,9 +55,9 @@ function iguana_acs_functions:OnStep(dt)
     end
     for _, event in pairs(self.lateCall) do
         print("iguana_acs_functions:late call:"..event)
-        applyEvent(event)
+        iguana_acs_functions:applyEvent(event)
     end
 end
 
-iguana_acs_functions.OnInit = functorAddSubmodInitializer("OnInit")
-iguana_acs_functions.OnLoad = functorAddSubmodInitializer("OnLoad")
+iguana_acs_functions.OnInit = iguana_acs_functions:functorAddSubmodInitializer("OnInit")
+iguana_acs_functions.OnLoad = iguana_acs_functions:functorAddSubmodInitializer("OnLoad")
