@@ -17,6 +17,7 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * Fix Camping Head UI - Various improvements to the Head UI when camping ([Standalone Mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/22/))
 * Add Sect Rules -  better control over the popups when playing, both through additional Sect Rules and Concern/Neglect Sect Event rules. See detailed changes in the [[Standalone Mod description]](https://www.nexusmods.com/amazingcultivationsimulator/mods/24)
 * Infinite Mouse Scrolling - Removes the limit to zooming out with the scroll wheel, matching prior behaviour with PageUp. ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/23)).
+* Instant Story Hotkey - Instantly choose the story option associated with an hotkey when pressing the key.
 
 ## Install instructions
 
@@ -89,6 +90,7 @@ For example, removing the Trimerous Essence Price change requires the removal of
 
 * FabaoData.AddGodCount, FabaoData.LoadInit - Heavenly Reforge Limit increased, Transpiler changing ldc.i4.s 36 to ldc.i4 2048
 * OutspreadMgr.Region.AddPopulation, OutspreadMgr.Region.RawAddPopulation, OutspreadMgr.GetRegionPopulationAddPerday - Agency Population Limit increased, Transpiler changing ldc.i4 400000 to ldc.i4 999999
+* Wnd_StorySelect.SelectClicking - Instant Story Hotkey
 
 ### Other files
 
@@ -111,5 +113,5 @@ If the fixes exist as a standalone mod, include a link to it.
 
 ## Credits/Contributions
 
-* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet, Fix Camping Head UI, Add Sect Rules, Infinite Mouse Scrolling
+* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet, Fix Camping Head UI, Add Sect Rules, Infinite Mouse Scrolling, Instant Story Hotkey
 * Gothmos - Add Sect Rules
