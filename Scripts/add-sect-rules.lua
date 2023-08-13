@@ -9,7 +9,7 @@ function changeSecretEventShows()
     end
 end
 
-function NewMagicLeave(success)
+function NewMagicLeave(self, success)
     local SECRET = {53,76}
     local MsgShowMgr = CS.XiaWorld.MsgShowMgr.Instance
 	if success == true then
