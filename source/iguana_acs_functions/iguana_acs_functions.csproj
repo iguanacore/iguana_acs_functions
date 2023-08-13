@@ -70,6 +70,7 @@
     <Compile Include="iguana_acs_functions.cs" />
     <Compile Include="InfiniteScroll.cs" />
     <Compile Include="InstantStoryHotkey.cs" />
+    <Compile Include="MoodTo200.cs" />
     <Compile Include="OutspreadPopIncreaser.cs" />
     <Compile Include="SkillLevelEverywhere.cs" />
     <Compile Include="SortManualsByAttainment.cs" />

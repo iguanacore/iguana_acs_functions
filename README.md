@@ -19,7 +19,7 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * Infinite Mouse Scrolling (optional) - Removes the limit to zooming out with the scroll wheel, matching prior behaviour with PageUp. ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/23)).
 * Instant Story Hotkey (optional) - Instantly choose the story option associated with an hotkey when pressing the key.
 * Display Base Mental State (optional) - Displays the base mental state superimposed over the current mental statein the profile info for Xiandao cultivators ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/18)).
-
+* Display max Mood at 200 (optional) - Whenever the game uses mood for calculations, it uses 200 as maximum value and not 100 as it is displayed in-game. This corrects the in-game indicators to treat 200 mood as the actual maximum to avoid confusion.
 Everything that isn't marked as optional can still be manually disabled by removing the modified entities from the mod files.
 
 ## Install instructions
@@ -107,7 +107,7 @@ Modifications applied by iguana_acs_functions.dll.
 * Wnd_StorySelect.SelectClicking - Instant Story Hotkey
 * Panel_NpcInfoPanel.UpdateSkill, Panel_NpcPropertyPanel.UpdateSkill - Skill Level Everywhere
 * Wnd_CangJingGeWindow.CheckEsoLise, Wnd_CangJingGeWindow.RenderEsoListItem - Sort Manuals By Attainment
-
+* Wnd_NpcInfo.OnInit, Wnd_GameMain.OnInit - Display max Mood at 200
 ### Other files
 
 * Scripts\main.lua - main LUA mod loading utility
@@ -128,5 +128,5 @@ If the fixes exist as a standalone mod, include a link to it.
 
 ## Credits/Contributions
 
-* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet, Fix Camping Head UI, Add Sect Rules, Infinite Mouse Scrolling, Instant Story Hotkey, Display Base Mental State
+* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet, Fix Camping Head UI, Add Sect Rules, Infinite Mouse Scrolling, Instant Story Hotkey, Display Base Mental State, Display max Mood at 200
 * Gothmos - Add Sect Rules
