@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddSectRules.cs" />
+    <Compile Include="DisplayBaseMentalState.cs" />
     <Compile Include="FixCampingHeadUI.cs" />
     <Compile Include="GodCountIncreaser.cs" />
     <Compile Include="iguana_acs_functions.cs" />
