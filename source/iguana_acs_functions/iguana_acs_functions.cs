@@ -9,6 +9,7 @@ namespace iguana_acs_functions
 
     public class iguana_acs_functions
     {
+
         public static bool configLoaded = false;
         public static Dictionary<string, bool> config = new Dictionary<string, bool>()
             {
@@ -27,9 +28,10 @@ namespace iguana_acs_functions
             };
         static Dictionary<string, List<Action>> loadSaveSubmods = new Dictionary<string, List<Action>>()
             {
-                { "AddSectRules", new List<Action>(){AddSectRules.OnLoad, AddSectRules.OnSave } }
+                { "Add Sect Rules", new List<Action>(){AddSectRules.OnLoad, AddSectRules.OnSave } },
+                { "Display Base Mental State",new List<Action>(){ DisplayBaseMentalState.OnLoad, null } }
             };
-        public static void OnInit()
+        static void OnLoadInit(string funcName)
         {
             Dictionary<string, bool> loadConfig = MLLMain.GetSaveOrDefault<Dictionary<string, bool>>("iguana_acs_functions_config");
             if (loadConfig != null)
@@ -51,21 +53,29 @@ namespace iguana_acs_functions
             HandleConfig(); // Needed or the loaded config isn't applied immediately
             foreach (KeyValuePair<string, List<Action>> kvp in loadSaveSubmods)
             {
-                if (!config.ContainsKey(kvp.Key) || config[kvp.Key])
+                if ((!config.ContainsKey(kvp.Key) || config[kvp.Key]) && kvp.Value[0] != null)
                 {
+                    KLog.Dbg($"\tiguana_acs_functions: {funcName} submod {kvp.Key}");
                     kvp.Value[0]();
                 }
             }
             configLoaded = true;
         }
-        public static Action OnLoad = OnInit;
+
+        public static void OnInit(){ 
+            OnLoadInit("OnInit");
+        }
+        public static void OnLoad() {
+            OnLoadInit("OnLoad");
+        }
         public static void OnSave()
         {
             MLLMain.AddOrOverWriteSave("iguana_acs_functions_config", config);
             foreach (KeyValuePair<string, List<Action>> kvp in loadSaveSubmods)
             {
-                if (!config.ContainsKey(kvp.Key) || config[kvp.Key])
+                if ((!config.ContainsKey(kvp.Key) || config[kvp.Key]) && kvp.Value[1] != null)
                 {
+                    KLog.Dbg("\tiguana_acs_functions: OnSave submod " + kvp.Key);
                     kvp.Value[1]();
                 }
             }

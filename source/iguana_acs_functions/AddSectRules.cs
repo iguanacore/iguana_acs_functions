@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Xml.Linq;
 using HarmonyLib;
 using ModLoaderLite;
-using ModLoaderLite.Config;
 using XiaWorld;
 using static XiaWorld.MsgShowMgr.SchoolRuleDef;
 
@@ -51,7 +49,7 @@ namespace iguana_acs_functions
         {
             static bool Prefix(int msgid)
             {
-                if (!AddSectRules.enabled) return true;
+                if (!enabled) return true;
                 if (!messageToSectEventRule.ContainsKey(msgid)) { return true; }
                 if (MsgShowMgr.Instance.CheckEventHide(messageToSectEventRule[msgid]))
                 {
@@ -70,7 +68,7 @@ namespace iguana_acs_functions
             }
             static void Postfix()
             {
-                if (!AddSectRules.enabled) return;
+                if (!enabled) return;
                 /* We only add at the end in case the story retriggers itself - for example when trying to setup a formation 
                  * for spirit root and failing
                  */
@@ -94,7 +92,7 @@ namespace iguana_acs_functions
         {
             static void Postfix(ref string __result)
             {
-                if (!AddSectRules.enabled) return;
+                if (!enabled) return;
                 if (currentStory == null) { return; }
                 if (currentPlace == null) { return; }
                 MapStoryDef storyDef = MapStoryMgr.Instance.GetStoryDef(currentStory);
@@ -143,7 +141,7 @@ namespace iguana_acs_functions
                  * a (mostly copy-pasted) alt version
                  */
                 jump = false;
-                if (!AddSectRules.enabled) return true; // out jump must be set before we return. As the vanilla function is used anyway this is not an issue
+                if (!enabled) return true; // out jump must be set before we return. As the vanilla function is used anyway this is not an issue
                 int num = 0;
                 GameDefine.SetTempDescOpen(open: true);
                 try

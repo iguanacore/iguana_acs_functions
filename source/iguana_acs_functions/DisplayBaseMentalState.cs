@@ -1,13 +1,9 @@
-﻿using Es.InkPainter;
-using FairyGUI;
+﻿using FairyGUI;
 using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 using XiaWorld;
 using XiaWorld.UI.InGame;
+using System;
 
 namespace iguana_acs_functions
 {
@@ -24,6 +20,12 @@ namespace iguana_acs_functions
             baseMentalStateBar.x = currentMentalStateSlider.m_bar.x;
             baseMentalStateBar.y = currentMentalStateSlider.m_bar.y;
         }
+
+        public static void OnLoad()
+        {
+            baseMentalStateBar = null;
+        }
+
         [HarmonyPatch(typeof(Panel_ThingInfo), "ShowNpc")]
         public class UpdateBaseMentalStateSlider
         {
@@ -61,7 +63,7 @@ namespace iguana_acs_functions
                 }
                 else
                 {
-                    baseMentalStateBar.width = System.Math.Min(1, baseMentalState / 100) * currentMentalStateSlider.width;
+                    baseMentalStateBar.width = Math.Min(1, baseMentalState / 100) * currentMentalStateSlider.width;
                 }
             }
         }
