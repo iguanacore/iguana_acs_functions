@@ -1,8 +1,5 @@
 ﻿using HarmonyLib;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using XiaWorld.UI.InGame;
 using XiaWorld;
 
@@ -20,7 +17,7 @@ namespace iguana_acs_functions
             public static Dictionary<int, float> lastRecordedStoryTimes = new Dictionary<int, float>();
             public static void Postfix(ref PlacesMgr __instance)
             {
-               if (!FixCampingHeadUI.enabled) { return; }
+               if (!enabled) { return; }
                 foreach (PlacesMgr.MapExploreData mapExplor in __instance.MapExplors)
                 {
                     if (!(ThingMgr.Instance.FindThingByID(mapExplor.NpcID) is Npc npc))
@@ -63,7 +60,7 @@ namespace iguana_acs_functions
         {
             public static void Postfix(ref Wnd_GameMain __instance, int i, Npc npc)
             {
-                if (!FixCampingHeadUI.enabled) { return; }
+                if (!enabled) { return; }
                 UI_Bnt_NpcHead uI_Bnt_NpcHead = __instance.UIInfo.m_lisNpcs.GetChildAt(i) as UI_Bnt_NpcHead;
                 if (npc.JobEngine.CurJob == null || npc.JobEngine.CurJob.jobdef == null)
                 {
@@ -88,7 +85,7 @@ namespace iguana_acs_functions
         {
             public static void Postfix(ref Wnd_GameMain __instance, int i, Npc npc)
             {
-                if (!FixCampingHeadUI.enabled) { return; }
+                if (!enabled) { return; }
                 UI_Bnt_NpcHeadSimple uI_Bnt_NpcHead = __instance.UIInfo.m_lisNpcs.GetChildAt(i) as UI_Bnt_NpcHeadSimple;
                 if (npc.JobEngine.CurJob == null || npc.JobEngine.CurJob.jobdef == null)
                 {

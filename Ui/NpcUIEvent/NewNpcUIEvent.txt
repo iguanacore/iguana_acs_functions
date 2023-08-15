@@ -1,3 +1,0 @@
-ID	Content	WholeContent	TipDesc	Desc
-	Message	After merging with ID,	tips will display descriptions or further clarification	
-501	{0}	Derivative Calculation Results		

@@ -6,18 +6,21 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * Fix Trimerous Essence Price - The Trimerous Essence Pill has a buy price and item quantity equal to equivalent items (SR pool).
 * Change Talisman of Foreseer from "Advanced Talismans" and "Luck with Talisman Room" to 96% quality, so it actually has an adventure exploration effect
 * The golden core tier 3 has a 90% chance for breakthrough at PS instead of the current 10%, more in line with the effect at T2 (100%) and T4 (25%) and its effect on breakthroughs at golden core (150% like T2).
-* Skill Level Everywhere - Displays Skill Level instead of Ability Rating ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/20/))
+* Skill Level Everywhere (optional with files deletion) - Displays Skill Level instead of Ability Rating ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/20/))
 * Story Button Interaction Change - Changes the interaction with Ancient Caskets and Festive Goods, making it select an opener randomly.
-* Sort Manuals by Attainment - Sorts the manuals by ascending attainment in the Manual Library. Also displays a small element icon next to manuals. Takes into account the element of the cultivator if any ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/21/))
+* Sort Manuals by Attainment (optional) - Sorts the manuals by ascending attainment in the Manual Library. Also displays a small element icon next to manuals. Takes into account the element of the cultivator if any ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/21/))
 * Sync Perfect Alignment moodlet - the perfect alignment moodlet is changed to trigger at the same element strength (1.85) as optimal cultivation speed and golden core
-* Heavenly Reforge Limit increased - Increases the Heavenly Reforge Cap from 36 (Vanilla) to 2048. ([Standalone mod](https://mega.nz/file/O10BVYwR#N09NIqmaX3KZ_M72BKY-XJ6wlhlhTjH4DEvsj5qtElI))
-* Agency Population Limit increased - Increases the Agency Population limit from 400 000 (Vanilla) to 999 999. ([Standalone mod](https://mega.nz/file/vwNA3RzY#ft7q0U-nhHHuCv7QHXRuJ1z0BCtpWrY6SFRkQlo-5Y8))
+* Heavenly Reforge Limit increased (optional) - Increases the Heavenly Reforge Cap from 36 (Vanilla) to 2048. ([Standalone mod](https://mega.nz/file/O10BVYwR#N09NIqmaX3KZ_M72BKY-XJ6wlhlhTjH4DEvsj5qtElI))
+* Agency Population Limit increased (optional) - Increases the Agency Population limit from 400 000 (Vanilla) to 999 999. ([Standalone mod](https://mega.nz/file/vwNA3RzY#ft7q0U-nhHHuCv7QHXRuJ1z0BCtpWrY6SFRkQlo-5Y8))
 * Farmable Strange Mushroom - Adds Strange Mushroom as a rare drop to the Mushroom plant, with similar rates to Red Ginseng.
 * Wudang DLC Translation" - Translates the Duck and related untranslated content added with the Wudang DLC
-* Fix Camping Head UI - Various improvements to the Head UI when camping ([Standalone Mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/22/))
-* Add Sect Rules -  better control over the popups when playing, both through additional Sect Rules and Concern/Neglect Sect Event rules. See detailed changes in the [[Standalone Mod description]](https://www.nexusmods.com/amazingcultivationsimulator/mods/24)
-* Infinite Mouse Scrolling - Removes the limit to zooming out with the scroll wheel, matching prior behaviour with PageUp. ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/23)).
-* Instant Story Hotkey - Instantly choose the story option associated with an hotkey when pressing the key.
+* Fix Camping Head UI (optional) - Various improvements to the Head UI when camping ([Standalone Mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/22/))
+* Add Sect Rules (optional) -  better control over the popups when playing, both through additional Sect Rules and Concern/Neglect Sect Event rules. See detailed changes in the [[Standalone Mod description]](https://www.nexusmods.com/amazingcultivationsimulator/mods/24)
+* Infinite Mouse Scrolling (optional) - Removes the limit to zooming out with the scroll wheel, matching prior behaviour with PageUp. ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/23)).
+* Instant Story Hotkey (optional) - Instantly choose the story option associated with an hotkey when pressing the key.
+* Display Base Mental State (optional) - Displays the base mental state superimposed over the current mental statein the profile info for Xiandao cultivators ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/18)).
+
+Everything that isn't marked as optional can still be manually disabled by removing the modified entities from the mod files.
 
 ## Install instructions
 
@@ -75,22 +78,35 @@ For example, removing the Trimerous Essence Price change requires the removal of
 ### MapStories
 
 * (MapStory_Item) Story_Item_E_FuBox - Change Talisman of Foreseer in starting experiences
-* various Mapstories - Add Sect Rules
+* Settings/MapStories/... - Add Sect Rules:
+    * MapStory_FillingLv1.xml : City_Base, Business_Base
+    * MapStory_FillingLv2.xml: Story_LingZhiGet, Story_LingZhiBeg
+    * MapStory_Special.xml: Secrets_Esoterica1, Secrets_Esoterica2, Secrets_FabaoAppear1, Secrets_FabaoAppear2, Secrets_FabaoAppear3, Secrets_FabaoAppear3_Cold, Secrets_FabaoAppear3_Hot, Secrets_DongFuAppear, Secrets_DongFuAppear_Cold, Secrets_DongFuAppear_Hot, Secrets_DongFuAppear_Manual, Secrets_DongFuAppear_Medicine, Secrets_Magic, Secrets_Magic_Cold, Secrets_Magic_Hot
+    * MapStory_SpecialGong.xml: Secrets_Gong2, Secrets_Gong3, Secrets_Gong4, Secrets_Gong5, Secrets_Gong6,Secrets_Gong7
 
 ### Properties
 
-* SkillProperty - Sort Manuals By Attainment
+* SkillProperty - Skill Level Everywhere
 
 ### Message displays / UI Events
-* School rules changes for Add Sect Rules
-* Event display changes for Add Sect Rules
-* Npc UI Events changes for Add Sect Rules
+* Settings/MsgShow/Event/EventShow.xml - Event display changes for Add Sect Rules
+* Settings/MsgShow/Rule/Rule,xml - Rule changes for Add Sect Rules
+* Settings/Ui/NpcUIEvent/NewNpcUIEvent.txt - Add Sect Rules
 
 ### Functions
+
+Modifications applied by iguana_acs_functions.dll.
 
 * FabaoData.AddGodCount, FabaoData.LoadInit - Heavenly Reforge Limit increased, Transpiler changing ldc.i4.s 36 to ldc.i4 2048
 * OutspreadMgr.Region.AddPopulation, OutspreadMgr.Region.RawAddPopulation, OutspreadMgr.GetRegionPopulationAddPerday - Agency Population Limit increased, Transpiler changing ldc.i4 400000 to ldc.i4 999999
 * Wnd_StorySelect.SelectClicking - Instant Story Hotkey
+* MapStoryMgr.TriggerStorySelection, MapStoryMgr.DidStorySelect, MessageMgr.AddMessage, MsgShowMgr.GetStorySelect- Add Sect Rules
+* Panel_ThingInfo.ShowNpc - Display Base Mental State
+* PlacesMgr.Step, Wnd_GameMain.AddNpcHead, Wnd_GameMain.AddNpcHeadSimple - Fix Camping Head UI
+* UILogicMode_Global.OnScroll - Infinite Mouse Scroll
+* Wnd_StorySelect.SelectClicking - Instant Story Hotkey
+* Panel_NpcInfoPanel.UpdateSkill, Panel_NpcPropertyPanel.UpdateSkill - Skill Level Everywhere
+* Wnd_CangJingGeWindow.CheckEsoLise, Wnd_CangJingGeWindow.RenderEsoListItem - Sort Manuals By Attainment
 
 ### Other files
 
@@ -98,9 +114,8 @@ For example, removing the Trimerous Essence Price change requires the removal of
 * Scripts\fix-gc-tier3-breakthrough-multiplier.lua - GC T3 breakthrough multiplier fix
 * Scripts\sync-perfect-alignment-moodlet.lua - Sync Perfect Alignment moodlet
 * Scripts\MapStory\MapStory.lua - Agency Population Limit increased, MapStoryHelper.SlightlyIncreaseAllPop and MapStoryHelper.IncreaseAllPop
-* Scripts\derivative-calc-change.lua - Add Sect Rules
-* Scripts\event-show-secrets-change.lua - Add Sect Rules
-* iguana_acs_functions.dll - Skill Level Everywhere, Sort Manuals By Attainment, Fix Camping Head UI, Add Sect Rules
+* Scripts\add-sect-rules.lua - Add Sect Rules
+* iguana_acs_functions.dll - Configuration and Functions
 
 ## How to Contribute
 
@@ -113,5 +128,5 @@ If the fixes exist as a standalone mod, include a link to it.
 
 ## Credits/Contributions
 
-* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet, Fix Camping Head UI, Add Sect Rules, Infinite Mouse Scrolling, Instant Story Hotkey
+* ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet, Fix Camping Head UI, Add Sect Rules, Infinite Mouse Scrolling, Instant Story Hotkey, Display Base Mental State
 * Gothmos - Add Sect Rules
