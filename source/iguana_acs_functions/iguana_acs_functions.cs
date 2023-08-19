@@ -9,7 +9,6 @@ namespace iguana_acs_functions
 
     public class iguana_acs_functions
     {
-
         public static bool configLoaded = false;
         public static Dictionary<string, bool> config = new Dictionary<string, bool>()
             {
@@ -24,7 +23,8 @@ namespace iguana_acs_functions
                 { "Fix T3 GC Breakthrough Multiplier", true},
                 { "Instantly choose story option with hotkey", InstantStoryHotkey.enabled},
                 { "Display Base Mental State", DisplayBaseMentalState.enabled},
-                { "Display max Mood at 200", MoodTo200.enabled}
+                { "Display max Mood at 200", MoodTo200.enabled},
+                { "Display Adventure Results Notifications", DisplayAdventureResults.enabled}
 
             };
         static Dictionary<string, List<Action>> loadSaveSubmods = new Dictionary<string, List<Action>>()
@@ -94,6 +94,7 @@ namespace iguana_acs_functions
             InstantStoryHotkey.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Instantly choose story option with hotkey");
             DisplayBaseMentalState.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Display Base Mental State");
             MoodTo200.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Display max Mood at 200");
+            DisplayAdventureResults.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Display Adventure Results Notifications");
 
             Dictionary<string, bool> newConfig = new Dictionary<string, bool>();
             foreach (KeyValuePair<string, bool> kvp in config)
