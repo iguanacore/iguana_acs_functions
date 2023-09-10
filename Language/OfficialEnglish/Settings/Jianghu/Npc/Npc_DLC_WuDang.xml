@@ -3,8 +3,8 @@
 		<Text Name="Npc_WuDang_1">
 			<LastName>Wudang</LastName>
 			<FristName>Duck</FristName>
-		</Text>
-		<Text Name="Npc_WuDang_1">
+		<!--/Text>
+		<Text Name="Npc_WuDang_1"-->
 			<Titles>Invincible</Titles>
 		</Text>
 	</List>
