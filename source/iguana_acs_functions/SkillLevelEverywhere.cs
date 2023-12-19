@@ -64,6 +64,8 @@ namespace iguana_acs_functions
         {
             private static void Postfix( Wnd_NpcWork __instance, FairyGUI.EventContext context )
             {
+                if (!enabled) { return; }
+                
                 try
                 {
                     var uI_NpcWorkCheckbox = context.sender as UI_NpcWorkCheckbox;
