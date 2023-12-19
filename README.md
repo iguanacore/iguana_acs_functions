@@ -65,58 +65,58 @@ For example, removing the Trimerous Essence Price change requires the removal of
 
 ### Items
 
-* Item_Dan_SanHuaHuangJing - Fix Trimerous Essence Price
-* Item_StoneBox2 and Item_SpringBox - Ancient Caskets and Festive Goods, related to Story Button Interaction Change
+* `Item_Dan_SanHuaHuangJing` - Fix Trimerous Essence Price
+* `Item_StoneBox2 and Item_SpringBox` - Ancient Caskets and Festive Goods, related to Story Button Interaction Change
 
 ### Plants
 
-* Mushroom - Farmable Strange Mushroom
+* `Mushroom` - Farmable Strange Mushroom
 
 ### JianghuNpc
 
-* Npc_WuDang_1 - Wudang DLC Translation
+* `Npc_WuDang_1` - Wudang DLC Translation
 
 ### MapStories
 
-* (MapStory_Item) Story_Item_E_FuBox - Change Talisman of Foreseer in starting experiences
-* Settings/MapStories/... - Add Sect Rules:
-    * MapStory_FillingLv1.xml : City_Base, Business_Base
-    * MapStory_FillingLv2.xml: Story_LingZhiGet, Story_LingZhiBeg
-    * MapStory_Special.xml: Secrets_Esoterica1, Secrets_Esoterica2, Secrets_FabaoAppear1, Secrets_FabaoAppear2, Secrets_FabaoAppear3, Secrets_FabaoAppear3_Cold, Secrets_FabaoAppear3_Hot, Secrets_DongFuAppear, Secrets_DongFuAppear_Cold, Secrets_DongFuAppear_Hot, Secrets_DongFuAppear_Manual, Secrets_DongFuAppear_Medicine, Secrets_Magic, Secrets_Magic_Cold, Secrets_Magic_Hot
-    * MapStory_SpecialGong.xml: Secrets_Gong2, Secrets_Gong3, Secrets_Gong4, Secrets_Gong5, Secrets_Gong6,Secrets_Gong7
+* (`MapStory_Item`) `Story_Item_E_FuBox` - Change Talisman of Foreseer in starting experiences
+* `Settings/MapStories/...` - Add Sect Rules:
+    * `MapStory_FillingLv1.xml` : City_Base, Business_Base
+    * `MapStory_FillingLv2.xml`: Story_LingZhiGet, Story_LingZhiBeg
+    * `MapStory_Special.xml`: Secrets_Esoterica1, Secrets_Esoterica2, Secrets_FabaoAppear1, Secrets_FabaoAppear2, Secrets_FabaoAppear3, Secrets_FabaoAppear3_Cold, Secrets_FabaoAppear3_Hot, Secrets_DongFuAppear, Secrets_DongFuAppear_Cold, Secrets_DongFuAppear_Hot, Secrets_DongFuAppear_Manual, Secrets_DongFuAppear_Medicine, Secrets_Magic, Secrets_Magic_Cold, Secrets_Magic_Hot
+    * `MapStory_SpecialGong.xml`: Secrets_Gong2, Secrets_Gong3, Secrets_Gong4, Secrets_Gong5, Secrets_Gong6,Secrets_Gong7
 
 ### Properties
 
-* SkillProperty - Skill Level Everywhere
+* `SkillProperty` - Skill Level Everywhere
 
 ### Message displays / UI Events
-* Settings/MsgShow/Event/EventShow.xml - Event display changes for Add Sect Rules
-* Settings/MsgShow/Rule/Rule,xml - Rule changes for Add Sect Rules
-* Settings/Ui/NpcUIEvent/NewNpcUIEvent.txt - Add Sect Rules
+* `Settings/MsgShow/Event/EventShow.xml` - Event display changes for Add Sect Rules
+* `Settings/MsgShow/Rule/Rule,xml` - Rule changes for Add Sect Rules
+* `Settings/Ui/NpcUIEvent/NewNpcUIEvent.txt` - Add Sect Rules
 
 ### Functions
 
 Modifications applied by iguana_acs_functions.dll.
 
-* FabaoData.AddGodCount, FabaoData.LoadInit - Heavenly Reforge Limit increased, Transpiler changing ldc.i4.s 36 to ldc.i4 2048
-* OutspreadMgr.Region.AddPopulation, OutspreadMgr.Region.RawAddPopulation, OutspreadMgr.GetRegionPopulationAddPerday - Agency Population Limit increased, Transpiler changing ldc.i4 400000 to ldc.i4 999999
-* Wnd_StorySelect.SelectClicking - Instant Story Hotkey
-* MapStoryMgr.TriggerStorySelection, MapStoryMgr.DidStorySelect, MessageMgr.AddMessage, MsgShowMgr.GetStorySelect- Add Sect Rules
-* Panel_ThingInfo.ShowNpc - Display Base Mental State
-* PlacesMgr.Step, Wnd_GameMain.AddNpcHead, Wnd_GameMain.AddNpcHeadSimple - Fix Camping Head UI
-* UILogicMode_Global.OnScroll - Infinite Mouse Scroll
-* Wnd_StorySelect.SelectClicking - Instant Story Hotkey
-* Panel_NpcInfoPanel.UpdateSkill, Panel_NpcPropertyPanel.UpdateSkill - Skill Level Everywhere
-* Wnd_CangJingGeWindow.CheckEsoLise, Wnd_CangJingGeWindow.RenderEsoListItem - Sort Manuals By Attainment
-* Wnd_NpcInfo.OnInit, Wnd_GameMain.OnInit - Display max Mood at 200
+* `FabaoData.AddGodCount`, `FabaoData.LoadInit` - Heavenly Reforge Limit increased, Transpiler changing ldc.i4.s 36 to ldc.i4 2048
+* `OutspreadMgr.Region.AddPopulation`, `OutspreadMgr.Region.RawAddPopulation`, `OutspreadMgr.GetRegionPopulationAddPerday` - Agency Population Limit increased, Transpiler changing ldc.i4 400000 to ldc.i4 999999
+* `Wnd_StorySelect.SelectClicking` - Instant Story Hotkey
+* `MapStoryMgr.TriggerStorySelection`, `MapStoryMgr.DidStorySelect`, `MessageMgr.AddMessage`, `MsgShowMgr.GetStorySelect`- Add Sect Rules
+* `Panel_ThingInfo.ShowNpc` - Display Base Mental State
+* `PlacesMgr.Step`, `Wnd_GameMain.AddNpcHead`, `Wnd_GameMain.AddNpcHeadSimple` - Fix Camping Head UI
+* `UILogicMode_Global.OnScroll` - Infinite Mouse Scroll
+* `Wnd_StorySelect.SelectClicking` - Instant Story Hotkey
+* `Panel_NpcInfoPanel.UpdateSkill`, `Panel_NpcPropertyPanel.UpdateSkill`, `Wnd_NpcWork.ItemRoolOver` - Skill Level Everywhere
+* `Wnd_CangJingGeWindow.CheckEsoLise`, `Wnd_CangJingGeWindow.RenderEsoListItem` - Sort Manuals By Attainment
+* `Wnd_NpcInfo.OnInit`, `Wnd_GameMain.OnInit` - Display max Mood at 200
 ### Other files
 
-* Scripts\main.lua - main LUA mod loading utility
-* Scripts\fix-gc-tier3-breakthrough-multiplier.lua - GC T3 breakthrough multiplier fix
-* Scripts\sync-perfect-alignment-moodlet.lua - Sync Perfect Alignment moodlet
-* Scripts\MapStory\MapStory.lua - Agency Population Limit increased, MapStoryHelper.SlightlyIncreaseAllPop and MapStoryHelper.IncreaseAllPop
-* Scripts\add-sect-rules.lua - Add Sect Rules
-* iguana_acs_functions.dll - Configuration and Functions
+* `Scripts\main.lua` - main LUA mod loading utility
+* `Scripts\fix-gc-tier3-breakthrough-multiplier.lua` - GC T3 breakthrough multiplier fix
+* `Scripts\sync-perfect-alignment-moodlet.lua` - Sync Perfect Alignment moodlet
+* `Scripts\MapStory\MapStory.lua` - Agency Population Limit increased, MapStoryHelper.SlightlyIncreaseAllPop and MapStoryHelper.IncreaseAllPop
+* `Scripts\add-sect-rules.lua` - Add Sect Rules
+* `iguana_acs_functions.dll` - Configuration and Functions
 
 ## How to Contribute
 
