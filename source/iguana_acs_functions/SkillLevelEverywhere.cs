@@ -58,7 +58,7 @@ namespace iguana_acs_functions
             }
         }
 
-
+        //Added with PR#40
         [HarmonyPatch( typeof( Wnd_NpcWork ), "ItemRoolOver" )]
         private class NPCWnd_NpcWork
         {
@@ -66,8 +66,8 @@ namespace iguana_acs_functions
             {
                 if (!enabled) { return; }
                 
-                try
-                {
+                //try
+                //{
                     var uI_NpcWorkCheckbox = context.sender as UI_NpcWorkCheckbox;
                     int childIndex = ( uI_NpcWorkCheckbox.parent as FairyGUI.GList ).GetChildIndex( uI_NpcWorkCheckbox );
                     FairyGUI.GObject[] children = __instance.UIInfo.m_n15.GetChildren();
@@ -90,11 +90,14 @@ namespace iguana_acs_functions
                             }
                         }
                     }
+                /* Temporarily disabled due to build failure
                 }
+                
                 catch(Exception e)
                 {
                     Main.Debug( e.Message );
                 }
+                */
             }
         }
     }
