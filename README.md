@@ -23,6 +23,7 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 Everything that isn't marked as optional can still be manually disabled by removing the modified entities from the mod files.
 * Display Adventure Results Notifications - Adds a small notification on adventure return if some harvest has been obtained.
 * Chance Estimation Precision - Increases the precision of estimates from GetRateString, anything below 1% is listed now as insignificant.
+* Formation Sharing - Reveals the Formation Diagram Sharing/Import buttons, in both normal gameplay as well as RPG Map Maker.
 
 ## Install instructions
 
@@ -111,6 +112,7 @@ Modifications applied by iguana_acs_functions.dll.
 * `Wnd_CangJingGeWindow.CheckEsoLise`, `Wnd_CangJingGeWindow.RenderEsoListItem` - Sort Manuals By Attainment
 * `Wnd_NpcInfo.OnInit`, `Wnd_GameMain.OnInit` - Display max Mood at 200
 * `GameUlt.GetRateString` - Chance Estimation Precision
+* `Wnd_CreateZhen.OnShown` - Formation Sharing
 ### Other files
 
 * `Scripts\main.lua` - main LUA mod loading utility

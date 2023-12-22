@@ -25,7 +25,8 @@ namespace iguana_acs_functions
                 { "Display Base Mental State", DisplayBaseMentalState.enabled},
                 { "Display max Mood at 200", MoodTo200.enabled},
                 { "Display Adventure Results Notifications", DisplayAdventureResults.enabled},
-                { "Chance Estimation Precision", GetRateStringPrecision.enabled}
+                { "Chance Estimation Precision", GetRateStringPrecision.enabled},
+                { "Formation Sharing", ZhenImportExport.enabled }
 
             };
         static Dictionary<string, List<Action>> loadSaveSubmods = new Dictionary<string, List<Action>>()
@@ -97,6 +98,7 @@ namespace iguana_acs_functions
             MoodTo200.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Display max Mood at 200");
             DisplayAdventureResults.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Display Adventure Results Notifications");
             GetRateStringPrecision.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Chance Estimation Precision");
+            ZhenImportExport.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Formation Sharing");
 
             Dictionary<string, bool> newConfig = new Dictionary<string, bool>();
             foreach (KeyValuePair<string, bool> kvp in config)
