@@ -22,6 +22,7 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * Display max Mood at 200 (optional) - Whenever the game uses mood for calculations, it uses 200 as maximum value and not 100 as it is displayed in-game. This corrects the in-game indicators to treat 200 mood as the actual maximum to avoid confusion.
 Everything that isn't marked as optional can still be manually disabled by removing the modified entities from the mod files.
 * Display Adventure Results Notifications - Adds a small notification on adventure return if some harvest has been obtained.
+* Chance Estimation Precision - Increases the precision of estimates from GetRateString, anything below 1% is listed now as insignificant.
 
 ## Install instructions
 
@@ -109,6 +110,7 @@ Modifications applied by iguana_acs_functions.dll.
 * `Panel_NpcInfoPanel.UpdateSkill`, `Panel_NpcPropertyPanel.UpdateSkill`, `Wnd_NpcWork.ItemRoolOver` - Skill Level Everywhere
 * `Wnd_CangJingGeWindow.CheckEsoLise`, `Wnd_CangJingGeWindow.RenderEsoListItem` - Sort Manuals By Attainment
 * `Wnd_NpcInfo.OnInit`, `Wnd_GameMain.OnInit` - Display max Mood at 200
+* `GameUlt.GetRateString` - Chance Estimation Precision
 ### Other files
 
 * `Scripts\main.lua` - main LUA mod loading utility
@@ -131,3 +133,4 @@ If the fixes exist as a standalone mod, include a link to it.
 
 * ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet, Fix Camping Head UI, Add Sect Rules, Infinite Mouse Scrolling, Instant Story Hotkey, Display Base Mental State, Display max Mood at 200, Display Adventure Results Notifications
 * Gothmos - Add Sect Rules
+* NecrCode - Skill Level Everywhere additions
