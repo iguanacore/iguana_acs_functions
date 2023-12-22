@@ -3,6 +3,7 @@ using XiaWorld;
 using HarmonyLib;
 using XiaWorld.UI.InGame;
 using UnityEngine;
+using System; //PR#40 exception catching
 
 namespace iguana_acs_functions
 {
