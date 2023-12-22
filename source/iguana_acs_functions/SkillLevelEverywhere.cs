@@ -3,6 +3,7 @@ using XiaWorld;
 using HarmonyLib;
 using XiaWorld.UI.InGame;
 using UnityEngine;
+using System; //PR#40 exception catching
 
 namespace iguana_acs_functions
 {
@@ -55,6 +56,50 @@ namespace iguana_acs_functions
                     uI_SkillProgressBarDouble.max = 20.0;
                     uI_SkillProgressBarDouble.m_bar2.scaleX = Mathf.Clamp(skillEvaluate.x / 20f, 0f, 1f);
                 }
+            }
+        }
+
+        //Added with PR#40
+        [HarmonyPatch( typeof( Wnd_NpcWork ), "ItemRoolOver" )]
+        private class NPCWnd_NpcWork
+        {
+            private static void Postfix( Wnd_NpcWork __instance, FairyGUI.EventContext context )
+            {
+                if (!enabled) { return; }
+                
+                try
+                {
+                    var uI_NpcWorkCheckbox = context.sender as UI_NpcWorkCheckbox;
+                    int childIndex = ( uI_NpcWorkCheckbox.parent as FairyGUI.GList ).GetChildIndex( uI_NpcWorkCheckbox );
+                    FairyGUI.GObject[] children = __instance.UIInfo.m_n15.GetChildren();
+
+                    for ( int i = 0; i < children.Length; i++ )
+                    {
+                        UI_NpcWorkCheckList uI_NpcWorkCheckList = (UI_NpcWorkCheckList)children[i];
+
+                        if ( uI_NpcWorkCheckList.m_n13.GetChildAt( childIndex ) is UI_NpcWorkCheckbox uI_NpcWorkCheckbox2 )
+                        {
+                            uI_NpcWorkCheckbox2.m_HighLight.selectedIndex = 1;
+
+                            var npc = uI_NpcWorkCheckbox2.data as Npc;
+                            g_emBehaviourWorkKind work = (g_emBehaviourWorkKind)uI_NpcWorkCheckbox2.data2;
+
+                            if ( GameDefine.BehaviourLinkSkill.ContainsKey( work ) )
+                            {
+                                var skill = GameDefine.BehaviourLinkSkill[work];
+                                uI_NpcWorkCheckbox2.m_level.text = npc.PropertyMgr.SkillData.GetSkillLevel( skill ).ToString();
+                            }
+                        }
+                    }
+               
+                }
+                
+                catch(Exception e)
+                {
+                    //SLE SkillLevelEverywhere
+                    KLog.Dbg( "[Iguana ACS Functions - SLE] Error: " + e.Message );
+                }
+               
             }
         }
     }
