@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddSectRules.cs" />
+    <Compile Include="BodyPracticePlus.cs" />
     <Compile Include="DisplayAdventureResults.cs" />
     <Compile Include="DisplayBaseMentalState.cs" />
     <Compile Include="FixCampingHeadUI.cs" />
