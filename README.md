@@ -91,7 +91,6 @@ For example, removing the Trimerous Essence Price change requires the removal of
 ### Properties
 
 * `SkillProperty` - Skill Level Everywhere
-* `UnityEngine.Time.timeScale` - Body Cultivation+ Less Grindy Remolding
 
 ### Message displays / UI Events
 * `Settings/MsgShow/Event/EventShow.xml` - Event display changes for Add Sect Rules
