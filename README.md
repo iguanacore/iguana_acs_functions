@@ -24,6 +24,7 @@ Everything that isn't marked as optional can still be manually disabled by remov
 * Display Adventure Results Notifications - Adds a small notification on adventure return if some harvest has been obtained.
 * Chance Estimation Precision - Increases the precision of estimates from GetRateString, anything below 1% is listed now as insignificant.
 * Formation Sharing - Reveals the Formation Diagram Sharing/Import buttons, in both normal gameplay as well as RPG Map Maker.
+* Body Cultivation+ Less Grindy Remolding - Improves and Makes the remolding process simpler, faster, and cleaner. Color filters work as intended, by removing unwanted labels (unless required by the body part).
 
 ## Install instructions
 
@@ -113,6 +114,8 @@ Modifications applied by iguana_acs_functions.dll.
 * `Wnd_NpcInfo.OnInit`, `Wnd_GameMain.OnInit` - Display max Mood at 200
 * `GameUlt.GetRateString` - Chance Estimation Precision
 * `Wnd_CreateZhen.OnShown` - Formation Sharing
+* `Wnd_BodyRollShow.Begin`, `Wnd_BodyRollShow.OnHide`, `XiaWorld.PracticeMgr.GetRandomQuenchingLabelList` - Body Cultivation+ Less Grindy Remolding
+
 ### Other files
 
 * `Scripts\main.lua` - main LUA mod loading utility
@@ -135,4 +138,4 @@ If the fixes exist as a standalone mod, include a link to it.
 
 * ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet, Fix Camping Head UI, Add Sect Rules, Infinite Mouse Scrolling, Instant Story Hotkey, Display Base Mental State, Display max Mood at 200, Display Adventure Results Notifications
 * Gothmos - Add Sect Rules
-* NecrCode - Skill Level Everywhere additions
+* NecrCode - Skill Level Everywhere additions, Body Cultivation+ Less Grindy Remolding
