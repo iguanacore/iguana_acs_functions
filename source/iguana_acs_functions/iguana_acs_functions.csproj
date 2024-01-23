@@ -64,9 +64,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddSectRules.cs" />
+    <Compile Include="BodyPracticePlus.cs" />
     <Compile Include="DisplayAdventureResults.cs" />
     <Compile Include="DisplayBaseMentalState.cs" />
     <Compile Include="FixCampingHeadUI.cs" />
+    <Compile Include="GetRateStringPrecision.cs" />
     <Compile Include="GodCountIncreaser.cs" />
     <Compile Include="iguana_acs_functions.cs" />
     <Compile Include="InfiniteScroll.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="SkillLevelEverywhere.cs" />
     <Compile Include="SortManualsByAttainment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="zhenImportExport.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
