@@ -22,7 +22,7 @@ function NewMagicLeave(self, success)
             end
             local result = world:RandomInt(SECRET[1],SECRET[2])
             if result == 60 then
-                result == 59;
+                result = 59;
             end
             if MsgShowMgr:CheckEventHide("p_derivativecalc2") == false then
                 if result <= 57 then
