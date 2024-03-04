@@ -21,6 +21,9 @@ function NewMagicLeave(self, success)
 			    world:ShowStoryBox(XT("大衍神算施展成功，获得一条秘闻。"), XT("大衍神算"));
             end
             local result = world:RandomInt(SECRET[1],SECRET[2])
+            if result == 60 then
+                result == 59;
+            end
             if MsgShowMgr:CheckEventHide("p_derivativecalc2") == false then
                 if result <= 57 then
                     MessageMgr:AddMessage(502)
