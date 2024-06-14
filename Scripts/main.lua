@@ -32,6 +32,7 @@ function iguana_acs_functions:functorAddSubmodInitializer(event)
     end
 end
 
+local mllSavedLoaded = false
 function iguana_acs_functions:OnStep(dt)
     -- The configuration from MLL is loaded after the lua files are
     -- which means we need to do our own initialization once MLL is done
@@ -49,7 +50,13 @@ function iguana_acs_functions:OnStep(dt)
     end
     print("iguana_acs_functions:actual init")
     self.configLoaded = true
-    self.OnStep = nil
+	self.OnStep = nil
+	
+	if configLoaded and not mllSavedLoaded then
+		CS.ModLoaderLite.MLLMain.Save()
+		CS.ModLoaderLite.MLLMain.Load()
+		mllSavedLoaded = true
+    end
     if self.lateCall == nil then
         return
     end
