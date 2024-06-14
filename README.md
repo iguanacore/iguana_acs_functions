@@ -24,7 +24,7 @@ Everything that isn't marked as optional can still be manually disabled by remov
 * Display Adventure Results Notifications - Adds a small notification on adventure return if some harvest has been obtained.
 * Chance Estimation Precision - Increases the precision of estimates from GetRateString, anything below 1% is listed now as insignificant.
 * Formation Sharing - Reveals the Formation Diagram Sharing/Import buttons, in both normal gameplay as well as RPG Map Maker.
-* Body Cultivation+ Less Grindy Remolding - Improves and Makes the remolding process simpler, faster, and cleaner. Color filters work as intended, by removing unwanted labels (unless required by the body part).
+* Body Cultivation+ Less Grindy Remolding - Improves and Makes the remolding process simpler, faster, and cleaner. filter either by selecting label(s), or by color(s). and also the option to ignore labels required to unlock a secret body.
 
 ## Install instructions
 
@@ -123,6 +123,8 @@ Modifications applied by iguana_acs_functions.dll.
 * `Scripts\sync-perfect-alignment-moodlet.lua` - Sync Perfect Alignment moodlet
 * `Scripts\MapStory\MapStory.lua` - Agency Population Limit increased, MapStoryHelper.SlightlyIncreaseAllPop and MapStoryHelper.IncreaseAllPop
 * `Scripts\add-sect-rules.lua` - Add Sect Rules
+* `Scripts\bodypracticeplus.lua` - a lua extension for Body Cultivation+, initializes and sets up the UI required by the mod.
+* `UI\BPP_List_fui.bytes` - Body Cultivation+'s UI.
 * `iguana_acs_functions.dll` - Configuration and Functions
 
 ## How to Contribute
