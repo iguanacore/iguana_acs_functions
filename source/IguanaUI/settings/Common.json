@@ -1,0 +1,16 @@
+{
+	"buttonClickSound":"",
+	"colorScheme":["自定义颜色 #FF0000","黑底字 #D1C0A5","无底字 #D1C0A5","亮底字 #2B231B","大吉 #00FF00","吉 #1AA100","小吉 #9AFF9A","小凶 #FFF92B","凶 #FF8211","大凶 #FF0000","描边1 #444444","描边2 #ffe5a1","描边3 #d08033","描边4 #483721","字体1 #ffe5a1","字体2 #ececec","字体3 #b0aca1","字体4 #fec585","字体5 #DEA60D","字体彩色1 #f35858","字体彩色2 #83eb68","字体彩色3 #fc9a4a","字体彩色4 #44cef6","字体彩色5 #d874f9","字体彩色6 #f7d95f","字体彩色7 #d5d5d5","0白 #FFFFFF","1绿 #33CC00","2蓝 #0099FF","3紫 #F700FF","4橙 #FFA900","5粉 #FF99FF","按钮字 #3C5959","按钮字 #ffe5a1","按钮描边 #927655","一般文字 #6d5544","一般文字2 #514030"],
+	"font":"微软雅黑",
+	"fontScheme":["默认字体"],
+	"fontSize":12,
+	"fontSizeScheme":["自定义字体大小 30"],
+	"pivot":"default",
+	"scrollBars":{
+		"defaultDisplay":"visible",
+		"horizontal":"ui://0xrxw6g7hdhl1m",
+		"vertical":"ui://0xrxw6g7hdhl1n"
+	},
+	"textColor":"#000000",
+	"tipsRes":"ui://0xrxw6g7hdhl1t"
+}

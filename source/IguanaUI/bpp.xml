@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- BPP_List/Label1.xml -->
+  <string name="2fevh8bimtkj3i-n46_mtkj" mz="title">Default Text</string>
+  <!-- BPP_List/LabelsList.xml -->
+  <string name="2fevh8biv6073f-n25_mtkj-0" mz="filter_mode">By Rarity</string>
+  <string name="2fevh8biv6073f-n25_mtkj-1" mz="filter_mode">By Selected Labels</string>
+  <string name="2fevh8biv6073f-n26_mtkj" mz="n26">Filter Quenched Labels:</string>
+  <string name="2fevh8biv6073f-n29_iali-tips" mz="n29">Remove Labels required to unlock a secret body,if they don't meet filtering conditions, either by rarity or selection.</string>
+  <string name="2fevh8biv6073f-n29_iali" mz="n29">Ignore Required Labels</string>
+  <string name="2fevh8biv6073f-n31_iali" mz="n31">Select a Body Part
+</string>
+ 
+</resources>

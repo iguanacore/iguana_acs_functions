@@ -25,7 +25,8 @@ local function round(n, prec) --thanks to NumericDescriptions
 	end
 end
 
-local function GetEssenceDispName(Items) -- get essence display name; TODO: Add DevourData found in ItemData to know which item contains which essence (thingitem?)
+-- get essence display name; TODO: Add DevourData found in ItemData to know which item contains which essence (thingitem?)
+local function GetEssenceDispName(Items) 
     local essences = ""
     
     if Items == nil then return nil end
@@ -43,7 +44,7 @@ local function GetLabelAdditionalInfo(label) -- get label displayName, propertie
     local labelDef = CS.XiaWorld.PracticeMgr.Instance:GetBodyQuenchingLabelDef(label)
 
     local labelDisplayName = labelDef.DisplayName 
-    local supProp ="[color=#A025B1]"; --CC3333 prev color
+    local supProp =  "[color=#A025B1]" --"[color=#ED53E8]"; --CC3333 prev color
     local modifier = "";
     if labelDef.SuperPartProperties ~= nil then 
         
@@ -80,10 +81,12 @@ local function GetLabelAdditionalInfo(label) -- get label displayName, propertie
         end
     
     end
+    local globalModfClr = "[color=#249819]" --new  "[color=#2EC220]" 
+    local desc = supProp .. "[/color]".. globalModfClr  .. modifier .. "[/color]"
     
-    local desc = supProp .. "[/color]"..  "[color=#249819]" .. modifier .. "[/color]"
-    
-    if labelDef.Desc:find(desc) == nil then labelDef.Desc = labelDef.Desc .. "\n" .. desc end
+    if labelDef.Desc:find(desc) == nil and labelDef.Desc:find("#249819") == nil then 
+		labelDef.Desc = labelDef.Desc .. "\n" .. desc 
+	end
     
     return labelDisplayName , desc, labelDef.MaxLevel
 end
@@ -129,40 +132,40 @@ local function GetBPLabels(Part, baseCache) -- get labels for the selected part 
 end
 
 local function FilterMode( ctx )
-	if ctx.initiator.selectedIndex == 0 then
-		CS.iguana_acs_functions.BodyPracticePlus.filter_mode = 0
-	else
-		CS.iguana_acs_functions.BodyPracticePlus.filter_mode = 1
-	end
+	local npcID = CS.Wnd_BodyPractice.Instance.npc.ID
+	CS.iguana_acs_functions.BodyPracticePlus.PrefsFilterMode(npcID, true, ctx.initiator.selectedIndex)
 end
 
 local function IgnoreRequireLabels( ctx )
-	CS.iguana_acs_functions.BodyPracticePlus.ignoreRequiredLabels = ctx.sender.selected
+	 local npcID = CS.Wnd_BodyPractice.Instance.npc.ID
+	CS.iguana_acs_functions.BodyPracticePlus.PrefsIgnoreLabels(npcID, true,  ctx.sender.selected );
 end
 
 local function OnClickLabel( ctx )
 	 local gLabel = ctx.data
 	 local bodypart = gLabel.data2
      local label = gLabel.data3
+	 local npcID = CS.Wnd_BodyPractice.Instance.npc.ID
 
-	 CS.iguana_acs_functions.BodyPracticePlus.ModifyPreferredLabels(bodypart, label, gLabel.selected)
+	 CS.iguana_acs_functions.BodyPracticePlus.ModifyPreferredLabels(npcID, bodypart, label, gLabel.selected)
 end
 
 local function UpdateList(ctx) -- Add Labels to the list
     
-	local BPP_List = CS.Wnd_BodyPractice.Instance.contentPane:GetChild("BPP_List")
+	local BodyPracticePlus = CS.iguana_acs_functions.BodyPracticePlus
+	local Wnd_BodyPractice = CS.Wnd_BodyPractice.Instance
+	local BPP_List = Wnd_BodyPractice.contentPane:GetChild("BPP_List")
+	local npcID = Wnd_BodyPractice.npc.ID
 
-	BPP_List.visible = CS.iguana_acs_functions.BodyPracticePlus.enabled
+	BPP_List.visible = BodyPracticePlus.enabled
 
 	if not BPP_List.visible then
 		return
 	end
 
-	BPP_List:GetChild("filter_mode").onClickItem:Add(FilterMode)
-	BPP_List:GetChild("filter_mode"):GetChildAt(0).tooltips = "Fitler remolded labels based on the checked colors (on the far right)"
-	BPP_List:GetChild("filter_mode"):GetChildAt(1).tooltips = "Filter remolded labels based on the selected labels from the list above.\
-																\n[size=9]Note: To ensure this filter works as intended, all colors will be checked.[/size]"
-	BPP_List:GetChild("n29").onClick:Add(IgnoreRequireLabels)
+
+	BPP_List:GetChild("n29").selected = BodyPracticePlus.PrefsIgnoreLabels( Wnd_BodyPractice.npc.ID );
+	BPP_List:GetChild("filter_mode").selectedIndex = BodyPracticePlus.PrefsFilterMode( Wnd_BodyPractice.npc.ID );
 
     local gList = BPP_List:GetChild("n8")
 	gList.onClickItem:Add( OnClickLabel )
@@ -186,7 +189,7 @@ local function UpdateList(ctx) -- Add Labels to the list
 			local Litem = gList:AddItemFromPool();
 			Litem.title = label.DisplayName
 			Litem.tooltips = label.Desc
-			Litem.selected = CS.iguana_acs_functions.BodyPracticePlus.IsLabelPreferred(def.Kind:ToString(), label.ID)
+			Litem.selected = BodyPracticePlus.IsLabelPreferred(npcID, def.Kind:ToString(), label.ID)
 			Litem.data2 = def.Kind:ToString() --Selected Body part
 			Litem.data3 = label.ID -- Label name
             
@@ -202,56 +205,66 @@ local function UpdateList(ctx) -- Add Labels to the list
 end
 
 local function SelectAllLabels( ctx )
+	local npcID = CS.Wnd_BodyPractice.Instance.npc.ID
 	local gList = CS.Wnd_BodyPractice.Instance.contentPane:GetChild("BPP_List"):GetChild("n8")
 	gList:SelectAll()
-	children = gList:GetChildren()
-	for i=0, children.Length-1 do
-		CS.iguana_acs_functions.BodyPracticePlus.ModifyPreferredLabels(children[i].data2, children[i].data3, true)
+	for i,gobj in ipairs(gList:GetChildren()) do
+		CS.iguana_acs_functions.BodyPracticePlus.ModifyPreferredLabels(npcID, gobj.data2, gobj.data3, true)
 	end
 
 end
 
 local function ClearSelectedLabels( ctx )
+	local npcID = CS.Wnd_BodyPractice.Instance.npc.ID
 	local gList = CS.Wnd_BodyPractice.Instance.contentPane:GetChild("BPP_List"):GetChild("n8")
 	print("ClearSelectedLabels")
-	CS.iguana_acs_functions.BodyPracticePlus.ClearPreferredLabels(gList:GetChildAt(0).data2)
+	CS.iguana_acs_functions.BodyPracticePlus.ClearPreferredLabels(npcID, gList:GetChildAt(0).data2)
 	gList:ClearSelection()
 end
 
 function InitBPPWindow()
+	local BodyPracticePlus = CS.iguana_acs_functions.BodyPracticePlus
 	local Wnd_BodyPractice = CS.Wnd_BodyPractice.Instance
-    local bppFrame = Wnd_BodyPractice.contentPane:AddChild(UIPackage.CreateObject("BPP_List", "LabelsList")); 
+    local bppFrame = Wnd_BodyPractice.contentPane:AddChild(UIPackage.CreateObject("IguanaUI", "LabelsList")); 
     
     print("[Iguana ACS Funcs - BP+] Init Body Cultivation+\n") 
     
     bppFrame.x = -300;
     bppFrame.y = 20;
     bppFrame.name = "BPP_List";
-    --bppFrame:GetChild("n8").defaultItem = "ui://0xrxw6g7dc9rovpr"
+	
+	bppFrame:GetChild("filter_mode").onClickItem:Add(FilterMode)
+	bppFrame:GetChild("filter_mode"):GetChildAt(0).tooltips = "Fitler remolded labels based on the checked colors (on the far right)"
+	bppFrame:GetChild("filter_mode"):GetChildAt(1).tooltips = "Filter remolded labels based on the selected labels from the list above.\
+																\n[size=9]Note: To ensure this filter works as intended, all colors will be checked.[/size]"
+	bppFrame:GetChild("n29").onClick:Add(IgnoreRequireLabels)
+	bppFrame:GetChild("n29").selected = BodyPracticePlus.PrefsIgnoreLabels( Wnd_BodyPractice.npc.ID );
+	bppFrame:GetChild("filter_mode").selectedIndex = BodyPracticePlus.PrefsFilterMode( Wnd_BodyPractice.npc.ID );
+	--bppFrame:GetChild("n8").defaultItem = "ui://0xrxw6g7dc9rovpr"
 	Wnd_BodyPractice.contentPane:GetChild("n166").onClickItem:Add( UpdateList )
 
-	local btnSelectAll = Wnd_BodyPractice.contentPane:GetChild("BPP_List"):AddChild( UIPackage.CreateObject("InGame", "CItem") )
-	local btnDeselectAll = Wnd_BodyPractice.contentPane:GetChild("BPP_List"):AddChild( UIPackage.CreateObject("InGame", "CItem") )
+	local bntSelectAll = Wnd_BodyPractice.contentPane:GetChild("BPP_List"):AddChild( UIPackage.CreateObject("InGame", "CItem") )
+	local bntDeselectAll = Wnd_BodyPractice.contentPane:GetChild("BPP_List"):AddChild( UIPackage.CreateObject("InGame", "CItem") )
 	
-	btnSelectAll.title = ""
-	btnSelectAll.tooltips = "Select All Labels"
-	btnSelectAll.name = "btnSelectAll"
-	btnSelectAll.width = 20
-	btnSelectAll.height = 20
-	btnSelectAll.x = 5
-	btnSelectAll.y = 15
-	btnSelectAll.m_n19.color = CS.UnityEngine.Color(.3,1,.3)
-	btnSelectAll.onClick:Add( SelectAllLabels )
+	bntSelectAll.title = ""
+	bntSelectAll.tooltips = "Select All Labels"
+	bntSelectAll.name = "bntSelectAll"
+	bntSelectAll.width = 20
+	bntSelectAll.height = 20
+	bntSelectAll.x = 5
+	bntSelectAll.y = 15
+	bntSelectAll.m_n19.color = CS.UnityEngine.Color(.3,1,.3)
+	bntSelectAll.onClick:Add( SelectAllLabels )
 
-	btnDeselectAll.title = ""
-	btnDeselectAll.tooltips = "Clear Selected Labels"
-	btnDeselectAll.name = "btnDeselectAll"
-	btnDeselectAll.width = 20
-	btnDeselectAll.height = 20
-	btnDeselectAll.x = btnSelectAll.x
-	btnDeselectAll.y = btnSelectAll.y + 20
-	btnDeselectAll.m_n19.color = CS.UnityEngine.Color(1,.3,.3)
-	btnDeselectAll.onClick:Add( ClearSelectedLabels )
+	bntDeselectAll.title = ""
+	bntDeselectAll.tooltips = "Clear Selected Labels"
+	bntDeselectAll.name = "bntDeselectAll"
+	bntDeselectAll.width = 20
+	bntDeselectAll.height = 20
+	bntDeselectAll.x = bntSelectAll.x
+	bntDeselectAll.y = bntSelectAll.y + 20
+	bntDeselectAll.m_n19.color = CS.UnityEngine.Color(1,.3,.3)
+	bntDeselectAll.onClick:Add( ClearSelectedLabels )
 
     
 	Wnd_BodyPractice.onPositionChanged:Remove( InitBPPWindow );
@@ -259,7 +272,6 @@ end
 
 
 local function InitBPLabels() --GetBPLabelCacheDef : cache, BodyPartDef, partType, partName
-    
     xlua.private_accessible(CS.XiaWorld.PracticeMgr)
     local dicCache = CS.XiaWorld.PracticeMgr.s_mapBPLabelCacheDefs  
     for key,val in pairs(dicCache) do
@@ -289,13 +301,23 @@ local function InitBPLabels() --GetBPLabelCacheDef : cache, BodyPartDef, partTyp
         end    
     end  
 
-    
 end
+
+local function SetTradeValueVisible( ctx )
+	if not ctx.sender.contentPane.m_itemvalue.visible then
+		ctx.sender.contentPane.m_itemvalue.visible = true
+		ctx.sender.contentPane.m_itemvalue.y = ctx.sender.contentPane.m_friendpontvalue.y - 50
+	end
+end
+
+--CS.Wnd_TipPopPanel.Instance.UIInfo.m_n0.color = CS.UnityEngine.Color(0,0,0,1)
 --BPP: BodyPracticePlus
 function initBPP()
-	CS.iguana_acs_functions.BodyPracticePlus.ClearPreferredLabels()
+	--BodyPracticePlus.ClearPreferredLabels()
     CS.Wnd_BodyPractice.Instance.onPositionChanged:Add( InitBPPWindow )
+    CS.Wnd_SchoolTrade.Instance.onClick:Add( SetTradeValueVisible ) 
     InitBPLabels();
+
 	--sort table by Lv 
     table.sort(Labels, function (a,b) return a.Lv > b.Lv;   end ) 
 end
