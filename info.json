@@ -2,7 +2,7 @@
     "Name":"iguana_acs_functions",
     "DisplayName":"Iguana's Overhaul, functional changes",
     "GameVersion":1.23,
-    "Version":0.4,
+    "Version":0.5,
     "Desc": "A mod, consisting of functional changes for Amazing Cultivation Simulator, not just fixes.\n\n[Changelog]\nListed in the README.MD, available on the repository.",
     "Author":"iguana",
 	"UIPackage":"UI/BPP_List",
