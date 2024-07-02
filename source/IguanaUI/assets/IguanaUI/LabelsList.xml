@@ -4,7 +4,7 @@
   <controller name="button" pages="2,up,3,down" selected="0"/>
   <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
   <displayList>
-    <image id="n7_zg5x" name="n7" src="kjtf3p" fileName="images/bg_ban008.png" pkg="ncbwb41m" xy="-21,-3" size="305,588">
+    <image id="n7_zg5x" name="n7" src="kjtf3p" fileName="images/bg_ban008.png" xy="-21,-3" size="305,588">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <graph id="n4" name="contentArea" xy="2,15" size="258,552">
@@ -24,7 +24,7 @@
     <component id="n29_iali" name="n29" src="mtkjb2" fileName="button.xml" xy="10,499" size="130,19" tooltips="Remove Labels required to unlock a secret body,if they don&apos;t meet filtering conditions, either by rarity or selection.">
       <Button title="Ignore Required Labels"/>
     </component>
-    <image id="n30_iali" name="n30" src="zg5x9d" fileName="images/bg_ban0013.png" pkg="ncbwb41m" xy="32,18" size="201,24"/>
+    <image id="n30_iali" name="n30" src="zg5x9d" fileName="images/bg_ban0013.png" xy="32,18" size="201,24"/>
     <text id="n31_iali" name="n31" xy="39,20" size="185,20" fontSize="12" align="center" vAlign="middle" autoSize="none" singleLine="true" text="Select a Body Part&#xA;"/>
     <component id="n32_iali" name="n32" src="mtkjb2" fileName="button.xml" xy="139,499" size="125,19" visible="false" tooltips="Remeber selected labels by body part type (organ, muscle, ro bone).&#xA;Else remeber for each body part.">
       <Button title="Remeber by Part Type"/>

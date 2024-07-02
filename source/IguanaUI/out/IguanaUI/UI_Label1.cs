@@ -3,7 +3,7 @@
 using FairyGUI;
 using FairyGUI.Utils;
 
-namespace BPP_List
+namespace IguanaUI
 {
     public partial class UI_Label1 : GButton
     {
@@ -15,7 +15,7 @@ namespace BPP_List
 
         public static UI_Label1 CreateInstance()
         {
-            return (UI_Label1)UIPackage.CreateObject("BPP_List", "Label1");
+            return (UI_Label1)UIPackage.CreateObject("IguanaUI", "Label1");
         }
 
         public override void ConstructFromXML(XML xml)
