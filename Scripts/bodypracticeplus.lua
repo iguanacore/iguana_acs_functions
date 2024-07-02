@@ -243,28 +243,28 @@ function InitBPPWindow()
 	--bppFrame:GetChild("n8").defaultItem = "ui://0xrxw6g7dc9rovpr"
 	Wnd_BodyPractice.contentPane:GetChild("n166").onClickItem:Add( UpdateList )
 
-	local bntSelectAll = Wnd_BodyPractice.contentPane:GetChild("BPP_List"):AddChild( UIPackage.CreateObject("InGame", "CItem") )
-	local bntDeselectAll = Wnd_BodyPractice.contentPane:GetChild("BPP_List"):AddChild( UIPackage.CreateObject("InGame", "CItem") )
+	local btnSelectAll = Wnd_BodyPractice.contentPane:GetChild("BPP_List"):AddChild( UIPackage.CreateObject("InGame", "CItem") )
+	local btnDeselectAll = Wnd_BodyPractice.contentPane:GetChild("BPP_List"):AddChild( UIPackage.CreateObject("InGame", "CItem") )
 	
-	bntSelectAll.title = ""
-	bntSelectAll.tooltips = "Select All Labels"
-	bntSelectAll.name = "bntSelectAll"
-	bntSelectAll.width = 20
-	bntSelectAll.height = 20
-	bntSelectAll.x = 5
-	bntSelectAll.y = 15
-	bntSelectAll.m_n19.color = CS.UnityEngine.Color(.3,1,.3)
-	bntSelectAll.onClick:Add( SelectAllLabels )
+	btnSelectAll.title = ""
+	btnSelectAll.tooltips = "Select All Labels"
+	btnSelectAll.name = "btnSelectAll"
+	btnSelectAll.width = 20
+	btnSelectAll.height = 20
+	btnSelectAll.x = 5
+	btnSelectAll.y = 15
+	btnSelectAll.m_n19.color = CS.UnityEngine.Color(.3,1,.3)
+	btnSelectAll.onClick:Add( SelectAllLabels )
 
-	bntDeselectAll.title = ""
-	bntDeselectAll.tooltips = "Clear Selected Labels"
-	bntDeselectAll.name = "bntDeselectAll"
-	bntDeselectAll.width = 20
-	bntDeselectAll.height = 20
-	bntDeselectAll.x = bntSelectAll.x
-	bntDeselectAll.y = bntSelectAll.y + 20
-	bntDeselectAll.m_n19.color = CS.UnityEngine.Color(1,.3,.3)
-	bntDeselectAll.onClick:Add( ClearSelectedLabels )
+	btnDeselectAll.title = ""
+	btnDeselectAll.tooltips = "Clear Selected Labels"
+	btnDeselectAll.name = "btnDeselectAll"
+	btnDeselectAll.width = 20
+	btnDeselectAll.height = 20
+	btnDeselectAll.x = btnSelectAll.x
+	btnDeselectAll.y = btnSelectAll.y + 20
+	btnDeselectAll.m_n19.color = CS.UnityEngine.Color(1,.3,.3)
+	btnDeselectAll.onClick:Add( ClearSelectedLabels )
 
     
 	Wnd_BodyPractice.onPositionChanged:Remove( InitBPPWindow );
