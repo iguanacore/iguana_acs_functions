@@ -303,19 +303,9 @@ local function InitBPLabels() --GetBPLabelCacheDef : cache, BodyPartDef, partTyp
 
 end
 
-local function SetTradeValueVisible( ctx )
-	if not ctx.sender.contentPane.m_itemvalue.visible then
-		ctx.sender.contentPane.m_itemvalue.visible = true
-		ctx.sender.contentPane.m_itemvalue.y = ctx.sender.contentPane.m_friendpontvalue.y - 50
-	end
-end
-
---CS.Wnd_TipPopPanel.Instance.UIInfo.m_n0.color = CS.UnityEngine.Color(0,0,0,1)
 --BPP: BodyPracticePlus
 function initBPP()
-	--BodyPracticePlus.ClearPreferredLabels()
     CS.Wnd_BodyPractice.Instance.onPositionChanged:Add( InitBPPWindow )
-    CS.Wnd_SchoolTrade.Instance.onClick:Add( SetTradeValueVisible ) 
     InitBPLabels();
 
 	--sort table by Lv 
