@@ -115,7 +115,8 @@ namespace iguana_acs_functions
                 {
                     UnityEngine.Time.timeScale = 15f;
                 }
-            }
+            }
+
         }
 
         [HarmonyPatch( typeof( Wnd_BodyRollShow ), "OnHide" )]
@@ -374,7 +375,7 @@ namespace iguana_acs_functions
                 }
             }
 
-
+            /*
             if( (Filter)filter_mode == Filter.BySelection )
             {
                 if( !cancelLoop.Contains( false ) && cancelLoop.Count > 0 )
@@ -386,6 +387,7 @@ namespace iguana_acs_functions
                     }
                 }
             }
+            */
 
             return origLabels;
         }
