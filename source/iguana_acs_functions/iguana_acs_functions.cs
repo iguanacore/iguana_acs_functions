@@ -9,6 +9,7 @@ namespace iguana_acs_functions
 
     public class iguana_acs_functions
     {
+        static EventCallback0 eventHandleConfig = new EventCallback0(HandleConfig);
         public static bool configLoaded = false;
         public static Dictionary<string, bool> config = new Dictionary<string, bool>()
             {
@@ -27,16 +28,21 @@ namespace iguana_acs_functions
                 { "Display Adventure Results Notifications", DisplayAdventureResults.enabled},
                 { "Chance Estimation Precision", GetRateStringPrecision.enabled},
                 { "Formation Sharing", ZhenImportExport.enabled },
-                { "Body Cultivation+ Less Grindy Remolding", BodyPracticePlus.enabled }
-
+                { "Body Cultivation+ Less Grindy Remolding", BodyPracticePlus.enabled },
+                { "Misc: List Essences Within an Item(Popup)", Miscellaneous.Enabled.showEssences },
+                { "Misc: Instantly Attack Hostile NPC", Miscellaneous.Enabled.autoAttack    },
+                { "Misc: Dark Info Popup", Miscellaneous.Enabled.darkTipPopup  },
+                { "Misc: Dark Tooltips(reload save to take effect)", Miscellaneous.Enabled.darkTooltips  },
+                { "Misc: Display Sect Traded Items' Value", Miscellaneous.Enabled.showTradeValue}
             };
         static Dictionary<string, List<Action>> loadSaveSubmods = new Dictionary<string, List<Action>>()
             {
                 { "Add Sect Rules", new List<Action>(){AddSectRules.OnLoad, AddSectRules.OnSave } },
-                { "Display Base Mental State",new List<Action>(){ DisplayBaseMentalState.OnLoad, null } }
+                { "Display Base Mental State",new List<Action>(){ DisplayBaseMentalState.OnLoad, null } },
+                { "Body Cultivation+ Less Grindy Remolding",new List<Action>(){ BodyPracticePlus.OnLoad, BodyPracticePlus.OnSave } }
             };
         static void OnLoadInit(string funcName)
-        {
+        { 
             Dictionary<string, bool> loadConfig = MLLMain.GetSaveOrDefault<Dictionary<string, bool>>("iguana_acs_functions_config");
             if (loadConfig != null)
             {
@@ -52,8 +58,12 @@ namespace iguana_acs_functions
                 {
                     Configuration.AddCheckBox("iguana_acs_functions", kvp.Key, kvp.Key, kvp.Value);
                 }
-                Configuration.Subscribe(new EventCallback0(HandleConfig));
             }
+
+            //to avoid duplicates of the same callback
+            Configuration.Unsubscribe( eventHandleConfig );
+            Configuration.Subscribe( eventHandleConfig );
+
             HandleConfig(); // Needed or the loaded config isn't applied immediately
             foreach (KeyValuePair<string, List<Action>> kvp in loadSaveSubmods)
             {
@@ -87,6 +97,7 @@ namespace iguana_acs_functions
 
         private static void HandleConfig()
         {
+            KLog.Dbg( "ssssssssssss" );
             SkillLevelEverywhere.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Skill Level Everywhere");
             SortManualsByAttainment.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Sort Manuals by Attainment");
             FixCampingHeadUI.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Fix Camping Head UI");
@@ -101,7 +112,11 @@ namespace iguana_acs_functions
             GetRateStringPrecision.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Chance Estimation Precision");
             ZhenImportExport.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Formation Sharing");
             BodyPracticePlus.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Body Cultivation+ Less Grindy Remolding" );
-
+            Miscellaneous.Enabled.showEssences = Configuration.GetCheckBox( "iguana_acs_functions", "Misc: List Essences Within an Item(Popup)" );
+            Miscellaneous.Enabled.autoAttack = Configuration.GetCheckBox( "iguana_acs_functions", "Misc: Instantly Attack Hostile NPC" );
+            Miscellaneous.Enabled.darkTipPopup = Configuration.GetCheckBox( "iguana_acs_functions", "Misc: Dark Info Popup" );
+            Miscellaneous.Enabled.darkTooltips = Configuration.GetCheckBox( "iguana_acs_functions", "Misc: Dark Tooltips(reload save to take effect)" );
+            Miscellaneous.Enabled.showTradeValue = Configuration.GetCheckBox( "iguana_acs_functions", "Misc: Display Sect Traded Items' Value" );
             Dictionary<string, bool> newConfig = new Dictionary<string, bool>();
             foreach (KeyValuePair<string, bool> kvp in config)
             {

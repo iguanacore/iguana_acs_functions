@@ -1,0 +1,12 @@
+﻿<Texts Type="Story">
+	<List>
+		<Text Name="CollectFaith">
+			<DisplayName>Gather Belief</DisplayName>
+			<Desc>There are believers here, we can gather belief.</Desc>
+			<Selections.0.Display>Acquisition</Selections.0.Display>
+			<Selections.1.Display>Acquisition (1/2)</Selections.1.Display>
+			<Selections.2.Display>Acquisition (1/3)</Selections.2.Display>
+			<Selections.3.Display>Acquisition (1/4)</Selections.3.Display>
+		</Text>
+	</List>
+</Texts>
