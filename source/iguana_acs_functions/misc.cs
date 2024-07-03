@@ -82,7 +82,7 @@ namespace iguana_acs_functions
             {
                 if ( __instance?.contentPane == null )
                     return;
-                KLog.Dbg( Enabled.darkTipPopup.ToString() );
+                
                 var n0 = __instance.contentPane.GetChild( "n0" ) as FairyGUI.GImage;
                 if ( oldClr.a == 0)
                     oldClr = n0.color;
