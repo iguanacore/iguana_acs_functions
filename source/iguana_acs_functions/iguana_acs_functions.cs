@@ -9,6 +9,7 @@ namespace iguana_acs_functions
 
     public class iguana_acs_functions
     {
+        static EventCallback0 eventHandleConfig = new EventCallback0(HandleConfig);
         public static bool configLoaded = false;
         public static Dictionary<string, bool> config = new Dictionary<string, bool>()
             {
@@ -52,8 +53,11 @@ namespace iguana_acs_functions
                 {
                     Configuration.AddCheckBox("iguana_acs_functions", kvp.Key, kvp.Key, kvp.Value);
                 }
-                Configuration.Subscribe(new EventCallback0(HandleConfig));
             }
+            //to avoid duplicates of the same callback
+            Configuration.Unsubscribe( eventHandleConfig );
+            Configuration.Subscribe( eventHandleConfig );
+            
             HandleConfig(); // Needed or the loaded config isn't applied immediately
             foreach (KeyValuePair<string, List<Action>> kvp in loadSaveSubmods)
             {

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="282,228" restrictSize="150,375,70,0" extention="Label" bgColor="#000000">
+  <controller name="lang" pages="0,cn,1,en" selected="0"/>
+  <displayList>
+    <image id="n2_u5n8" name="n0" src="eeq9b3" fileName="images/background(1).png" xy="0,0" size="282,225" restrictSize="150,0,0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <richtext id="n1_u5n8" name="title" xy="24,20" size="235,190" restrictSize="130,330,0,0" fontSize="13" color="#ffffff" leading="2" ubb="true" vars="true" autoClearText="true" text="ddffdfdffd333333333333333fdffdfdffdfdff&#xA;dfdff&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;dfdff&#xA;&#xA;&#xA;dfdff"/>
+  </displayList>
+  <relation target="n1_u5n8" sidePair="width-width,height-height"/>
+  <transition name="anim"/>
+</component>

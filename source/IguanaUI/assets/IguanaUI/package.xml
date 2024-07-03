@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="2fevh8bi" hasFavorites="true">
+  <resources>
+    <component id="v6073f" name="LabelsList.xml" path="/" exported="true"/>
+    <component id="mtkj3i" name="Label1.xml" path="/" exported="true"/>
+    <component id="mtkjb2" name="button.xml" path="/" exported="true"/>
+    <component id="u5n81" name="DarkToolTip.xml" path="/" exported="true"/>
+    <image id="eeq9b3" name="background(1).png" path="/images/" exported="true" scale="9grid" scale9grid="193,114,10,9" gridTile="16" qualityOption="source"/>
+    <image id="zg5x9d" name="bg_ban0013.png" path="/images/" exported="true" scale="9grid" scale9grid="30,34,9,8"/>
+    <image id="kjtf3p" name="bg_ban008.png" path="/images/" exported="true" scale="9grid" scale9grid="60,30,43,60"/>
+    <image id="kjtf47" name="bg_title001.png" path="/images/" exported="true" scale9grid="83,12,166,24"/>
+    <image id="kjtf5v" name="button_work01.png" path="/images/" exported="true" favorite="true"/>
+    <image id="kjtf5w" name="button_work02.png" path="/images/" exported="true"/>
+    <image id="kjtf5y" name="button_work04.png" path="/images/" exported="true"/>
+    <image id="kjtf5z" name="button_work05.png" path="/images/" exported="true"/>
+  </resources>
+  <publish name="" genCode="true"/>
+</packageDescription>

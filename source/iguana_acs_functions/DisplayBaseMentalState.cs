@@ -35,11 +35,10 @@ namespace iguana_acs_functions
             {
                 try
                 {
-                    if ( !enabled ) { return; }
                     if ( npc == null || ___Panel == null ) { return; }
-                    if ( !npc.IsPlayerThing || npc.IsVistor || npc.GongKind != g_emGongKind.Dao )
+                    if ( !npc.IsPlayerThing || npc.IsVistor || npc.GongKind != g_emGongKind.Dao || !enabled )
                     {
-                        if( ___Panel.m_n39.GetChild( "baseMentalStateBar" ) != null )
+                        if( ___Panel.m_n39.GetChild( "baseMentalStateBar" ) != null && ___Panel.m_n39.GetChild( "baseMentalStateBar" )?.visible == true)
                         {
                             ___Panel.m_n39.GetChild( "baseMentalStateBar" ).visible = false;
                         }

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<packageDescription id="2fevh8bi">
-  <resources>
-    <component id="v6073f" name="LabelsList.xml" path="/" exported="true"/>
-    <component id="mtkj3i" name="Label1.xml" path="/"/>
-    <component id="mtkjb2" name="button.xml" path="/"/>
-  </resources>
-  <publish name="" genCode="true"/>
-</packageDescription>
