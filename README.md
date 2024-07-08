@@ -25,7 +25,13 @@ Everything that isn't marked as optional can still be manually disabled by remov
 * Chance Estimation Precision - Increases the precision of estimates from GetRateString, anything below 1% is listed now as insignificant.
 * Formation Sharing - Reveals the Formation Diagram Sharing/Import buttons, in both normal gameplay as well as RPG Map Maker.
 * Body Cultivation+ Less Grindy Remolding - Improves and Makes the remolding process simpler, faster, and cleaner. filter either by selecting label(s), or by color(s). and also the option to ignore labels required to unlock a secret body.
-
+* Miscellaneous(Misc):
+	- List Essences Within an Item(Popup) - List essences in the popup of the hovered over item (base amount, and chance of getting them once you devour said item).
+    - AutoAttack Hostile NPC - NPCs that have their Defensive mode On, will attack hostile NPCs the moment they spawn or enter the map.
+    - Dark Info Popup - Change the color of details popup of items/objects to dark.
+    - Dark Tooltips(reload save to take effect) - (_Emperimental_) New dark tooltips UI that replaces the original tooltips UI
+    - Display Sect Traded Items' Value - Display items value when trading with sects.
+* Collecting Belief In Fractions - You can now collect accumulated belief by half, third , Quarter or just take it all.
 ## Install instructions
 
 Download the latest release, extract the iguana_acs_functions into the Mods folder. If the release is behind the Main version and you want to update to the preview version, download the repository directly, and extract the contents of the archive into the iguana_acs_functions folder, located in the Mods folder.
@@ -87,6 +93,7 @@ For example, removing the Trimerous Essence Price change requires the removal of
     * `MapStory_FillingLv2.xml`: Story_LingZhiGet, Story_LingZhiBeg
     * `MapStory_Special.xml`: Secrets_Esoterica1, Secrets_Esoterica2, Secrets_FabaoAppear1, Secrets_FabaoAppear2, Secrets_FabaoAppear3, Secrets_FabaoAppear3_Cold, Secrets_FabaoAppear3_Hot, Secrets_DongFuAppear, Secrets_DongFuAppear_Cold, Secrets_DongFuAppear_Hot, Secrets_DongFuAppear_Manual, Secrets_DongFuAppear_Medicine, Secrets_Magic, Secrets_Magic_Cold, Secrets_Magic_Hot
     * `MapStory_SpecialGong.xml`: Secrets_Gong2, Secrets_Gong3, Secrets_Gong4, Secrets_Gong5, Secrets_Gong6,Secrets_Gong7
+* `MapStory_OutSpread.xml`: Acquisition, Acquisition (1/2), Acquisition (1/3), Acquisition (1/4)
 
 ### Properties
 
@@ -115,6 +122,7 @@ Modifications applied by iguana_acs_functions.dll.
 * `GameUlt.GetRateString` - Chance Estimation Precision
 * `Wnd_CreateZhen.OnShown` - Formation Sharing
 * `Wnd_BodyRollShow.Begin`, `Wnd_BodyRollShow.OnHide`, `XiaWorld.PracticeMgr.GetRandomQuenchingLabelList` - Body Cultivation+ Less Grindy Remolding
+* `Wnd_GameMain.GetNpcHeadTip`, `TFMgr.GetValue`, `Wnd_TipPopPanel.UpdateItem` - Miscellaneous (Dark Tooltips and Dark info Popup)
 
 ### Other files
 
@@ -124,7 +132,8 @@ Modifications applied by iguana_acs_functions.dll.
 * `Scripts\MapStory\MapStory.lua` - Agency Population Limit increased, MapStoryHelper.SlightlyIncreaseAllPop and MapStoryHelper.IncreaseAllPop
 * `Scripts\add-sect-rules.lua` - Add Sect Rules
 * `Scripts\bodypracticeplus.lua` - a lua extension for Body Cultivation+, initializes and sets up the UI required by the mod.
-* `UI\BPP_List_fui.bytes` - Body Cultivation+'s UI.
+* `Scripts\misc.lua` - a lua extension for Miscellaneous; also Initializes "AutoAttack Hostile NPC", "Display Sect Traded Items' Value", and "Dark Tooltips".
+* `UI\IguanaUI.bytes` - Contains UI for Body Cultivation+ and Dark Tooltips.
 * `iguana_acs_functions.dll` - Configuration and Functions
 
 ## How to Contribute
@@ -140,4 +149,4 @@ If the fixes exist as a standalone mod, include a link to it.
 
 * ucddj - Trimerous Essence Price, FuBox change, Skill Level Everywhere, Sort Manuals by Attainment, Sync Perfect Alignment moodlet, Fix Camping Head UI, Add Sect Rules, Infinite Mouse Scrolling, Instant Story Hotkey, Display Base Mental State, Display max Mood at 200, Display Adventure Results Notifications
 * Gothmos - Add Sect Rules
-* NecrCode - Skill Level Everywhere additions, Body Cultivation+ Less Grindy Remolding
+* NecrCode - Skill Level Everywhere additions, Body Cultivation+ Less Grindy Remolding, Miscellaneous
