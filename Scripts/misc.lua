@@ -49,12 +49,14 @@ local function InitDarkTooltips( enabled )
 	xlua.private_accessible(CS.FairyGUI.GRoot)
 	if enabled then
 		CS.FairyGUI.UIConfig.tooltipsWin = UIPackage.GetItemURL("IguanaUI", "DarkToolTip");
-		CS.FairyGUI.GRoot.inst._defaultTooltipWin = nil
 		CS.FairyGUI.GRoot.inst._defaultTooltipWin = UIPackage.CreateObject("IguanaUI", "DarkToolTip")
+		CS.FairyGUI.GRoot.inst._defaultTooltipWin:SetHome(CS.FairyGUI.GRoot.inst)
+		CS.FairyGUI.GRoot.inst._defaultTooltipWin.touchable = false;
 	else
 		CS.FairyGUI.UIConfig.tooltipsWin = UIPackage.GetItemURL("InGame", "Tip");
-		CS.FairyGUI.GRoot.inst._defaultTooltipWin = nil
 		CS.FairyGUI.GRoot.inst._defaultTooltipWin = UIPackage.CreateObject("InGame", "Tip");
+		CS.FairyGUI.GRoot.inst._defaultTooltipWin:SetHome(CS.FairyGUI.GRoot.inst)
+		CS.FairyGUI.GRoot.inst._defaultTooltipWin.touchable = false;
 	end
 end
 
