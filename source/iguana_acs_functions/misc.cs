@@ -107,6 +107,7 @@ namespace iguana_acs_functions
                             }
                             if ( itemData?.DevourDatas != null )
                             {
+                                //Known issue for Artifacts and items with creators, there's a lacking newline in there somewhere.
                                 foreach ( var devdt in itemData.DevourDatas )
                                 {
                                     ThingDef def = ThingMgr.Instance.GetDef( g_emThingType.Item, devdt.Name );
