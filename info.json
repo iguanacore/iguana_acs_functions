@@ -5,7 +5,7 @@
     "Version":0.5,
     "Desc": "A mod, consisting of functional changes for Amazing Cultivation Simulator, not just fixes.\n\n[Changelog]\nListed in the README.MD, available on the repository.",
     "Author":"iguana",
-	"UIPackage":"UI/BPP_List",
+	"UIPackage":"UI/IguanaUI",
 	"Tags":[
 		"Function"
 	],
