@@ -2,7 +2,7 @@
 <component size="200,25" pivot="0.5,0.5" overflow="hidden" extention="Button" bgColor="#66cc00">
   <controller name="button" pages="6,up,7,down" selected="1"/>
   <displayList>
-    <image id="n43_mtkj" name="n82" src="kjtf47" fileName="images/bg_title001.png" pkg="ncbwb41m" xy="-30,-1" size="260,27" color="#fcfcfc" fillMethod="radial360"/>
+    <image id="n43_mtkj" name="n82" src="kjtf47" fileName="images/bg_title001.png" xy="-30,-1" size="260,27" color="#fcfcfc" fillMethod="radial360"/>
     <image id="n45_mtkj" name="n83" src="kjtf3x" fileName="images/bg_di05.png" pkg="ncbwb41m" xy="8,1" size="25,24">
       <gearDisplay controller="button" pages="7,9"/>
     </image>

@@ -59,11 +59,10 @@ namespace iguana_acs_functions
                     Configuration.AddCheckBox("iguana_acs_functions", kvp.Key, kvp.Key, kvp.Value);
                 }
             }
-
             //to avoid duplicates of the same callback
             Configuration.Unsubscribe( eventHandleConfig );
             Configuration.Subscribe( eventHandleConfig );
-
+            
             HandleConfig(); // Needed or the loaded config isn't applied immediately
             foreach (KeyValuePair<string, List<Action>> kvp in loadSaveSubmods)
             {
