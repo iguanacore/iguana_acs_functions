@@ -11,7 +11,7 @@ namespace iguana_acs_functions
 {
     class iguana_OutspreadPopIncreaser
     {
-        public static bool enabled = true;
+        public static bool enabled = true; //No longer toggleable
         [HarmonyPatch(typeof(OutspreadMgr.Region), "AddPopulation")]
         public static class iguana_AddPopulation_Patch
         {

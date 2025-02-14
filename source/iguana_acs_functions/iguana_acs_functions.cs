@@ -19,7 +19,7 @@ namespace iguana_acs_functions
                 { "Add Sect Rules", AddSectRules.enabled},
                 { "Infinite Mouse Scroll", InfiniteScroll.enabled},
                 { "Heavenly Reforge Limit Increase", iguana_GodCountIncreaser.enabled},
-                { "Raise Agency Pop Limit to 999,999", iguana_OutspreadPopIncreaser.enabled },
+                //{ "Raise Agency Pop Limit to 999,999", iguana_OutspreadPopIncreaser.enabled }, No longer toggleable
                 { "Sync perfect alignment moodlet", true},
                 { "Fix T3 GC Breakthrough Multiplier", true},
                 { "Instantly choose story option with hotkey", InstantStoryHotkey.enabled},
@@ -103,7 +103,7 @@ namespace iguana_acs_functions
             InfiniteScroll.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Infinite Mouse Scroll");
             AddSectRules.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Add Sect Rules");
             iguana_GodCountIncreaser.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Heavenly Reforge Limit Increase");
-            iguana_OutspreadPopIncreaser.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Raise Agency Pop Limit to 999,999");
+            //iguana_OutspreadPopIncreaser.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Raise Agency Pop Limit to 999,999"); No longer toggleable
             InstantStoryHotkey.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Instantly choose story option with hotkey");
             DisplayBaseMentalState.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Display Base Mental State");
             MoodTo200.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Display max Mood at 200");
