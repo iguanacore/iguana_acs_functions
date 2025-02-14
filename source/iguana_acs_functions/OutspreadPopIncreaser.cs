@@ -22,7 +22,7 @@ namespace iguana_acs_functions
                 {
                     if (codeInstruction.opcode.Name == "ldc.i4" && codeInstruction.operand.ToString() == "400000")
                     {
-                        int newvalue = 999999;
+                        int newvalue = 999990;
                         codeInstruction.operand = newvalue;
                     }
                 }
@@ -39,7 +39,7 @@ namespace iguana_acs_functions
                 {
                     if (codeInstruction.opcode.Name == "ldc.i4" && codeInstruction.operand.ToString() == "400000")
                     {
-                        int newvalue = 999999;
+                        int newvalue = 999990;
                         codeInstruction.operand = newvalue;
                     }
                 }

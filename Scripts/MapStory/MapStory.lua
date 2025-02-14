@@ -3,12 +3,12 @@ local tbTable = GameMain:GetMod("MapStoryHelper");--duplicated for the two new f
 
 --testing, the initial configuration, which can't be toggled anymore
 function tbTable:IncreaseAllPop(me,region)
-	local k = math.min(self:Rand(self:ReturnPop(2)), 999999 - region.Population);
+	local k = math.min(self:Rand(self:ReturnPop(2)), 999990 - region.Population);
 	me:AddMsg(XT("有约{0}位流民加入了{1}。"), k, region.def.DisplayName);
 	region:AddPopulation(k);
 end
 function tbTable:SlightlyIncreaseAllPop(me,region)
-	local k = math.min(self:Rand(self:ReturnPop(1)), 999999 - region.Population);
+	local k = math.min(self:Rand(self:ReturnPop(1)), 999990 - region.Population);
 	me:AddMsg(XT("有约{0}位流民加入了{1}。"), k, region.def.DisplayName);
 	region:AddPopulation(k);
 end
