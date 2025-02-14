@@ -11,7 +11,7 @@ A mod, consisting of functional changes for Amazing Cultivation Simulator, not j
 * Sort Manuals by Attainment (optional) - Sorts the manuals by ascending attainment in the Manual Library. Also displays a small element icon next to manuals. Takes into account the element of the cultivator if any ([Standalone mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/21/))
 * Sync Perfect Alignment moodlet - the perfect alignment moodlet is changed to trigger at the same element strength (1.85) as optimal cultivation speed and golden core
 * Heavenly Reforge Limit increased (optional) - Increases the Heavenly Reforge Cap from 36 (Vanilla) to 2048. ([Standalone mod](https://mega.nz/file/O10BVYwR#N09NIqmaX3KZ_M72BKY-XJ6wlhlhTjH4DEvsj5qtElI))
-* Agency Population Limit increased (optional) - Increases the Agency Population limit from 400 000 (Vanilla) to 999 999. ([Standalone mod](https://mega.nz/file/vwNA3RzY#ft7q0U-nhHHuCv7QHXRuJ1z0BCtpWrY6SFRkQlo-5Y8))
+* Agency Population Limit increased - Increases the Agency Population limit from 400 000 (Vanilla) to 999 999. ([Standalone mod](https://mega.nz/file/vwNA3RzY#ft7q0U-nhHHuCv7QHXRuJ1z0BCtpWrY6SFRkQlo-5Y8))
 * Farmable Strange Mushroom - Adds Strange Mushroom as a rare drop to the Mushroom plant, with similar rates to Red Ginseng.
 * Wudang DLC Translation" - Translates the Duck and related untranslated content added with the Wudang DLC
 * Fix Camping Head UI (optional) - Various improvements to the Head UI when camping ([Standalone Mod](https://www.nexusmods.com/amazingcultivationsimulator/mods/22/))
@@ -94,6 +94,7 @@ For example, removing the Trimerous Essence Price change requires the removal of
     * `MapStory_Special.xml`: Secrets_Esoterica1, Secrets_Esoterica2, Secrets_FabaoAppear1, Secrets_FabaoAppear2, Secrets_FabaoAppear3, Secrets_FabaoAppear3_Cold, Secrets_FabaoAppear3_Hot, Secrets_DongFuAppear, Secrets_DongFuAppear_Cold, Secrets_DongFuAppear_Hot, Secrets_DongFuAppear_Manual, Secrets_DongFuAppear_Medicine, Secrets_Magic, Secrets_Magic_Cold, Secrets_Magic_Hot
     * `MapStory_SpecialGong.xml`: Secrets_Gong2, Secrets_Gong3, Secrets_Gong4, Secrets_Gong5, Secrets_Gong6,Secrets_Gong7
 * `MapStory_OutSpread.xml`: Acquisition, Acquisition (1/2), Acquisition (1/3), Acquisition (1/4)
+* `MapStory_Policy.xml`: OutSpread_Give16 (Charity, related to PopIncreaser)
 
 ### Properties
 

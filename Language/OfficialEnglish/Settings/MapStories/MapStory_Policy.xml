@@ -1,0 +1,9 @@
+<Texts Type="Story">
+    <List>
+        <Text Name="OutSpread_Give16">
+			<DisplayName>Charity</DisplayName>
+			<Desc>[NAME] led the disciples to the street and started giving alms to passersby. They encountered a group of refugees.</Desc>
+			<Selections.0.Display>Check results</Selections.0.Display>
+		</Text>
+    </List>
+</Texts>
