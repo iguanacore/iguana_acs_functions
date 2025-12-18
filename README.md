@@ -32,6 +32,7 @@ Everything that isn't marked as optional can still be manually disabled by remov
     - Dark Tooltips(reload save to take effect) - (_Emperimental_) New dark tooltips UI that replaces the original tooltips UI
     - Display Sect Traded Items' Value - Display items value when trading with sects.
 * Collecting Belief In Fractions - You can now collect accumulated belief by half, third , Quarter or just take it all.
+* SkillLevelInRecruitment - Original mod available on ([Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2364620535)). Added due to the mod causing incompatibilities with Agency Population Limit Increaser.
 ## Install instructions
 
 Download the latest release, extract the iguana_acs_functions into the Mods folder. If the release is behind the Main version and you want to update to the preview version, download the repository directly, and extract the contents of the archive into the iguana_acs_functions folder, located in the Mods folder.
