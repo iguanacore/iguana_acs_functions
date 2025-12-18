@@ -33,7 +33,8 @@ namespace iguana_acs_functions
                 { "Misc: Instantly Attack Hostile NPC", Miscellaneous.Enabled.autoAttack    },
                 { "Misc: Dark Info Popup", Miscellaneous.Enabled.darkTipPopup  },
                 { "Misc: Dark Tooltips(reload save to take effect)", Miscellaneous.Enabled.darkTooltips  },
-                { "Misc: Display Sect Traded Items' Value", Miscellaneous.Enabled.showTradeValue}
+                { "Misc: Display Sect Traded Items' Value", Miscellaneous.Enabled.showTradeValue},
+                { "SkillLevelInRecruitment", SkillLevelInRecruitment.enabled} //Originally by Neverjoke
             };
         static Dictionary<string, List<Action>> loadSaveSubmods = new Dictionary<string, List<Action>>()
             {
@@ -116,6 +117,7 @@ namespace iguana_acs_functions
             Miscellaneous.Enabled.darkTipPopup = Configuration.GetCheckBox( "iguana_acs_functions", "Misc: Dark Info Popup" );
             Miscellaneous.Enabled.darkTooltips = Configuration.GetCheckBox( "iguana_acs_functions", "Misc: Dark Tooltips(reload save to take effect)" );
             Miscellaneous.Enabled.showTradeValue = Configuration.GetCheckBox( "iguana_acs_functions", "Misc: Display Sect Traded Items' Value" );
+            SkillLevelInRecruitment.enabled = Configuration.GetCheckBox("iguana_acs_functions", "SkillLevelInRecruitment");
             Dictionary<string, bool> newConfig = new Dictionary<string, bool>();
             foreach (KeyValuePair<string, bool> kvp in config)
             {
