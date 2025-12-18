@@ -65,9 +65,9 @@ local function SetTradeValueVisible( ctx )
 	local enabled = CS.iguana_acs_functions.Miscellaneous.Enabled.showTradeValue;
 
 	if not ctx.sender.contentPane.m_itemvalue.visible and enabled then
-		if itemVal_oldY == 0 then
-			itemVal_oldY = ctx.sender.contentPane.m_friendpontvalue.y - 50
-			ctx.sender.contentPane.m_itemvalue.y = itemVal_oldY
+		if itemVal_Y == 0 then
+			itemVal_Y = ctx.sender.contentPane.m_friendpontvalue.y - ctx.sender.contentPane.m_friendpontvalue.actualHeight
+			ctx.sender.contentPane.m_itemvalue.y = itemVal_Y
 		end
 		ctx.sender.contentPane.m_itemvalue.visible = true
 	end
