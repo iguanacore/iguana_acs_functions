@@ -34,8 +34,13 @@ namespace iguana_acs_functions
                 { "Misc: Dark Info Popup", Miscellaneous.Enabled.darkTipPopup  },
                 { "Misc: Dark Tooltips(reload save to take effect)", Miscellaneous.Enabled.darkTooltips  },
                 { "Misc: Display Sect Traded Items' Value", Miscellaneous.Enabled.showTradeValue},
-                { "SkillLevelInRecruitment", SkillLevelInRecruitment.enabled} //Originally by Neverjoke
+                { "SkillLevelInRecruitment", SkillLevelInRecruitment.enabled},//Originally by Neverjoke
+                { "Unorthodox Esoterica Derandomizer", UnorthodoxEsotericaDerandomizer.enabled }
             };
+        public static Dictionary<string, string> configval = new Dictionary<string, string>()
+        {
+            {"UED Manual Element", UnorthodoxEsotericaDerandomizer.derandomelementstring }
+        };
         static Dictionary<string, List<Action>> loadSaveSubmods = new Dictionary<string, List<Action>>()
             {
                 { "Add Sect Rules", new List<Action>(){AddSectRules.OnLoad, AddSectRules.OnSave } },
@@ -45,6 +50,7 @@ namespace iguana_acs_functions
         static void OnLoadInit(string funcName)
         { 
             Dictionary<string, bool> loadConfig = MLLMain.GetSaveOrDefault<Dictionary<string, bool>>("iguana_acs_functions_config");
+            Dictionary<string, string> loadConfigval = MLLMain.GetSaveOrDefault<Dictionary<string, string>>("iguana_acs_functions_configval");
             if (loadConfig != null)
             {
                 // We don't directly overwrite as we must handle loaded configs from previous versions of the mod
@@ -53,11 +59,28 @@ namespace iguana_acs_functions
                     config[kvp.Key] = kvp.Value;
                 };
             }
+            if (loadConfigval != null)
+            {
+                // We don't directly overwrite as we must handle loaded configs from previous versions of the mod
+                foreach (KeyValuePair<string, string> kvp in loadConfigval)
+                {
+                    configval[kvp.Key] = kvp.Value;
+                };
+            }
             if (!Configuration.ListItems.ContainsKey("iguana_acs_functions"))
             {
                 foreach (KeyValuePair<string, bool> kvp in config)
                 {
                     Configuration.AddCheckBox("iguana_acs_functions", kvp.Key, kvp.Key, kvp.Value);
+                }
+                foreach (KeyValuePair<string, string> kvp in configval)
+                {
+                    if (kvp.Key=="UED Manual Element")
+                    {
+                        //string[] values = { "Neutral", "Metal", "Wood", "Water", "Fire", "Earth" };
+                        //Configuration.AddDropDown("iguana_acs_functions", kvp.Key, kvp.Key, values);
+                        Configuration.AddInput("iguana_acs_functions", kvp.Key, kvp.Key, "None");
+                    }
                 }
             }
             //to avoid duplicates of the same callback
@@ -85,6 +108,7 @@ namespace iguana_acs_functions
         public static void OnSave()
         {
             MLLMain.AddOrOverWriteSave("iguana_acs_functions_config", config);
+            MLLMain.AddOrOverWriteSave("iguana_acs_functions_configval", configval);
             foreach (KeyValuePair<string, List<Action>> kvp in loadSaveSubmods)
             {
                 if ((!config.ContainsKey(kvp.Key) || config[kvp.Key]) && kvp.Value[1] != null)
@@ -118,7 +142,12 @@ namespace iguana_acs_functions
             Miscellaneous.Enabled.darkTooltips = Configuration.GetCheckBox( "iguana_acs_functions", "Misc: Dark Tooltips(reload save to take effect)" );
             Miscellaneous.Enabled.showTradeValue = Configuration.GetCheckBox( "iguana_acs_functions", "Misc: Display Sect Traded Items' Value" );
             SkillLevelInRecruitment.enabled = Configuration.GetCheckBox("iguana_acs_functions", "SkillLevelInRecruitment");
+            UnorthodoxEsotericaDerandomizer.enabled = Configuration.GetCheckBox("iguana_acs_functions", "Unorthodox Esoterica Derandomizer");
+            UnorthodoxEsotericaDerandomizer.derandomelementstring = Configuration.GetInput("iguana_acs_functions", "UED Manual Element");
+
             Dictionary<string, bool> newConfig = new Dictionary<string, bool>();
+            Dictionary<string, string> newConfigval = new Dictionary<string, string>();
+
             foreach (KeyValuePair<string, bool> kvp in config)
             {
                 bool newValue = Configuration.GetCheckBox("iguana_acs_functions", kvp.Key);
@@ -130,6 +159,19 @@ namespace iguana_acs_functions
             foreach (KeyValuePair<string, bool> kvp in newConfig)
             {
                 config[kvp.Key] = kvp.Value;
+            }
+
+            foreach (KeyValuePair<string,string> kvp in configval)
+            {
+                string newValue = Configuration.GetDropDown("iguana_acs_functions", kvp.Key);
+                if (kvp.Value != newValue)
+                {
+                    newConfigval[kvp.Key] = newValue;
+                }
+            }
+            foreach (KeyValuePair<string,string> kvp in newConfigval)
+            {
+                configval[kvp.Key] = kvp.Value;
             }
         }
     }

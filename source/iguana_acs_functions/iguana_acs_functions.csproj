@@ -80,6 +80,7 @@
     <Compile Include="SkillLevelInRecruitment.cs" />
     <Compile Include="SortManualsByAttainment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnorthodoxEsotericaDerandomizer.cs" />
     <Compile Include="zhenImportExport.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
