@@ -163,7 +163,7 @@ namespace iguana_acs_functions
 
             foreach (KeyValuePair<string,string> kvp in configval)
             {
-                string newValue = Configuration.GetDropDown("iguana_acs_functions", kvp.Key);
+                string newValue = Configuration.GetInput("iguana_acs_functions", kvp.Key);
                 if (kvp.Value != newValue)
                 {
                     newConfigval[kvp.Key] = newValue;
